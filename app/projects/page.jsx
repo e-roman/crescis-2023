@@ -63,7 +63,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-1.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">
@@ -93,7 +93,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-2.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">
@@ -123,7 +123,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-3.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-video-wrap ttgr-height">
@@ -156,7 +156,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-4.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">
@@ -186,7 +186,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-5.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">
@@ -216,7 +216,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-6.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">
@@ -246,7 +246,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-7.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">
@@ -276,7 +276,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item pgi-image-is-light">
-                                        <a href="single-project-8.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">
@@ -304,7 +304,7 @@ export default function Projects() {
                                 <div className="ttgr-item-inner">
 
                                     <div className="portfolio-grid-item">
-                                        <a href="single-project-9.html" className="pgi-image-wrap" data-cursor="View Project">
+                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
                                             <div className="pgi-image-holder cover-opacity-2">
                                                 <div className="pgi-image-inner anim-zoomin">
                                                     <figure className="pgi-image ttgr-height">

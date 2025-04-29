@@ -3,9 +3,10 @@
 
 import { gsap, Power2, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-// Registro de plugins
-gsap.registerPlugin(ScrollTrigger);
+// Registrar plugins GSAP
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Detecta si es Firefox
 export function detectBrowser() {
@@ -572,8 +573,98 @@ export function initDeferVideos() {
   });
 }
 
+// Ejecutar defer videos al cargar ventana (para compatibilidad)
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', initDeferVideos);
+}
+
+
+
+
+// Init scrolling text
+export function initScrollingText() {
+  if (typeof window === 'undefined') return;
+  document.querySelectorAll('.tt-scrolling-text').forEach(el => {
+    const speed = el.getAttribute('data-scroll-speed');
+    const inner = el.querySelector('.tt-scrolling-text-inner');
+    if (inner && speed) {
+      inner.style.animationDuration = `${speed}s`;
+    }
+  });
+}
+
+
+
+// Init scroll-to-top buttons
+export function initScrollToTopButton() {
+  if (typeof window === 'undefined') return;
+  document.querySelectorAll('.scroll-to-top').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const body = document.body;
+      const html = document.documentElement;
+      // Si se usa smooth-scroll basado en classe
+      if (body.classList.contains('tt-smooth-scroll')) {
+        const scrollbar = window.Scrollbar || null;
+        if (scrollbar && scrollbar.get) {
+          const sb = scrollbar.get(document.getElementById('scroll-container'));
+          gsap.to(sb, { duration: 1.5, scrollTo: { y: 0, autoKill: true }, ease: 'expo.inOut' });
+          return;
+        }
+      }
+      // fallback nativo / GSAP ScrollToPlugin
+      gsap.to(window, { duration: 0.8, scrollTo: { y: 0 }, ease: 'expo.inOut' });
+    });
+  });
+}
 
 
 
 
 
+
+// HOVER TITLE PROJECTS
+export function initTitleHoverProjects() {
+  if (typeof window === 'undefined') return;
+
+  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+  if (isMobile) return;
+
+  const interactive = document.querySelector('.portfolio-interactive');
+  if (!interactive) return;
+
+  const forceScroll = interactive.classList.contains('pi-force-scroll');
+  const titles = interactive.querySelectorAll('.pi-item-hover-title');
+
+  titles.forEach(title => {
+    const span = document.createElement('span');
+    span.innerHTML = title.innerHTML;
+    title.innerHTML = '';
+    title.appendChild(span);
+
+    const clones = forceScroll ? 5 : 1;
+    for (let i = 0; i < clones; i++) {
+      const clone = span.cloneNode(true);
+      title.appendChild(clone);
+    }
+  });
+
+  // Hover estado (add/remove class)
+  const items = interactive.querySelectorAll('.portfolio-interactive-item');
+  items.forEach(item => {
+    const link = item.querySelector('.pi-item-title-link');
+    if (link) {
+      link.addEventListener('mouseenter', () => item.classList.add('pi-item-hover'));
+      link.addEventListener('mouseleave', () => item.classList.remove('pi-item-hover'));
+    }
+
+    // Velocidad de scroll desde data-scroll-speed
+    const scrollSpeed = item.getAttribute('data-scroll-speed');
+    if (scrollSpeed) {
+      const spans = item.querySelectorAll('.pi-item-hover-title span');
+      spans.forEach(span => {
+        span.style.animationDuration = `${scrollSpeed}s`;
+      });
+    }
+  });
+}

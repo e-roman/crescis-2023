@@ -326,6 +326,7 @@ body.tt-boxed .tt-wrap-xl {
 
 #content-wrap {
 	position: relative;
+	overflow: hidden;
 }
 
 
@@ -7064,9 +7065,9 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 	padding-bottom: 40px;
 	color: #e0e0e0;
 }
-.tt-accordion-content:not(.is-open) {
+/* .tt-accordion-content:not(.is-open) {
 	display: none;
-}
+} */
 
 .tt-accordion-content p:last-child {
 	margin-bottom: 0;
@@ -9587,3 +9588,39 @@ body:not(.tt-boxed) .tt-footer-inner,
 		display: none;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .accordion-content {
+	height: 0;
+	overflow: hidden;
+	max-height: 90vh;
+  }
+  .accordion-content.expanded {
+	height: auto;
+  }
+  .accordion-plus,
+  .accordion-minus {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+  }
+
+  
+  

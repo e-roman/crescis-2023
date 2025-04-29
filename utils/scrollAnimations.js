@@ -292,7 +292,7 @@ export function initScrollAnimations() {
         trigger: wrap,
         start: "top 90%",
         markers: false,
-        onEnter: () => ScrollTrigger.refresh()
+        // onEnter: () => setTimeout(() => ScrollTrigger.refresh(), 50)
       }
     });
     tl.from(el, {

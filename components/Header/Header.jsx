@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react"; 
+import { usePathname } from "next/navigation"; 
 import Link from "next/link";
-import Image from "next/image";
 
 import { initMainMenu, initMobileMenu, initOverlayMenu } from '@/utils/FunctionsNavsite';
 
@@ -41,9 +41,10 @@ export default function Header() {
                 <div className="tt-ol-menu-inner tt-wrap">
                   <div className="tt-ol-menu-content">
                     <ul className="tt-ol-menu-list">
-                      <li><a href="#">Single Link</a></li>
-                      <li><a href="#">Single Link</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/projects">Projects</a></li>
+                      <li><a href="/expertise">Expertise</a></li>
+                      <li><a href="/about">About</a></li>
                     </ul>
                   </div> 
                 </div> 

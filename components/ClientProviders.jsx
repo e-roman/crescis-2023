@@ -3,7 +3,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useLayoutEffect } from "react"; // Importar useLayoutEffect
+import { useLayoutEffect } from "react"; 
 
 // Components
 import Header from "@/components/Header/Header";
