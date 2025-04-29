@@ -8,6 +8,7 @@ import { useLayoutEffect } from "react";
 // Components
 import Header from "@/components/Header/Header";
 import CursorMagic from "@/components/CursorMagic/CursorMagic";
+
 import PageTransition from "@/components/PageTransition/PageTransition";
 
 
@@ -21,14 +22,14 @@ export default function ClientProviders({ children }) {
     initLenis();
     RevealLoad();
     HideLoad();
-    initPageTransitions();
-    initMagicCursor();
-    initScrollAnimations();
+    // initPageTransitions();
+    // initMagicCursor();
+    // initScrollAnimations();
   }, []); 
 
   return (
     <>
-      <PageTransition/>
+      {/* <PageTransition/> */}
       <Header/>
       <CursorMagic/>
       <div className="bg-noise"></div>
