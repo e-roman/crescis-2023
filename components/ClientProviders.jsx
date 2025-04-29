@@ -10,26 +10,28 @@ import Header from "@/components/Header/Header";
 import CursorMagic from "@/components/CursorMagic/CursorMagic";
 
 import PageTransition from "@/components/PageTransition/PageTransition";
-
+import { detectBrowser, detectMobile, initPageTransitions, RevealLoad, HideLoad } from '@/utils/themeFunctions';
 
 // Functions
 import { initLenis } from '@/utils/initLenis';
-import { RevealLoad, HideLoad, initPageTransitions, initMagicCursor } from '@/utils/themeFunctions';
+import { initMagicCursor } from '@/utils/themeFunctions';
 import { initScrollAnimations } from '@/utils/scrollAnimations';
 
 export default function ClientProviders({ children }) {
   useEffect(() => {
-    initLenis();
+    detectBrowser();
+    detectMobile();
+    initPageTransitions();
     RevealLoad();
     HideLoad();
-    // initPageTransitions();
-    // initMagicCursor();
-    // initScrollAnimations();
+    initLenis();
+    initMagicCursor();
+    initScrollAnimations();
   }, []); 
 
   return (
     <>
-      {/* <PageTransition/> */}
+      <PageTransition/>
       <Header/>
       <CursorMagic/>
       <div className="bg-noise"></div>
