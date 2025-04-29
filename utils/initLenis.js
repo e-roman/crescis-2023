@@ -1,35 +1,27 @@
-// utils/lenos.js
-"use client";
+// utils/lenis.js
+import Lenis from 'lenis'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import Lenis from "lenis";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
-gsap.registerPlugin(ScrollTrigger);
-
-let lenis;  // mantén una referencia si quieres más tarde
+let scroll
 
 export function initLenis() {
-  if (typeof window === "undefined") return;
+  scroll = new Lenis({ duration: 1 })
 
-  // Si ya lo inicializaste, no volver a hacerlo
-  if (lenis) return;
+  scroll.on('scroll', () => {
+    ScrollTrigger.update()
+  })
 
-  lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easing similar a Expo
-    orientation: "vertical",
-    gestureOrientation: "vertical",
-    smoothWheel: true,
-    smoothTouch: false,
-    infinite: false,
-  });
+  gsap.ticker.add((time) => {
+    scroll.raf(time * 1000)
+  })
 
-  function raf(time) {
-    lenis.raf(time);
-    ScrollTrigger.update(); // refresca ScrollTrigger en cada frame
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
+  return scroll
 }
+
+export { scroll }
+
+// para poder usar scrollTo()
+export const scrollTo = (...args) => scroll?.scrollTo(...args);
