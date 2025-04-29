@@ -6,11 +6,9 @@ import { useEffect } from "react";
 import { useLayoutEffect } from "react"; 
 
 // Components
+import PageTransition from "@/components/PageTransition/PageTransition";
 import Header from "@/components/Header/Header";
 import CursorMagic from "@/components/CursorMagic/CursorMagic";
-
-import PageTransition from "@/components/PageTransition/PageTransition";
-import { detectBrowser, detectMobile, initPageTransitions, RevealLoad, HideLoad } from '@/utils/themeFunctions';
 
 // Functions
 import { initLenis } from '@/utils/initLenis';
@@ -19,11 +17,6 @@ import { initScrollAnimations } from '@/utils/scrollAnimations';
 
 export default function ClientProviders({ children }) {
   useEffect(() => {
-    detectBrowser();
-    detectMobile();
-    initPageTransitions();
-    RevealLoad();
-    HideLoad();
     initLenis();
     initMagicCursor();
     initScrollAnimations();

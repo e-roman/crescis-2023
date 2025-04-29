@@ -5,17 +5,16 @@
 import { useEffect } from "react";
 import Image from "next/image";
 
-import { initPageTransitions } from "@/utils/themeFunctions";
+import { detectBrowser, detectMobile, initPageTransitions, RevealLoad, HideLoad } from '@/utils/themeFunctions';
 
 export default function PageTransition() {
   useEffect(() => {
-    // Esperar un poquito para asegurar que todo esté montado
-    const timeout = setTimeout(() => {
-      initPageTransitions();
-    }, 50); // o usar requestAnimationFrame o raf-tick si usás GSAP MatchMedia
-
-    return () => clearTimeout(timeout);
-  }, []);
+    detectBrowser();
+    detectMobile();
+    initPageTransitions();
+    RevealLoad();
+    HideLoad();
+  }, []); 
 
   return (
     <div id="page-transition">
