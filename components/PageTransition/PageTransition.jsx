@@ -1,7 +1,8 @@
+// components/PageTransition.jsx
 "use client";
 
 import { useEffect } from "react";
-import Image        from "next/image";
+import Image from "next/image";
 import { initPageTransition } from "@/utils/FunctionsLoader";
 
 export default function PageTransition() {
