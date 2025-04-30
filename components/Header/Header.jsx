@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { initMainMenu, initMobileMenu, initOverlayMenu } from "@/utils/FunctionsNavsite";
 
 export default function Header() {
@@ -37,18 +38,28 @@ export default function Header() {
               <div className="tt-ol-menu-inner tt-wrap">
                 <div className="tt-ol-menu-content">
                   <ul className="tt-ol-menu-list">
-                    {[
+                  {[
                       { href: "/", label: "Home" },
                       { href: "/projects", label: "Projects" },
                       { href: "/expertise", label: "Expertise" },
                       { href: "/about", label: "About" }
                     ].map(item => (
                       <li key={item.href}>
-                        <a href={item.href} onClick={e => handleLinkClick(item.href, e)}>
+                        <a
+                          href={item.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            // Acá podés poner tu animación de cierre si querés
+                            setTimeout(() => {
+                              window.location.href = item.href;
+                            }, 600);
+                          }}
+                        >
                           {item.label}
                         </a>
                       </li>
                     ))}
+
                   </ul>
                 </div>
               </div>
