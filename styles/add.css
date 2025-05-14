@@ -215,7 +215,7 @@ body {
 #draw-on.intiDraw1.anim-drawing {
     position: absolute;
     right: -500px;
-    top: -150px;
+    top: 0;
     height: 100%;
 }
 .anim-drawing {
@@ -227,17 +227,10 @@ body {
 
 
 
-.tt-title-brands {
-    font-size: calc(8px + 6vw);
-    margin-left: 3.5%;
-    line-height: 1;
-    margin-right: 2%;
-}
 #draw-on.intiDraw2.anim-drawing {
     position: absolute;
     right: 255px;
-    top: -355px;
-    height: 60%;
+    top: -255px;
 }
 
 
@@ -543,3 +536,109 @@ body {
 	transform: scale(1);
 	transform-origin: 50% 100%;
 }
+
+
+
+
+
+
+
+
+
+
+/*COLLABS*/
+.tt-partners-carousel .swiper-horizontal {
+    padding: 0 2.8%;
+}
+
+.tt-partners-carousel .swiper-horizontal>.swiper-scrollbar,
+.tt-partners-carousel .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: absolute;
+    background: rgb(0 0 0 / 30%)
+}
+
+.tt-partners-carousel .swiper-scrollbar-drag {
+    background: #ffb2c7
+}
+
+.tt-partners-carousel .swiper-horizontal>.swiper-scrollbar,
+.tt-partners-carousel .swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: var(--swiper-scrollbar-sides-offset, 4%)
+}
+
+
+.tt-title-brands {
+    font-size: calc(8px + 8vw);
+    padding-left: 2.5%;
+    line-height: 1;
+    padding-right: 2.5%;
+}
+
+.tt-partners-carousel .swiper-scrollbar {
+    visibility: hidden
+}
+
+@media (max-width:760px) {
+    .tt-partners-carousel .swiper-scrollbar {
+        visibility: initial
+    }
+    .tt-partners-carousel .swiper-wrapper {
+        padding-bottom: 2rem
+    }
+}
+
+.tt-partners-carousel .swiper-horizontal {
+    padding: 0 2.8%;
+}
+
+
+.tt-partners-carousel-item h4 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.tt-partners-carousel-item p {
+    margin: 0 0 30px;
+    line-height: normal;
+    font-size: 1rem;
+}
+
+.tt-partners-carousel-item figure {
+    margin-bottom: 25px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+}
+
+
+.tt-partners-carousel-item figure img {
+    width: auto;
+    height: auto
+}
+
+@media (max-width:760px) {
+    .tt-partners-carousel-item figure img {
+        max-width: 200px
+    }
+}
+
+@media (max-width:2800px) {
+    .tt-partners-carousel .swiper-slide {
+        width: 30vw;
+        padding-right: 5vw;
+    }
+}
+
+@media (max-width:768px) {
+    .tt-partners-carousel .swiper-slide {
+        width: 40vw
+    }
+}
+
+@media (max-width:767px) {
+    .tt-partners-carousel .swiper-slide {
+        width: 70vw
+    }
+}
+
+

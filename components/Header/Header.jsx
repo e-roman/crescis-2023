@@ -35,14 +35,14 @@ export default function Header() {
           </div>
           <nav className="tt-overlay-menu tt-ol-menu-center tt-ol-menu-count">
             <div className="tt-ol-menu-holder">
-              <div className="tt-ol-menu-inner tt-wrap">
+              <div className="tt-ol-menu-inner tt-wrap-xl">
                 <div className="tt-ol-menu-content">
                   <ul className="tt-ol-menu-list">
                   {[
                       { href: "/", label: "Home" },
                       { href: "/projects", label: "Projects" },
+                      { href: "/about", label: "Who we Are" },
                       { href: "/expertise", label: "Expertise" },
-                      { href: "/about", label: "About" }
                     ].map(item => (
                       <li key={item.href}>
                         <a
@@ -55,7 +55,8 @@ export default function Header() {
                             }, 600);
                           }}
                         >
-                          {item.label}
+                          <span>{item.label}</span>
+                          <span className="arrow-navlink"><svg width="70" height="48" viewBox="0 0 70 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5568 19.9733L13.781 21.4372L13.1364 19.8516L16.0516 18.7206L28.5508 6.50449L22.5777 0.666679L0 22.7329L0 25.4675L22.3726 47.3333L28.3457 41.4955L16.0516 29.4799L13.1364 28.3488L13.781 26.7632L17.5568 28.2271L70 28.0768V19.8194L17.5568 19.9697V19.9733Z" fill="#FFB2C7"></path></svg></span> 
                         </a>
                       </li>
                     ))}

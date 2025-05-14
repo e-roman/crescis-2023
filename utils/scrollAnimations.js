@@ -298,7 +298,7 @@ export function initScrollAnimations() {
     tl.from(el, {
       duration: 1.5,
       autoAlpha: 0,
-      scale: 1.2,
+      scale: 1.5,
       ease: "power2.out",
       clearProps: "all"
     });

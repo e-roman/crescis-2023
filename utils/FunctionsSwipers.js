@@ -358,3 +358,58 @@ export function initTestimonialsSlider() {
     }
   });
 }
+
+
+
+
+
+export function initPartnersSlider() {
+  if (typeof window === 'undefined') return;
+
+  document.querySelectorAll('.tt-partners-slider').forEach(sliderEl => {
+    const container = sliderEl.querySelector('.swiper');
+    if (!container) return;
+
+    const swiperOptions = {
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      loop: false,
+      slidesPerGroup: 1,
+      freeMode: true,
+      spaceBetween: 0,
+      speed: 1000,
+      grabCursor: true,
+      scrollbar: {
+        el: sliderEl.querySelector('.swiper-scrollbar'),
+        hide: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          scrollbar: true,
+        },
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          scrollbar: true,
+        },
+        1024: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          slidesPerGroup: 1,
+          scrollbar: false,
+        },
+        1940: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+          slidesPerGroup: 1,
+          scrollbar: false,
+        },
+      },
+    };
+
+    // 👉 Crear instancia de Swiper
+    new Swiper(container, swiperOptions);
+  });
+}
