@@ -182,7 +182,6 @@ export default function Home() {
 													<figure className="pgi-video-wrap ttgr-height">
 														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
 															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-preview.mp4" type="video/mp4" />
-															<source src="/assets/vids/fashion-week.webm" type="video/webm" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> {/*/.pgi-image-inner */}
@@ -283,7 +282,12 @@ export default function Home() {
 							<div className="pi-item-category">Varia</div>
 						</div>
 						<figure className="pi-item-image cover-opacity-2">
-							<img src="/assets/img/portfolio/portfolio-1.jpg" alt="image" />
+							<Image
+								src="/assets/img/portfolio/portfolio-1.jpg"
+								alt="Imagen de ejemplo"
+								width={800}
+								height={600}
+							/>
 						</figure>
 					</div>
 					{/*}End portfolio interactive item */}
@@ -302,7 +306,12 @@ export default function Home() {
 							<div className="pi-item-category">Varia</div>
 						</div>
 						<figure className="pi-item-image cover-opacity-2">
-							<img src="/assets/img/portfolio/portfolio-2.jpg" alt="image" />
+							<Image
+								src="/assets/img/portfolio/portfolio-2.jpg"
+								alt="Imagen de ejemplo"
+								width={800}
+								height={600}
+							/>
 						</figure>
 					</div>
 					{/*}End portfolio interactive item */}
@@ -323,7 +332,6 @@ export default function Home() {
 						<figure className="pi-item-image cover-opacity-2">
 							<video className="pi-item-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
 								<source src="/assets/vids/fashion-week.mp4" type="video/mp4" />
-								<source src="/assets/vids/fashion-week.webm" type="video/webm" />
 							</video>
 						</figure>
 					</div>
@@ -343,7 +351,12 @@ export default function Home() {
 							<div className="pi-item-category">Varia</div>
 						</div>
 						<figure className="pi-item-image cover-opacity-2">
-							<img src="/assets/img/portfolio/portfolio-3.jpg" alt="image" />
+							<Image
+								src="/assets/img/portfolio/portfolio-3.jpg"
+								alt="Imagen de ejemplo"
+								width={800}
+								height={600}
+							/>
 						</figure>
 					</div>
 					{/*}End portfolio interactive item */}
@@ -362,7 +375,12 @@ export default function Home() {
 							<div className="pi-item-category">Varia</div>
 						</div>
 						<figure className="pi-item-image cover-opacity-2">
-							<img src="/assets/img/portfolio/portfolio-4.jpg" alt="image" />
+							<Image
+								src="/assets/img/portfolio/portfolio-4.jpg"
+								alt="Imagen de ejemplo"
+								width={800}
+								height={600}
+							/>
 						</figure>
 					</div>
 					{/*}End portfolio interactive item */}
