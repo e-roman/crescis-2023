@@ -41,7 +41,7 @@ export function initScrollAnimations() {
     // title
     if (document.querySelector(".ph-caption-title")) {
       wrapInner(".ph-caption-title", "ph-title-parallax");
-      tlPhParallax.to(".ph-title-parallax", { y: -40 }, 0);
+      tlPhParallax.to(".ph-title-parallax", { y: -120 }, 0);
     }
     // subtitle
     if (document.querySelector(".ph-caption-subtitle")) {
@@ -343,4 +343,5 @@ export function initScrollAnimations() {
       clearProps: "all"
     }, "+=0.2");
   });
+  
 }

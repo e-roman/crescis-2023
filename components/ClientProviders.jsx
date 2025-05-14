@@ -8,11 +8,12 @@ import { useLayoutEffect } from "react";
 // Components
 import PageTransition from "@/components/PageTransition/PageTransition";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import CursorMagic from "@/components/CursorMagic/CursorMagic";
 
 // Functions
 import { initLenis } from '@/utils/initLenis';
-import { initMagicCursor } from '@/utils/themeFunctions';
+import { initMagicCursor, initScrollToTop, initAnchorScrolling } from '@/utils/themeFunctions';
 import { initScrollAnimations } from '@/utils/scrollAnimations';
 
 export default function ClientProviders({ children }) {
@@ -20,6 +21,8 @@ export default function ClientProviders({ children }) {
     initLenis();
     initMagicCursor();
     initScrollAnimations();
+    initScrollToTop();
+    initAnchorScrolling();
   }, []); 
 
   return (
@@ -32,6 +35,8 @@ export default function ClientProviders({ children }) {
         <div id="content-wrap">
           {children}
         </div>
+
+        <Footer/>
       </div>
     </>
   );

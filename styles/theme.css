@@ -85,7 +85,6 @@ body {
 	background-color: #0a0a0a;
 	line-height: 1.7;
 	font-size: 19px;
-	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 	color: #FFF;
 }
@@ -120,8 +119,6 @@ img {
 }
 
 b, strong {
-	font-weight: bold;
-	font-weight: 700;
 }
 
 section { 
@@ -234,14 +231,14 @@ body {
 .tt-scrolling-text,
 #blog-list.bli-compact .bli-info::before,
 .blog-interactive-item::before {
-	font-family: 'Noto Serif JP', serif;
+	font-family: 'helvetica-regular', serif;
 }
 
 
 /* ------------------------------------------------------------- *
  * Page transitions
 /* ------------------------------------------------------------- */
-
+/* 
 #page-transition {
 	display: none;
 }
@@ -251,7 +248,7 @@ body.tt-transition #page-transition {
 	z-index: 99999;
 }
 
-/* Transition overlay */
+
 body.tt-transition .ptr-overlay {
 	position: fixed;
 	display: block;
@@ -263,7 +260,7 @@ body.tt-transition .ptr-overlay {
 	z-index: 1;
 }
 
-/* Transition preloader */
+
 body.tt-transition .ptr-preloader {
 	position: fixed;
 	top: 50%;
@@ -277,14 +274,105 @@ body.tt-transition .ptr-prel-content {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 15px;
-	font-weight: bold;
 	color: #af1212;
 }
 
 .ptr-prel-image {
-	max-height: 96px; /* You may need to change the img height to match your logo type! */
-	opacity: .2; /* You may need to change the opacity as well! */
+	max-height: 96px;
+	opacity: .2; 
+} */
+
+
+
+
+
+
+
+
+body.tt-transition #page-transition {
+    position: relative;
+    display: block;
+    z-index: 99999;
 }
+body.tt-transition .ptr-overlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #231f27;
+    background-image: url(/assets/img/bg-noise.png);
+    background-repeat: repeat;
+    z-index: 1;
+}
+body.tt-transition .ptr-overlay:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    background: #ffb2c7;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+body.tt-transition .ptr-preloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+body.tt-transition .ptr-prel-content {
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.ptr-prel-image {
+    opacity: .9;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+}
+
+
+@-webkit-keyframes animate-svg-stroke-1 {
+    0% {
+        stroke-dashoffset: 17560.09765625px;
+        stroke-dasharray: 17560.09765625px
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 17560.09765625px
+    }
+}
+
+@keyframes animate-svg-stroke-1 {
+    0% {
+        stroke-dashoffset: 17560.09765625px;
+        stroke-dasharray: 17560.09765625px;
+        stroke-dashoffset: 7389.0029296875px;
+        stroke-dasharray: 7389.0029296875px
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 17560.09765625px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 7389.0029296875px
+    }
+}
+
+.svg-preloader {
+    -webkit-animation: 1s cubic-bezier(.47, 0, .745, .715) infinite both animate-svg-stroke-1;
+    animation: 1s cubic-bezier(.47, 0, .745, .715) infinite both animate-svg-stroke-1
+}
+
+
 
 
 /* ----------------------------------------------------------------------------------------- *
@@ -293,11 +381,11 @@ body.tt-transition .ptr-prel-content {
 /* ----------------------------------------------------------------------------------------- */
 
 body.tt-boxed .tt-wrap {
-	max-width: 1282px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 15px;
-	padding-right: 15px;
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 body.tt-boxed .tt-wrap-xl {
@@ -308,6 +396,10 @@ body.tt-boxed .tt-wrap-xl {
 	padding-right: 15px;
 }
 
+body.tt-boxed .tt-p-md {
+	padding-left: 3.5%;
+	padding-right: 3.5%;
+}
 
 /* ------------------------------------------------------------- *
  * Body inner
@@ -461,7 +553,6 @@ body.tt-magic-cursor #magic-cursor {
 	visibility: hidden;
 	padding: 0 5px;
 	font-size: 14px;
-	font-weight: 500;
 	color: #222;
 	line-height: 1.3;
 	text-align: center;
@@ -481,7 +572,6 @@ body.tt-magic-cursor #magic-cursor {
 	width: 100%;
 	padding: 0 5px;
 	font-size: 15px;
-	font-weight: 600;
 	color: #FFF;
 	line-height: 1.2;
 	text-align: center;
@@ -499,7 +589,6 @@ body.tt-magic-cursor #magic-cursor {
 
 	/* Font Awesome */
 	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -529,7 +618,6 @@ body.tt-magic-cursor #magic-cursor {
 	position: absolute;
 	padding: 0 5px;
 	font-size: 14px;
-	font-weight: 600;
 	color: #FFF;
 	line-height: 1;
 	text-align: center;
@@ -590,9 +678,8 @@ body.tt-magic-cursor #magic-cursor {
 /* ------------------------------------------------------------- */
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-	font-weight: bold;
-	font-weight: 500;
 	color: inherit;
+	font-weight: normal;
 }
 .h1, .h2, .h3, h1, h2, h3 {
 	line-height: 1.4;
@@ -630,18 +717,12 @@ body.tt-magic-cursor #magic-cursor {
 .tt-heading-title {
 	margin: 0;
 	font-size: calc(24px + 1vw);
-	font-weight: bold;
-	font-weight: 500;
-	color: #FFF;
 }
 
 /* tt-Headings subtitle */
 .tt-heading-subtitle {
 	margin: 0 0 20px 0;
 	font-size: calc(19px + 0.1vw);
-	font-weight: bold;
-	font-weight: normal;
-	color: #FFF;
 }
 .tt-heading-title + .tt-heading-subtitle {
 	margin: 20px 0 0 0;
@@ -664,8 +745,6 @@ body.tt-magic-cursor #magic-cursor {
 ====================== */
 /* style stroke */
 .tt-heading.tt-heading-stroke .tt-heading-title {
-	font-weight: bold;
-	font-weight: 800;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #FFF;
 	-webkit-text-fill-color: transparent;
@@ -697,8 +776,6 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 /* size xsm */
 .tt-heading.tt-heading-xsm .tt-heading-title {
 	font-size: calc(24px + 0.1vw);
-	font-weight: bold;
-	font-weight: 600;
 }
 .tt-heading.tt-heading-xsm .tt-heading-subtitle {
 	font-size: calc(13px + 0.1vw);
@@ -707,8 +784,6 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 /* size sm */
 .tt-heading.tt-heading-sm .tt-heading-title {
 	font-size: calc(24px + 0.5vw);
-	font-weight: bold;
-	font-weight: 600;
 }
 .tt-heading.tt-heading-sm .tt-heading-subtitle {
 	font-size: calc(15px + 0.1vw);
@@ -721,8 +796,6 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 }
 .tt-heading.tt-heading-lg .tt-heading-subtitle {
 	font-size: calc(16px + 0.3vw);
-	font-weight: bold;
-	font-weight: 500;
 }
 
 /* size xlg */
@@ -737,8 +810,6 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 }
 .tt-heading.tt-heading-xlg .tt-heading-subtitle {
 	font-size: calc(16px + 0.3vw);
-	font-weight: bold;
-	font-weight: 500;
 }
 
 /* size xxlg */
@@ -753,8 +824,6 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 }
 .tt-heading.tt-heading-xxlg .tt-heading-subtitle {
 	font-size: calc(21px + 0.3vw);
-	font-weight: bold;
-	font-weight: 500;
 }
 
 
@@ -950,7 +1019,7 @@ body:not(.tt-boxed) .tt-header-inner,
 		display: block;
 		padding: 20px 5px;
 		font-size: 15px;
-		font-weight: 500;
+
 		color: #FFF;
 		transition: color 0.3s, opacity 0.3s;
 	}
@@ -1019,7 +1088,6 @@ body:not(.tt-boxed) .tt-header-inner,
 		padding: 10px 25px 10px 20px;
 		text-decoration: none;
 		font-size: 14px;
-		font-weight: 400;
 		line-height: 1.4;
 		color: #111;
 		transition: all 0.2s ease-in-out;
@@ -1058,7 +1126,7 @@ body:not(.tt-boxed) .tt-header-inner,
 
 		font-family: "Font Awesome 5 Free";
 		content: "\f107";
-		font-weight: 900;
+
 		display: inline-block;
 		font-style: normal;
 		font-variant: normal;
@@ -1165,7 +1233,7 @@ body:not(.tt-boxed) .tt-header-inner,
 		position: relative;
 		display: inline-block;
 		font-size: 34px;
-		font-weight: 600;
+
 		line-height: 1.2;
 		color: #eaeaea;
 	}
@@ -1240,7 +1308,7 @@ body:not(.tt-boxed) .tt-header-inner,
 		padding-top: 8px;
 		padding-bottom: 8px;
 		font-size: 16px;
-		font-weight: normal;
+
 		color: #AAA;
 		-webkit-text-stroke: 0;
 	}
@@ -1277,7 +1345,7 @@ body:not(.tt-boxed) .tt-header-inner,
 	.tt-m-caret::after {
 		font-family: "Font Awesome 5 Free";
 		content: "\f107";
-		font-weight: 900;
+
 		display: inline-block;
 		font-style: normal;
 		font-variant: normal;
@@ -1490,7 +1558,7 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 		left: -30px;
 		line-height: 1;
 		font-size: 14px;
-		font-weight: normal;
+
 		color: #FFF;
 		opacity: 0.4;
 	}
@@ -1502,8 +1570,6 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 	position: relative;
 	display: inline-block;
 	font-size: clamp(34px, 3.2vw, 62px);
-	font-weight: bold;
-	font-weight: 600;
 	line-height: 1.2;
 	color: #eaeaea;
 	transition: opacity 0.3s ease-in-out;
@@ -1608,7 +1674,6 @@ body:not(.is-mobile) .tt-ol-menu-list > li > .tt-ol-submenu-trigger.tt-ol-submen
 .tt-ol-submenu-caret::after {
 	font-family: "Font Awesome 5 Free";
 	content: "\f107";
-	font-weight: 900;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -1806,8 +1871,6 @@ body.olm-toggle-no-click .tt-ol-menu-toggle-btn {
 	display: flex;
 	align-items: flex-end;
 	font-size: calc(28px + 28vw);
-	font-weight: bold;
-	font-weight: 600;
 	color: #FFF;
 	white-space: nowrap;
 	line-height: 1;
@@ -1833,8 +1896,6 @@ body.olm-toggle-no-click .tt-ol-menu-toggle-btn {
 .tt-search-title {
 	margin-bottom: 10%;
 	font-size: clamp(48px, 6vw, 112px);
-	font-weight: bold;
-	font-weight: 500;
 	line-height: 1.3;
 }
 .tt-search .tt-search-form .tt-form-control {
@@ -2119,8 +2180,6 @@ body:not(.tt-boxed) .page-header-inner,
 	position: relative;
 	margin: 0;
 	font-size: clamp(40px, 5vw, 94px);
-	font-weight: bold;
-	font-weight: 500;
 	color: #FFF;
 	line-height: 1.3;
 	z-index: 9;
@@ -2137,8 +2196,6 @@ body:not(.tt-boxed) .page-header-inner,
 	left: -6%;
 	padding-top: 8%;
 	font-size: calc(16px + 9vw);
-	font-weight: bold;
-	font-weight: 600;
 	color: #FFF;
 	white-space: nowrap;
 	line-height: 1;
@@ -2151,7 +2208,6 @@ body:not(.tt-boxed) .page-header-inner,
 	position: relative;
 	margin-top: 40px;
 	font-size: calc(15px + 0.5vw);
-	font-weight: 600;
 	color: #e4e4e4;
 	z-index: 9;
 }
@@ -2187,14 +2243,12 @@ a.ph-category:hover {
 	margin-top: 40px;
 	font-size: 16px;
 	color: #cacaca;
-	font-weight: normal;
 	z-index: 9;
 }
 .ph-meta-published {
 }
 .ph-meta-posted-by {
 	margin-left: 10px;
-	font-weight: normal;
 }
 .ph-meta-posted-by a {
 	position: relative;
@@ -2296,7 +2350,6 @@ a.ph-category:hover {
 .project-info-list .pi-list-heading {
 	margin-bottom: 5px;
 	font-size: calc(17px + 0.1vw);
-	font-weight: normal;
 	opacity: .7;
 }
 
@@ -2341,13 +2394,13 @@ a.ph-category:hover {
 /* Scroll down circle 
 ====================== */
 .scroll-down-circle {
-	position: absolute;
-	display: block;
-	left: 3%;
-	bottom: -100px;
-	width: 250px;
-	height: 250px;
-	z-index: 9;
+    position: absolute;
+    display: block;
+    right: 2%;
+    bottom: -100px;
+    width: 250px;
+    height: 250px;
+    z-index: 9;
 }
 @media (max-width: 1024px) {
 	.scroll-down-circle {
@@ -2382,7 +2435,6 @@ a.ph-category:hover {
 }
 .scroll-down-circle text { 
 	font-size: 33px;
-	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: 25px;
 	fill: #BBB;
@@ -2559,8 +2611,6 @@ a.ph-category:hover {
 	display: flex;
 	align-items: flex-end;
 	font-size: calc(28px + 34vw);
-	font-weight: bold;
-	font-weight: 600;
 	color: #FFF;
 	white-space: nowrap;
 	line-height: 1;
@@ -2584,11 +2634,9 @@ a.ph-category:hover {
 .ph-share-title {
 	margin-bottom: 15px;
 	font-size: clamp(32px, 4vw, 62px);
-	font-weight: 600;
 }
 .ph-share-subtitle {
 	font-size: 19px;
-	font-weight: 300;
 	color: #c1c1c1;
 }
 .ph-share-content .social-buttons {
@@ -2640,8 +2688,6 @@ body.ph-share-open .scrollbar-track {
 ====================== */
 /* page header caption title (stroke style) */
 #page-header.ph-stroke .ph-caption-title {
-	font-weight: bold;
-	font-weight: 800;
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: #FFF;
 	-webkit-text-fill-color: transparent;
@@ -2700,7 +2746,7 @@ body.ph-share-open .scrollbar-track {
 @media (min-width: 1025px) {
 	#page-header.ph-full {
 		display: flex;
-		align-items: center;
+		align-items: end;
 		min-height: 100vh;
 	}
 	#page-header.ph-full .page-header-inner {
@@ -2814,7 +2860,6 @@ body.ph-bg-image-light-on #page-header.ph-stroke .ph-caption-title {
 body.ph-bg-image-light-on #page-header .project-info-list,
 body.ph-bg-image-light-on #page-header .project-info-list .pi-list-cont a {
 	color: #111;
-	font-weight: 500;
 }
 body.ph-bg-image-light-on #page-header .project-info-list > ul > li::after {
 	background-color: rgb(92 92 92 / 40%);
@@ -3049,8 +3094,6 @@ body.ttgr-cat-nav-open {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	font-size: calc(26px + 1.2vw);
-	font-weight: bold;
-	font-weight: 700;
 	line-height: 1.2;
 	color: #BBB;
 	transition: color 0.3s ease-in-out;
@@ -3079,7 +3122,7 @@ body.ttgr-cat-nav-open {
 		left: -40px;
 		line-height: 1;
 		font-size: 14px;
-		font-weight: normal;
+
 		color: #FFF;
 		opacity: 0.4;
 	}
@@ -3777,8 +3820,6 @@ video.pgi-video {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	font-size: calc(19px + 1.5vw);
-	font-weight: bold;
-	font-weight: 600;
 	color: #FFF;
 	line-height: 1.5;
 }
@@ -4148,8 +4189,6 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 .pli-title { 
 	margin: 0;
 	font-size: calc(16px + 2vw);
-	font-weight: bold;
-	font-weight: 500;
 	color: #FFF;
 	line-height: 1.3;
 }
@@ -4229,7 +4268,6 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 	content: "" counter(pli-counter, decimal-leading-zero);
 	line-height: 1;
 	font-size: calc(17px + 0.1vw);
-	font-weight: normal;
 	z-index: 99999;
 }
 @media (min-width: 768px) {
@@ -4453,8 +4491,6 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 		-webkit-text-fill-color: transparent;
 	}
 	.portfolio-list.pli-title-stroke .pli-title {
-		font-weight: bold;
-		font-weight: 700;
 	}
 
 	/* If Firefox */
@@ -4470,7 +4506,7 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 	}
 	.pli-info-overlay .portfolio-list-item.pli-image-is-light .pli-category {
 		color: #111;
-		font-weight: 500;
+
 	}
 	.pli-info-overlay .portfolio-list-item.pli-image-is-light .pli-image[class*="cover-opacity-"]::before {
 		display: none !important;
@@ -4484,8 +4520,8 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 
 .portfolio-interactive {
 	position: relative;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 @media (max-width: 1024px) {
 	.portfolio-interactive {
@@ -4523,7 +4559,6 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	left: -40px;
 	line-height: 1;
 	font-size: calc(14px + 0.2vw);
-	font-weight: 300;
 	color: #FFF;
 	opacity: .3;
 }
@@ -4554,7 +4589,6 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	display: inline-block;
 	margin: 0;
 	font-size: calc(13px + 0.1vw);
-	font-weight: normal;
 	color: #B3B3B3;
 	line-height: 1.4;
 	transition: transform .6s cubic-bezier(0.51, 0.57, 0.17, 1);
@@ -4604,8 +4638,6 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	margin: 0;
 	padding: 0;
 	font-size: calc(14px + 5vw);
-	font-weight: bold;
-	font-weight: 500;
 	color: #FFF;
 	line-height: 1.5;
 	opacity: .5;
@@ -4623,8 +4655,6 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	margin: 0;
 	padding: 0;
 	font-size: calc(14px + 5vw);
-	font-weight: bold;
-	font-weight: 500;
 	color: #FFF;
 	line-height: 1.5;
 	transform: translate3d(0, 100%, 0);
@@ -4750,8 +4780,6 @@ video.pi-item-video {
 /* Style stroke (no effect on small screens) */
 @media (min-width: 1025px) {
 	.portfolio-interactive.pi-stroke .pi-item-title {
-		font-weight: bold;
-		font-weight: 700;
 		opacity: .75;
 		-webkit-text-stroke-width: 1px;
 		-webkit-text-stroke-color: #FFF;
@@ -4783,7 +4811,7 @@ video.pi-item-video {
 		left: auto;
 		right: 0;
 		font-size: calc(14px + 4vw);
-		font-weight: normal;
+
 		font-style: italic;
 		color: #FFF;
 		opacity: .2;
@@ -4916,8 +4944,6 @@ img.tt-psi-image {
 .tt-ps-caption-title {
 	margin: 0;
 	font-size: clamp(40px, 5.2vw, 100px);
-	font-weight: bold;
-	font-weight: 600;
 	line-height: 1.2;
 }
 .tt-ps-caption-title a {
@@ -4943,7 +4969,6 @@ body:not(.tt-magic-cursor) .tt-ps-caption-title a:hover {
 .tt-ps-caption-category {
 	margin: 30px 0 0 0;
 	font-size: calc(13px + 0.1vw);
-	font-weight: 500;
 }
 @media (max-width: 1024px) {
 	.tt-ps-caption-category {
@@ -4971,8 +4996,6 @@ body:not(.tt-magic-cursor) .tt-ps-caption-title a:hover {
 =================================== */
 /* Style stroke */
 .tt-portfolio-slider-caption.psc-stroke .tt-ps-caption-title {
-	font-weight: bold;
-	font-weight: 800;
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: #FFF;
 	-webkit-text-fill-color: transparent;
@@ -5042,7 +5065,6 @@ body:not(.tt-magic-cursor) .tt-ps-nav-arrow:hover {
 	line-height: 0;
 
 	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -5129,7 +5151,6 @@ body:not(.tt-magic-cursor) .tt-ps-nav-arrow:hover {
 .tt-ps-nav-pagination-fraction {
 	position: relative;
 	font-size: 14px;
-	font-weight: 600;
 	color: #FFF;
 	line-height: 1;
 }
@@ -5300,7 +5321,6 @@ body.psi-light-image-on .tt-header-tools .tt-hti-btn {
 .tt-pc-ghost {
 	position: absolute;
 	font-size: calc(16px + 24vw);
-	font-weight: 600;
 	color: #FFF;
 	opacity: .02;
 	line-height: 1;
@@ -5419,8 +5439,6 @@ video.tt-pci-video {
 .tt-pci-title {
 	margin: 0;
 	font-size: calc(16px + 3.2vw);
-	font-weight: bold;
-	font-weight: 500;
 	color: #FFF;
 	line-height: 1.2;
 }
@@ -5558,7 +5576,6 @@ video.tt-pci-video {
 	transform: translate3d(-50%, -50%, 0);
 }
 .pci-caption-center .tt-pci-title {
-	font-weight: 600;
 }
 .pci-caption-center .tt-pci-caption-back {
 	display: none !important;
@@ -5576,14 +5593,11 @@ video.tt-pci-video {
 		-webkit-text-fill-color: transparent;
 	}
 	.pci-caption-stroke .tt-pci-title {
-		font-weight: bold;
-		font-weight: 700;
 	}
 	.pci-caption-stroke.pci-caption-center .tt-pci-caption-front .tt-pci-title,
 	.pci-caption-stroke.pci-caption-center .tt-pci-caption-back .tt-pci-title {
 		-webkit-text-stroke-width: 2px;
-		font-weight: bold;
-		font-weight: 800;
+
 	}
 
 	/* If Firefox */
@@ -5657,7 +5671,6 @@ video.tt-pci-video {
 	line-height: 0;
 
 	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -5743,7 +5756,6 @@ video.tt-pci-video {
 .tt-pc-pagination-fraction {
 	position: relative;
 	font-size: 14px;
-	font-weight: 600;
 	color: #FFF;
 	line-height: 1;
 }
@@ -5870,7 +5882,6 @@ video.tt-pci-video {
 	/* Font Awesome */
 	content: "\f03d";
 	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -6011,8 +6022,6 @@ video.tt-pci-video {
 	display: block;
 	left: 50%;
 	font-size: clamp(42px, 6vw, 110px);
-	font-weight: bold;
-	font-weight: 500;
 	color: #FFF;
 	line-height: 1.6;
 	opacity: .4;
@@ -6028,8 +6037,6 @@ video.tt-pci-video {
 	position: absolute;
 	left: 50%;
 	font-size: clamp(36px, 6vw, 110px);
-	font-weight: bold;
-	font-weight: 500;
 	color: #FFF;
 	line-height: 1.6;
 	white-space: nowrap;
@@ -6148,8 +6155,7 @@ video.tt-pn-video {
 /* Style stroke (no effect on small screens) */
 @media (min-width: 1025px) {
 	.tt-page-nav.tt-pn-stroke .tt-pn-title {
-		font-weight: bold;
-		font-weight: 800;
+
 		opacity: .6;
 		-webkit-text-stroke-width: 1px;
 		-webkit-text-stroke-color: #FFF;
@@ -6326,7 +6332,6 @@ video.tt-pn-video {
 	position: relative;
 	line-height: 0;
 	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -6416,7 +6421,6 @@ video.tt-pn-video {
 /* Content carousel pagination fraction */
 .tt-cc-pagination-fraction {
 	font-size: 14px;
-	font-weight: 600;
 	color: #FFF;
 	letter-spacing: 2px;
 }
@@ -6572,7 +6576,6 @@ body:not(.is-mobile) .tt-content-carousel.cc-hide-pagination .tt-cc-pagination {
 	position: relative;
 	line-height: 0;
 	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -6716,8 +6719,6 @@ button {
 	margin: 15px 15px 15px 0;
 	text-align: center;
 	font-size: 16px;
-	font-weight: bold;
-	font-weight: 500;
 	overflow: hidden;
 	cursor: pointer;
 	border: none;
@@ -6958,7 +6959,6 @@ body:not(.is-mobile) .tt-btn-link:hover::after {
 	align-items: center;
 	line-height: 1;
 	font-size: 15px;
-	font-weight: 600;
 	color: #eaeaea;
 	transition: opacity 0.2s;
 }
@@ -7008,7 +7008,6 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 .tt-accordion-subtext {
 	margin-top: 10px;
 	font-size: 19px;
-	font-weight: normal;
 	color: #999;
 }
 
@@ -7103,7 +7102,8 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 	padding-bottom: 45px;
 }
 .tt-accordion.tt-ac-xlg .tt-ac-head-title {
-	font-size: calc(24px + 1.5vw);
+	font-size: calc(24px + 3.5vw);
+	color: var(--color-pink);
 }
 
 .tt-accordion.tt-ac-xxlg .tt-accordion-heading {
@@ -7112,6 +7112,12 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 }
 .tt-accordion.tt-ac-xxlg .tt-ac-head-title {
 	font-size: calc(24px + 2vw);
+}
+
+@media (max-width: 1024px) {
+	.tt-accordion.tt-ac-xlg .tt-ac-head-title {
+		font-size: calc(24px + 1.5vw);
+	}
 }
 
 
@@ -7131,8 +7137,6 @@ table {
 	border: none;
 }
 th {
-	font-weight: bold;
-	font-weight: 600;
 }
 th, 
 td {
@@ -7336,7 +7340,6 @@ blockquote.open-quote::before {
 	top: 0;
 	left: 0;
 	font-size: 84px;
-	font-weight: 300;
 	color: #D2D2D2;
 	line-height: 1;
 }
@@ -7408,7 +7411,6 @@ figcaption a:hover {
 	background-color: transparent;
 	padding: 5px 15px;
 	font-size: 17px;
-	font-weight: normal;
 	color: #FFF;
 	border: 1px solid rgb(136 136 136 / 65%);
 	border-radius: 3px;
@@ -7444,8 +7446,6 @@ label {
 	display: inline-block;
 	margin-bottom: 8px;
 	font-size: 17px;
-	font-weight: bold;
-	font-weight: 500;
 }
 label .required {
 	opacity: .8;
@@ -7909,9 +7909,6 @@ video.tt-bg-video {
 	padding-left: 2vw;
 	font-size: 7.5vw;
 	line-height: 1.1;
-	font-weight: bold;
-	font-weight: 500;
-	color: #FFF;
 	white-space: nowrap;
 	animation-name: tt_scrolling_text; 
 	animation-timing-function: linear; 
@@ -7939,12 +7936,7 @@ video.tt-bg-video {
 /* Style stroke */
 @media (min-width: 1025px) {
 	.tt-scrolling-text.scr-text-stroke .tt-scrolling-text-inner {
-		font-weight: bold;
-		font-weight: 700;
-		color: transparent;
-		-webkit-text-stroke-width: 2px;
-		-webkit-text-stroke-color: #AAA;
-		-webkit-text-fill-color: transparent;
+		color: var(--color-pink);
 	}
 }
 
@@ -7977,7 +7969,6 @@ body.tt-boxed .tt-wrap .tt-pagination {
 	align-items: center;
 	line-height: 1;
 	font-size: 28px;
-	font-weight: bold;
 	color: #FFF;
 	opacity: .4;
 	transition: opacity 0.3s;
@@ -8373,7 +8364,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 	position: relative;
 	margin-bottom: 40px;
 	font-size: 21px;
-	font-weight: 700;
 }
 .sidebar-heading:after {
 	position: absolute;
@@ -8404,7 +8394,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 	display: block;
 	text-decoration: none;
 	font-size: 18px;
-	font-weight: normal;
 	color: #b1b1b1;
 	line-height: 1;
 	padding: 10px 0px;
@@ -8421,7 +8410,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 	padding: 8px 9px 8px 9px;
 	text-align: center;
 	font-size: 13px;
-	font-weight: normal;
 	color: #CCC;
 	overflow: hidden;
 	z-index: 1;
@@ -8455,8 +8443,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 .sidebar-post-title {
 	margin: 0 0 5px 0;
 	font-size: 18px;
-	font-weight: bold;
-	font-weight: 500;
 	line-height: 1.4;
 }
 .sidebar-post-title a {
@@ -8522,7 +8508,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 .sidebar-comment-author {
 	display: block;
 	font-size: 15px;
-	font-weight: 500;
 	line-height: 1.2;
 }
 .sidebar-comment-author a {
@@ -8592,7 +8577,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 	background-color: rgb(160 160 160 / 12%);
 	padding: 2px 10px;
 	font-size: 13px;
-	font-weight: 300;
 	color: #cacaca;
 	overflow: hidden;
 	z-index: 1;
@@ -8700,8 +8684,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 .bli-title {
 	margin-bottom: 20px;
 	font-size: clamp(28px, 3vw, 42px);
-	font-weight: bold;
-	font-weight: 600;
 	color: #FFF;
 	line-height: 1.6;
 }
@@ -8735,7 +8717,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 /* Blog list item description */
 .bli-desc {
 	margin-top: 40px;
-	font-weight: 300;
 	font-size: 19px;
 	color: #BBB;
 }
@@ -8800,7 +8781,7 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 		left: 30%;
 		line-height: 1;
 		font-size: clamp(40px, 37vw, 360px);
-		font-weight: normal;
+
 		color: #FFF;
 		opacity: 0.1;
 		z-index: -1;
@@ -8850,7 +8831,7 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 		right: 0;
 		line-height: 1;
 		font-size: clamp(40px, 12vw, 220px);
-		font-weight: normal;
+
 		color: #FFF;
 		opacity: 0.1;
 		z-index: -1;
@@ -8938,8 +8919,6 @@ body.tt-sliding-sidebar-open .tt-sliding-sidebar-close {
 .bi-item-title {
 	margin-bottom: 30px;
 	font-size: clamp(28px, 3vw, 50px);
-	font-weight: bold;
-	font-weight: 600;
 	color: #FFF;
 	line-height: 1.4;
 }
@@ -9068,8 +9047,6 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 .tt-blog-post-tags {
 	padding: 40px 0;
 	font-size: 16px;
-	font-weight: bold;
-	font-weight: 700;
 	overflow: hidden;
 	margin-top: 60px;
 	overflow: hidden;
@@ -9093,7 +9070,6 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 	background-color: rgb(160 160 160 / 12%);
 	padding: 2px 10px;
 	font-size: 13px;
-	font-weight: 300;
 	color: #cacaca;
 	overflow: hidden;
 	z-index: 1;
@@ -9121,8 +9097,6 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 .tt-bps-text {
 	margin-bottom: 16px;
 	font-size: 16px;
-	font-weight: bold;
-	font-weight: 700;
 }
 
 .tt-blog-post-share .social-buttons {
@@ -9164,8 +9138,6 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 .tt-bp-nav-text {
 	margin-bottom: 10px;
 	font-size: 16px;
-	font-weight: bold;
-	font-weight: 500;
 	color: #999;
 }
 @media (max-width: 680px) {
@@ -9299,7 +9271,6 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 	display: block;
 	margin-bottom: 15px;
 	font-size: 14px;
-	font-weight: normal;
 	color: #999;
 }
 
@@ -9366,7 +9337,6 @@ body.tt-boxed .blog-single-inner.tt-wrap {
 #tt-post-comment-form .tt-post-comment-reminder label {
 	padding-top: 3px;
 	font-size: 15px;
-	font-weight: normal;
 	color: #888;
 	text-transform: unset;
 	letter-spacing: 0;

@@ -1,5 +1,5 @@
 {
-  "name": "crs-website-react",
+  "name": "Crescis-2023",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
     "next": "15.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "split-type": "^0.3.4",
     "swiper": "^11.2.6",
     "vanilla-lazyload": "^19.1.3"
   },

@@ -1,12 +1,24 @@
-// themeFunctions.js
-// Adaptado para React y Next.js (sin jQuery)
-
+// MagixCursor.js
 import { gsap, Power2, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 // Registrar plugins GSAP
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
+
+export function initDraw() {
+  document.querySelectorAll(".draw-on").forEach((el) => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        start: "center center",
+        end: "+=900",
+        toggleClass: "active",
+        once: true,
+      },
+    });
+  });
+}
+
 
 
 // Magic Cursor Initialization
@@ -366,29 +378,6 @@ export function initMagicCursor() {
 }
 
 
-// Scroll To Top Button
-export function initScrollToTop() {
-  if (typeof window === "undefined") return;
-
-  const scrollBtn = document.getElementById("scroll-to-top");
-
-  if (!scrollBtn) return;
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 700) {
-      scrollBtn.classList.add("show");
-    } else {
-      scrollBtn.classList.remove("show");
-    }
-  });
-
-  scrollBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    gsap.to(window, { duration: 1.5, scrollTo: 0, ease: "power3.inOut" });
-  });
-}
-
-
 // Smooth Scroll Between Anchors
 export function initAnchorScrolling() {
   if (typeof window === "undefined") return;
@@ -441,7 +430,7 @@ export function initScrollingText() {
 
 
 // Init scroll-to-top buttons
-export function initScrollToTopButton() {
+export function initScrollToTop() {
   if (typeof window === 'undefined') return;
   document.querySelectorAll('.scroll-to-top').forEach(btn => {
     btn.addEventListener('click', e => {
@@ -458,7 +447,7 @@ export function initScrollToTopButton() {
         }
       }
       // fallback nativo / GSAP ScrollToPlugin
-      gsap.to(window, { duration: 0.8, scrollTo: { y: 0 }, ease: 'expo.inOut' });
+      gsap.to(window, { duration: 1.5, scrollTo: { y: 0 }, ease: 'expo.inOut' });
     });
   });
 }

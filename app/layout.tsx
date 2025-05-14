@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 import "@/styles/helper.css";
 import "@/styles/theme.css";
+import "@/styles/add.css";
+
 
 import ClientProviders from "@/components/ClientProviders"; 
 

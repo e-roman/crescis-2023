@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 let scroll
 
 export function initLenis() {
-  scroll = new Lenis({ duration: 1 })
+  scroll = new Lenis({ duration: 1.5 })
 
   scroll.on('scroll', () => {
     ScrollTrigger.update()
