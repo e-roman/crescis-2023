@@ -1,17 +1,24 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
+import { useParams } from 'next/navigation';
+
+// Functions
 
 
 export default function ProjectDetail() {
+  const params = useParams();
+  const slug = params.slug;
+
+
   useEffect(() => {
     // Aquí puedes colocar otras inicializaciones que sean necesarias
   }, []);
 
   return (
     <>
-      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-shadow ph-image-cover-5 ph-content-parallax">
-        <div className="page-header-inner tt-wrap">
+      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-5 ph-content-parallax">
+        <div className="page-header-inner tt-wrap-xl padding-lr-xl">
           <div className="ph-image">
             <div className="ph-image-inner">
                 <Image

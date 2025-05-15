@@ -1,21 +1,18 @@
 
 "use client";
 import { useEffect } from "react";
+import Link from "next/link";
+
+// Functions
 import { initIsotope } from "@/utils/FunctionsIsotope";
 import { initPortfolioFilter } from "@/utils/initPortfolioFilter";
 
-// Functions
-import { initScrollingText, initTitleHoverProjects, initDraw } from '@/utils/themeFunctions';
-import { initPortfolioGrid } from '@/utils/themeFunctions2';
 
 
 export default function Projects() {
   useEffect(() => {
     initIsotope();
     initPortfolioFilter();
-   
-    initTitleHoverProjects();   
-    initPortfolioGrid();    
   }, []);
 
   return (
@@ -23,8 +20,8 @@ export default function Projects() {
 
 
 
-        <div id="page-header" className="ph-full ph-hero-about">
-            <div className="page-header-inner tt-wrap-xl padding-top-100">
+        <div id="page-header" className="ph-full ph-hero-projects">
+            <div className="page-header-inner tt-wrap-xl padding-lr-xl padding-top-100">
                 
                 <div className="ph-image-bg">
                     <div className="drawLoaded anim-drawing">
@@ -33,8 +30,8 @@ export default function Projects() {
                 </div>
                 
                 
-                <div className="ph-caption about-caption is-hidden">
-                    <h1 className="ph-caption-title ph-caption-title-about split-lines-init not-split-in">WE MAKE BRANDS THAT CAN´T BE INGNORED</h1>
+                <div className="ph-caption projects-caption is-hidden">
+                    <h1 className="ph-caption-title ph-caption-title-projects split-lines-init not-split-in">WE MAKE BRANDS THAT CAN´T BE INGNORED</h1>
                 </div> 
                 
             </div> 
@@ -54,345 +51,203 @@ export default function Projects() {
                 </svg>
               </div> 
             </a>
-
-            <div className="made-with-love ph-appear">
-              <div className="mwl-inner">
-                <div className="mwl-text">Made with</div>
-                <div className="mwl-icon"><i className="far fa-heart"></i></div>
-              </div>
-            </div>
         </div>
 
 
 
 
+        <div className="portfolio-list pli-info-lg pl-alter pli-cropped pli-hover padding-top-100 padding-top-lg-200 padding-bottom-100 padding-bottom-lg-200 margin-bottom-10-p margin-top-10-p">
 
 
+            <div className="portfolio-list-item">
+                <div className="pli-inner">
 
+                    <div className="tt-col-lg-7">
+                        <a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+                            <div className="pli-image-holder">
+                                <figure className="pli-image">
+                                    <img className="anim-image-parallax tt-lazy" src="/01.png" data-src="/01.png" alt="image"/>
+                                </figure> 
+                            </div> 
 
-        <div className="tt-section">
-            <div className="tt-section-inner">
+                        </a>
+                    </div> 
 
-                <div id="portfolio-grid" className="pgi-cap-inside pgi-cap-hover">
-
-                    <div className="tt-grid ttgr-layout-1-2 ttgr-gap-4">
-
-
-                        <div className="tt-grid-top">
-
-                            <div className="tt-grid-categories">
-
-                                <div className="ttgr-cat-trigger-wrap ttgr-cat-fixed">
-                                    <a href="#portfolio-grid" className="ttgr-cat-trigger not-hide-cursor" data-offset="150">
-                                        <div className="ttgr-cat-text">
-                                            <span data-hover="Open">Filter</span>
-                                        </div>
-                                        <div className="ttgr-cat-icon">
-                                            <span className="magnetic-item"><i className="fas fa-layer-group"></i></span>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div className="ttgr-cat-nav">
-                                    <div className="ttgr-cat-list-holder cursor-close">
-                                        <div className="ttgr-cat-list-inner">
-                                            <div className="ttgr-cat-list-content">
-                                                <ul className="ttgr-cat-list">
-                                                    <li className="ttgr-cat-close">Close <i className="fas fa-times"></i></li> 
-                                                    <li className="ttgr-cat-item"><a href="#" className="active">Show All</a></li>
-                                                    <li className="ttgr-cat-item"><a href="#" data-filter=".branding">Branding</a></li>
-                                                    <li className="ttgr-cat-item"><a href="#" data-filter=".people">People</a></li>
-                                                    <li className="ttgr-cat-item"><a href="#" data-filter=".nature">Nature</a></li>
-                                                    <li className="ttgr-cat-item"><a href="#" data-filter=".creative">Creative</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
+                    <div className="pli-info-col pli-info-outer">
+                        <div className="pli-info">
+                            <div className="pli-counter"></div>
+                            <h2 className="pli-title"><a href="single-project-1.html">Consectetur <br className="hide-from-sm"/>Adipiscing</a></h2> 
+                            <div className="pli-categories-wrap">
+                                <div className="pli-category">Creative</div>
+                                <div className="pli-category">Varia</div>
                             </div>
-                            
-
-                        </div>
-
-
-                        <div className="tt-grid-items-wrap isotope-items-wrap">
-
-                            <div className="tt-grid-item isotope-item people">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-1.jpg" alt="image"/>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Victorian Girls</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">People</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                            
-
-                            <div className="tt-grid-item isotope-item creative">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-2.jpg" alt="image"/>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Smithy</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">Creative</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                            
-
-                            <div className="tt-grid-item isotope-item people">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
-															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-preview.mp4" type="video/mp4" />
-														</video>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Washion Week</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">People</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                            
-
-                            <div className="tt-grid-item isotope-item nature">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-3.jpg" alt="image"/>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Mystery Forest</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">Nature</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                            
-
-                            <div className="tt-grid-item isotope-item branding">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-4.jpg" alt="image"/>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Red Package</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">Branding</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                            
-
-                            <div className="tt-grid-item isotope-item people">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-5.jpg" alt="image"/>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Studio Shoot</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">People</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                            
-
-                            <div className="tt-grid-item isotope-item nature">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-6.jpg" alt="image"/>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Breaking Wave</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">Nature</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                            
-
-                            <div className="tt-grid-item isotope-item branding">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item pgi-image-is-light">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-7.jpg" alt="image"/>
-                                                    </figure> 
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Wall Lamp</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">Branding</div>
-                                                    <div className="pgi-category">Varia</div> 
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-
-                                </div> 
-                            </div>
-
-                            <div className="tt-grid-item isotope-item creative">
-                                <div className="ttgr-item-inner">
-
-                                    <div className="portfolio-grid-item">
-                                        <a href="/projcts/projectDetail" className="pgi-image-wrap" data-cursor="View Project">
-                                            <div className="pgi-image-holder cover-opacity-2">
-                                                <div className="pgi-image-inner anim-zoomin">
-                                                    <figure className="pgi-image ttgr-height">
-                                                        <img src="assets/img/portfolio/portfolio-8.jpg" alt="image"/>
-                                                    </figure>
-                                                </div> 
-                                            </div>
-                                        </a> 
-
-                                        <div className="pgi-caption">
-                                            <div className="pgi-caption-inner">
-                                                <h2 className="pgi-title">Elegant Stoves</h2>
-                                                <div className="pgi-categories-wrap">
-                                                    <div className="pgi-category">Creative</div>
-                                                    <div className="pgi-category">Varia</div>
-                                                </div> 
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-
-                        </div>
-
+                        </div> 
                     </div>
 
-                </div>
-                
-            </div>
+                </div> 
+            </div> 
+            
+
+
+            <div className="portfolio-list-item">
+                <div className="pli-inner">
+
+                    <div className="tt-col-lg-6">
+                        <a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+                            <div className="pli-image-holder">
+                                <div className="pli-image">
+
+                                    <figure className="pli-image">
+                                        <img className="anim-image-parallax tt-lazy" src="/01.png" data-src="/01.png" alt="image"/>
+                                    </figure> 
+                                    
+
+                                </div> 
+                            </div> 
+                        </a>
+                    </div> 
+
+                    <div className="pli-info-col pli-info-outer">
+                        <div className="pli-info">
+                            <div className="pli-counter"></div>
+                            <h2 className="pli-title"><a href="single-project-1.html">Consectetur <br className="hide-from-sm"/>Adipiscing</a></h2> 
+                            <div className="pli-categories-wrap">
+                                <div className="pli-category">People</div>
+                                <div className="pli-category">Varia</div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div> 
+            </div> 
+            
+
+
+            <div className="portfolio-list-item">
+                <div className="pli-inner">
+
+                    <div className="tt-col-lg-5">
+                        <a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+                            <div className="pli-image-holder">
+                                <figure className="pli-image">
+                                    <img className="anim-image-parallax tt-lazy" src="/01.png" data-src="/01.png" alt="image"/>
+                                </figure> 
+                            </div> 
+                        </a>
+                    </div> 
+
+                    <div className="pli-info-col pli-info-outer">
+                        <div className="pli-info">
+                            <div className="pli-counter"></div>
+                            <h2 className="pli-title"><a href="single-project-1.html">Consectetur <br className="hide-from-sm"/>Adipiscing</a></h2> 
+                            <div className="pli-categories-wrap">
+                                <div className="pli-category">Nature</div>
+                                <div className="pli-category">Varia</div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div> 
+            </div> 
+            
+
+
+            <div className="portfolio-list-item">
+                <div className="pli-inner">
+
+                    <div className="tt-col-lg-7">
+                        <a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+                            <div className="pli-image-holder">
+                                <figure className="pli-image">
+                                    <img className="anim-image-parallax tt-lazy" src="/01.png" data-src="/01.png" alt="image"/>
+                                </figure> 
+                            </div> 
+                        </a>
+                    </div> 
+
+                    <div className="pli-info-col pli-info-outer">
+                        <div className="pli-info">
+                            <div className="pli-counter"></div>
+                            <h2 className="pli-title"><a href="single-project-1.html">Consectetur <br className="hide-from-sm"/>Adipiscing</a></h2> 
+                            <div className="pli-categories-wrap">
+                                <div className="pli-category">Branding</div>
+                                <div className="pli-category">Varia</div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div> 
+            </div> 
+            
+
+
+            <div className="portfolio-list-item">
+                <div className="pli-inner">
+
+                    <div className="tt-col-lg-4">
+                        <a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+                            <div className="pli-image-holder">
+                                <figure className="pli-image">
+                                    <img className="anim-image-parallax tt-lazy" src="/01.png" data-src="/01.png" alt="image"/>
+                                </figure> 
+                            </div> 
+                        </a>
+                    </div> 
+
+                    <div className="tt-col-lg-4">
+                        <a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+                            <div className="pli-image-holder">
+                                <figure className="pli-image">
+                                    <img className="anim-image-parallax tt-lazy" src="/01.png" data-src="/01.png" alt="image"/>
+                                </figure> 
+                            </div> 
+                        </a>
+                    </div> 
+
+                    <div className="pli-info-col pli-info-outer">
+                        <div className="pli-info">
+                            <div className="pli-counter"></div>
+                            <h2 className="pli-title"><a href="single-project-1.html">Consectetur <br className="hide-from-sm"/>Adipiscing</a></h2> 
+                            <div className="pli-categories-wrap">
+                                <div className="pli-category">People</div>
+                                <div className="pli-category">Varia</div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div> 
+            </div> 
+            
+
+
+            <div className="portfolio-list-item">
+                <div className="pli-inner">
+
+                    <div className="pli-image-col">
+                        <a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+                            <div className="pli-image-holder">
+                                <figure className="pli-image">
+                                    <img className="anim-image-parallax tt-lazy" src="/01.png" data-src="/01.png" alt="image"/>
+                                </figure> 
+                            </div> 
+                        </a>
+                    </div> 
+
+                    <div className="pli-info-col pli-info-outer">
+                        <div className="pli-info">
+                            <div className="pli-counter"></div>
+                            <h2 className="pli-title"><a href="single-project-1.html">Consectetur <br className="hide-from-sm"/>Adipiscing</a></h2> 
+                            <div className="pli-categories-wrap">
+                                <div className="pli-category">Nature</div>
+                                <div className="pli-category">Varia</div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div> 
+            </div> 
+            
+
         </div>
     </>
   );

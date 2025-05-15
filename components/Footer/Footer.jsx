@@ -12,13 +12,9 @@ return (
 		<div className="tt-footer-inner padding-bottom-70">
 			<div className="footer-col">
 				<div className="footer-col-inner">
-					<div className="tt-copyright anim-fadeinupSmall">
-						<a href="index" target="_blank">
-							<div className="magnetic-wrap">
-							<div className="magnetic-wrap">
-								<img src="https://d2s90tzqqa0vkb.cloudfront.net/assets/img/logo.svg" className="tt-logo-light magnetic-item" alt="Crescis" />
-							</div>
-							</div>
+					<div className="tt-logo-footer anim-fadeinupSmall">
+						<a href="/" target="_blank">
+							<img src="https://d2s90tzqqa0vkb.cloudfront.net/assets/img/logo.svg" alt="Crescis" />
 						</a>
 					</div>
 				</div>
@@ -75,7 +71,7 @@ return (
 		<div className="tt-footer-inner">
 			<div className="footer-col tt-align-center-left">
 				<div className="footer-col-inner">
-					<p>CRESCI®</p>
+					<p>CRESCIS®</p>
 				</div>
 			</div>
 			<div className="footer-col tt-align-center order-m-last">

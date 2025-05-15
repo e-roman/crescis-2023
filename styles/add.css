@@ -4,6 +4,10 @@
     visibility: hidden;
   }
 
+  .padding-lr-xl {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 
 body {
     background-color: #231f27;
@@ -182,7 +186,6 @@ body {
 /*HOME*/
 #page-header {
     height: 70vh;
-    overflow: hidden;
 }
 .ph-video-hm {
     position: absolute;
@@ -251,7 +254,7 @@ body {
 /**footer*/
 #tt-footer {
     overflow: hidden;
-    background-color: rgb(26 23 29);
+    /* background-color: rgb(26 23 29); */
     padding-top: 100px;
 }
 #tt-footer .nav-footer {
@@ -292,13 +295,20 @@ body {
 }
 
 .tt-footer-inner:not(.tt-wrap), body:not(.tt-boxed) .tt-footer-inner {
-    padding-left: 3.5%;
-    padding-right: 3.5%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
+.title-members {
+    font-size: 1rem;
+}
 
-
-
+.tt-logo-footer {
+    width: 85%;
+}
+.tt-logo-footer img {
+    width: 100%;
+}
 
 #legal-footer {
     background: rgb(0 0 0);
@@ -533,8 +543,12 @@ body {
 
 
 #team .tt-image .anim-image-parallax {
-	transform: scale(1);
+	transform: scale(1.1);
 	transform-origin: 50% 100%;
+}
+
+.tt-data-team h4 {
+    margin-bottom: 0;
 }
 
 
@@ -642,3 +656,188 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PRELOADERR NEW*/
+.splash {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #231f27;
+    z-index: 99999
+}
+
+.splash__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ffb2c7;
+    background-position: center;
+    display: block;
+    -webkit-clip-path: ellipse(0px 0px at 50% 50%);
+    clip-path: ellipse(0px 0px at 50% 50%);
+}
+
+.splash__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0
+}
+
+.splash__logo svg {
+    width: 190px;
+    fill:#ffb2c7
+}
+
+
+
+
+/*CURSOR VIEW PROJECT*/
+#ball .ball-view {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    font-weight: 500;
+    color: #222;
+    text-align: center;
+    background-color: #FFB2C7;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    border: solid 2px #FFB2C7;
+    border-radius: 100%;
+    z-index: 9;
+}
+#ball .ball-view svg {
+    font-size: 2.4rem;
+}
+#ball .ball-view svg {
+    width: 135px;
+    position: absolute;
+    animation: rotation 10s infinite linear;
+    pointer-events: none;
+    transition: top .5s, left .5s;
+    transition-timing-function: ease-out;
+}
+@keyframes rotation {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(359deg);
+}
+}
+
+.ball-view:before {
+    -webkit-animation: linkBefore .5s cubic-bezier(.87, 0, .13, 1);
+    animation: linkBefore .5s cubic-bezier(.87, 0, .13, 1);
+    border-right: 0.15rem solid #231F27;
+    border-top: 0.15rem solid #231F27;
+    box-sizing: border-box;
+    content: "";
+    height: 1.7rem;
+    position: absolute;
+    right: 2.2rem;
+    top: 2.3rem;
+    width: 1.8rem;
+}
+.ball-view:after {
+    -webkit-animation: linkAfter .5s cubic-bezier(.87, 0, .13, 1);
+    animation: linkAfter .5s cubic-bezier(.87, 0, .13, 1);
+    background-color: #231F27;
+    content: "";
+    height: 0.15rem;
+    position: absolute;
+    top: 3.3rem;
+    transform: translate(0) rotate(-45deg);
+    width: 3.3em;
+}
+@keyframes linkBefore {
+    0% {
+        transform: translate(-1rem, 1rem);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+@keyframes linkAfter {
+0% {
+    transform: translate(-1rem, 1rem) rotate(-45deg);
+}
+100% {
+    transform: translate(0) rotate(-45deg);
+}
+}
+
+
+
+
+
+
+
+
+/*PROJECTS*/
+.projects-caption {
+    position: relative;
+    max-width: 85vw;
+}
+.ph-caption-title-projects {
+    font-size: clamp(38px, 10.5vw, 150px);
+    line-height: 0.8;
+    margin: 0;
+}
+
+.ph-hero-projects .ph-image-bg .anim-drawing {
+    height: 55%;
+}
+
+
+
+/*CONTACT*/
+.tt-section-contact {
+    height: 100vh;
+}
+.tt-heading-title-contact .tt-heading-title {
+    margin: 0;
+    font-size: calc(28px + 5vw);
+    font-weight: 500;
+    line-height: .9;
+}
+.tt-heading-title-contact .tt-heading-subtitle {
+    margin: 0;
+    font-size: calc(25px + 1vw);
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.1;
+}
+.tt-contact-info > li {
+    padding: 0;
+    font-size: 1.414rem;
+}

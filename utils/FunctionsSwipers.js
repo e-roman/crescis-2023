@@ -366,7 +366,7 @@ export function initTestimonialsSlider() {
 export function initPartnersSlider() {
   if (typeof window === 'undefined') return;
 
-  document.querySelectorAll('.tt-partners-slider').forEach(sliderEl => {
+  document.querySelectorAll('.tt-partners-carousel').forEach(sliderEl => {
     const container = sliderEl.querySelector('.swiper');
     if (!container) return;
 

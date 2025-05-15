@@ -14,10 +14,7 @@ import {
   } from "@/utils/FunctionsAccordion";
   
 import {
-//   initPortfolioSlider,
-//   initPortfolioCarousel,
   initPartnersSlider,
-  initTestimonialsSlider
 } from "@/utils/FunctionsSwipers";
 
 export default function Home() {
@@ -26,9 +23,7 @@ export default function Home() {
 	 animateSplitTextScroll();
     // initPortfolioSlider();
     // initPortfolioCarousel();
-    initPartnersSlider();      
-    initTestimonialsSlider();
-    initAccordion();
+    initPartnersSlider();  
     initScrollingText();       
     initTitleHoverProjects();   
     initPortfolioGrid();    
@@ -37,7 +32,7 @@ export default function Home() {
   return (
     <>
       <div id="page-header" className="ph-full ph-content-parallax">
-        <div className="page-header-inner tt-wrap-xl ">
+        <div className="page-header-inner tt-wrap-xl padding-lr-xl">
             <div className="ph-video-hm">
 				<div className="ph-video-inner">
 				<video className="pgi-video" loop muted autoPlay preload="metadata">
@@ -74,7 +69,7 @@ export default function Home() {
 
 
 
-		<div className="tt-pn-subtitle tt-sub-hero padding-top-lg-200 margin-top-20-p margin-bottom-20-p padding-bottom-lg-200">
+		<div className="tt-pn-subtitle tt-sub-hero padding-top-lg-200 margin-top-20-p margin-bottom-10-p padding-bottom-lg-200">
 			<div className="position-realative">
 				<div className="tt-heading tt-heading-lg">
 					<h2 className="tt-heading-title text-uppercase split-lines not-split">We believe in the power of human connection and the ability to bring people together through design</h2>
@@ -114,7 +109,7 @@ export default function Home() {
 
 									{/*Begin portfolio grid item */}
 									<div className="portfolio-grid-item">
-										<a href="single-project-1.html" className="pgi-image-wrap" data-cursor="View Project">
+										<a href="single-project-1.html" className="pgi-image-wrap" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-image ttgr-height">
@@ -147,7 +142,7 @@ export default function Home() {
 
 
 									<div className="portfolio-grid-item anim-parallax">
-										<a href="single-project-2.html" className="pgi-image-wrap" data-cursor="View Project">
+										<a href="single-project-2.html" className="pgi-image-wrap" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-image ttgr-height">
@@ -180,7 +175,7 @@ export default function Home() {
 
 									{/*Begin portfolio grid item  */}
 									<div className="portfolio-grid-item">
-										<a href="single-project-3.html" className="pgi-image-wrap" data-cursor="View Project">
+										<a href="single-project-3.html" className="pgi-image-wrap" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-video-wrap ttgr-height">
@@ -215,7 +210,7 @@ export default function Home() {
 
 									{/*Begin portfolio grid item  */}
 									<div className="portfolio-grid-item">
-										<a href="single-project-4.html" className="pgi-image-wrap" data-cursor="View Project">
+										<a href="single-project-4.html" className="pgi-image-wrap" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-image ttgr-height">

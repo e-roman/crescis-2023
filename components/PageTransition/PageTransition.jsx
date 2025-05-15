@@ -10,16 +10,6 @@ export default function PageTransition() {
   }, []);
 
   return (
-    // <div id="page-transition">
-    //   <div className="ptr-overlay" />
-    //   <div className="ptr-preloader">
-    //     <div className="ptr-prel-content">
-    //       <Image src="/assets/img/logo-light.png" alt="Logo" width={70} height={50} />
-    //     </div>
-    //   </div>
-    // </div>
-
-
 		<div id="page-transition">
 			<div className="ptr-overlay"></div>
 			<div className="ptr-preloader">

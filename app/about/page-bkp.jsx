@@ -111,6 +111,88 @@ export default function AboutPage() {
 
 
 
+
+            {/* <div className="tt-section">
+                <div className="tt-section-inner">
+                    <div className="tt-content-carousel cc-shifted cursor-drag cc-scale-down cc-hide-pagination cc-hide-navigation" data-simulate-touch="true" data-speed="900">
+                        <div className="swiper">
+                            <div className="swiper-wrapper">
+
+                                <div className="swiper-slide">
+                                    <div className="tt-content-carousel-item">
+                                        <figure className="cover-opacity-1">
+                                            <img className="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-1.jpg" alt="Image"/>
+                                            <figcaption>Image Caption</figcaption>
+                                        </figure>
+                                    </div> 
+                                </div>
+
+                                <div className="swiper-slide">
+                                    <div className="tt-content-carousel-item">
+                                        <figure className="cover-opacity-1">
+                                            <img className="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-2.jpg" alt="Image"/>
+                                            <figcaption>Image Caption</figcaption>
+                                        </figure>
+                                    </div> 
+                                </div>
+
+                                <div className="swiper-slide">
+                                    <div className="tt-content-carousel-item">
+                                        <figure className="cover-opacity-1">
+                                            <video className="tt-cc-video" loop muted preload="metadata" poster="assets/vids/office-team.jpg">
+                                                <source src="/assets/vids/office-team.mp4" type="video/mp4" />
+                                                <source src="/assets/vids/office-team.webm" type="video/webm" />
+                                            </video>
+                                        </figure>
+                                    </div> 
+                                </div> 
+
+                                <div className="swiper-slide">
+                                    <div className="tt-content-carousel-item">
+                                        <figure className="cover-opacity-1">
+                                            <img className="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-3.jpg" alt="Image"/>
+                                            <figcaption>Image Caption</figcaption>
+                                        </figure>
+                                    </div> 
+                                </div>
+
+                                <div className="swiper-slide">
+                                    <div className="tt-content-carousel-item">
+                                        <figure className="cover-opacity-1">
+                                            <img className="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-4.jpg" alt="Image"/>
+                                            <figcaption>Image Caption</figcaption>
+                                        </figure>
+                                    </div> 
+                                </div>
+
+                                <div className="swiper-slide">
+                                    <div className="tt-content-carousel-item">
+                                        <figure className="cover-opacity-1">
+                                            <img className="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-5.jpg" alt="Image"/>
+                                            <figcaption>Image Caption</figcaption>
+                                        </figure>
+                                    </div> 
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div className="tt-cc-nav-prev">
+                            <div className="tt-cc-nav-arrow magnetic-item"></div>
+                        </div>
+                        <div className="tt-cc-nav-next">
+                            <div className="tt-cc-nav-arrow magnetic-item"></div>
+                        </div>
+                        <div className="tt-cc-pagination hide-cursor"></div>
+                    </div>
+                </div>
+            </div> */}
+
+
+
+
+
+
             <div className="tt-section padding-top-xlg-150 padding-bottom-xlg-200">
                 <div className="tt-section-inner tt-wrap-xl tt-p-md ">
 
@@ -166,7 +248,7 @@ export default function AboutPage() {
 
 
 
-            <div className="tt-section no-padding-bottom padding-top-lg-150 padding-bottom-lg-150" id="team">
+            <div className="tt-section no-padding-bottom padding-top-xlg-150" id="team">
                 <div className="tt-section-inner tt-wrap-xl tt-wrap-team">
 
                     <div className="tt-heading tt-heading-xxlg tt-heading-left margin-bottom-10-p padding-left-lg-50">
@@ -413,28 +495,68 @@ export default function AboutPage() {
 
 
 
-            <div className="tt-section padding-top-xlg-150 padding-bottom-lg-150">
-                <div className="tt-section-inner tt-wrap-xl padding-rl-xl">
+            {/* <div className="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
+                <div className="tt-section-inner tt-wrap">
 
-                    <div className="tt-heading tt-heading-xxlg tt-heading-left padding-left-lg-50">
-                        <h2 className="tt-heading-title split-lines not-split">MEMBERS OF</h2>
-                    </div>
-                
-                    <ul className="tt-logo-wall cl-col-44 anim-fadeinup">
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-1.png" alt="Client"/></a></li>
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-2.png" alt="Client"/></a></li>
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-3.png" alt="Client"/></a></li>
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-4.png" alt="Client"/></a></li>
-                    </ul>
+                        <div className="tt-row">
+                            <div className="tt-col-lg-4 padding-right-md-5-p">
+
+                                <div className="tt-heading tt-heading-sm margin-bottom-60 anim-fadeinup">
+                                    <h2 className="tt-heading-title text-gray">Honors &amp;<br className="hide-from-md" /> Mentions</h2>
+                                </div>
+                                
+
+                            </div> 
+
+                            <div className="tt-col-lg-4">
+
+                                <ul className="list-styled">
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">World Brand Design Awards</a></h5>
+                                        <p className="text-gray">Donec fringilla tortor at eros.</p>
+                                    </li>
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">World Design Awards</a></h5>
+                                        <p className="text-gray">Cras quis hendrerit nulla.</p>
+                                    </li>
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">Product Design Awards</a></h5>
+                                        <p className="text-gray">Pellentesque et fermentum.</p>
+                                    </li>
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">Lighting Design Awards</a></h5>
+                                        <p className="text-gray">In non leo quis risus blandit.</p>
+                                    </li>
+                                </ul>
+
+                            </div> 
+
+                            <div className="tt-col-lg-4">
+
+                                <ul className="list-styled">
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">Red Dot Award Design Concept</a></h5>
+                                        <p className="text-gray">Curabitur rhoncus ligula.</p>
+                                    </li>
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">One Color Award</a></h5>
+                                        <p className="text-gray">Orci varius natoque penatibus.</p>
+                                    </li>
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">London International Creative Competition</a></h5>
+                                        <p className="text-gray">Aliquam tellus leone.</p>
+                                    </li>
+                                    <li className="anim-fadeinup">
+                                        <h5 className="no-margin"><a href="https://1.envato.market/tank" className="tt-link" target="_blank" rel="noopener">Green Concept Award</a></h5>
+                                        <p className="text-gray">Phasellus a interdum tellus.</p>
+                                    </li>
+                                </ul>
+
+                            </div> 
+                        </div> 
 
                 </div>
-            </div>
-
-
-
-
-
-
+            </div> */}
 
 
             {/*Scrolling Text*/}
@@ -451,6 +573,62 @@ export default function AboutPage() {
             </div>
 
 
+
+
+
+
+            <div className="tt-section padding-top-xlg-150 padding-bottom-xlg-50">
+                <div className="tt-section-inner tt-wrap">
+
+                    <div className="tt-heading tt-heading-xxlg tt-heading-center margin-bottom-10-p anim-fadeinup">
+                        <h3 className="tt-heading-subtitle text-gray">Colabs</h3>
+                        <h2 className="tt-heading-title split-lines not-split">TRUSTED COLABS</h2>
+                    </div>
+                
+                    <ul className="tt-logo-wall cl-col-44 anim-fadeinup">
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-1.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-2.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-3.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-4.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-5.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-6.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-7.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-8.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-9.png" alt="Client"/></a></li>
+                        <li><a href="https://1.envato.market/tank" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-10.png" alt="Client"/></a></li>
+
+                    
+                        <li><img src="assets/img/clients/client-1.png" alt="Client" /></li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div className="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
+                <div className="tt-section-inner tt-wrap">
+
+
+                    <div className="tt-page-nav tt-pn-scroll">
+                        <a href="portfolio-grid-modern.html" className="tt-pn-link anim-fadeinup">
+                            <div className="tt-pn-title">Explore</div>
+                            <div className="tt-pn-hover-title">Explore</div>
+                        </a> 
+
+                        <div className="tt-pn-subtitle anim-fadeinup">Our Projects</div>
+
+                        <div className="tt-pn-image">
+                            <img src="assets/img/page-header/ph-1.jpg" alt="image"/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>  
     </>

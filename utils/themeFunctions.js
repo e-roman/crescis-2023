@@ -10,7 +10,7 @@ export function initDraw() {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: el,
-        start: "center center",
+        start: "10% center",
         end: "+=900",
         toggleClass: "active",
         once: true,
@@ -58,8 +58,8 @@ export function initMagicCursor() {
     const ballWidth       = 34;
     const ballHeight      = 34;
     const ballScale       = 1;
-    const ballOpacity     = 0.5;
-    const ballBorderWidth = 2;
+    const ballOpacity     = 0.8;
+    const ballBorderWidth = 0;
 
     gsap.set(ball, {
       xPercent:      -50,
@@ -68,7 +68,7 @@ export function initMagicCursor() {
       height:        ballHeight,
       borderWidth:   ballBorderWidth,
       opacity:       ballOpacity,
-      backgroundColor:"transparent"
+      backgroundColor: "#FFB2C7"
     });
 
     let mouse  = { x: window.innerWidth/2, y: window.innerHeight/2 };
@@ -170,75 +170,239 @@ export function initMagicCursor() {
     });
 
     // --- data-cursor views ---
-    document.querySelectorAll("[data-cursor]").forEach(el => {
+document.querySelectorAll("[data-cursor]").forEach(el => {
+  el.classList.add("not-hide-cursor");
+
+  el.addEventListener("mouseenter", () => {
+    // Eliminar cualquier .ball-view anterior si existe
+    const existingView = ball.querySelector(".ball-view");
+    if (existingView) existingView.remove();
+
+    // Crear nuevo .ball-view
+    const view = document.createElement("div");
+    view.className = "ball-view";
+
+    const label = el.getAttribute("data-cursor");
+    if (label && label.trim() !== "") {
+      view.textContent = label;
+    }
+
+    ball.appendChild(view);
+
+    // Animar entrada del cursor
+    gsap.to(ball, {
+      duration: 0.3,
+      yPercent: -75,
+      width: 95,
+      height: 95,
+      opacity: 1,
+      borderWidth: 0,
+      backgroundColor: "#FFF"
+    });
+
+    gsap.fromTo(view, {
+      scale: 0,
+      autoAlpha: 0
+    }, {
+      duration: 0.3,
+      scale: 1,
+      autoAlpha: 1
+    });
+  });
+
+  el.addEventListener("mouseleave", () => {
+    // Restaurar estado del cursor
+    gsap.to(ball, {
+      duration: 0.3,
+      yPercent: -50,
+      width: ballWidth,
+      height: ballHeight,
+      opacity: ballOpacity,
+      borderWidth: ballBorderWidth,
+      backgroundColor: "transparent"
+    });
+
+    const view = ball.querySelector(".ball-view");
+    if (view) {
+      gsap.to(view, {
+        duration: 0.3,
+        scale: 0,
+        autoAlpha: 0,
+        clearProps: "all",
+        onComplete: () => view.remove()
+      });
+    }
+  });
+});
+
+
+
+    // Cursor view on hover (data attribute "data-cursor-view").
+    document.querySelectorAll("[data-cursor-view]").forEach(el => {
       el.classList.add("not-hide-cursor");
+
       el.addEventListener("mouseenter", () => {
+        // Eliminar cualquier .ball-view previo (si aún existe)
+        const existingView = ball.querySelector(".ball-view");
+        if (existingView) existingView.remove();
+
+        // Crear el nuevo .ball-view
         const view = document.createElement("div");
         view.className = "ball-view";
-        view.textContent = el.getAttribute("data-cursor");
+        view.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 500 500" class="hover-cursor">
+            <defs>
+              <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(12,250,250)" />
+            </defs>
+            <text class="default">
+              <textPath xlink:href="#textcircle"
+                        aria-label="VIEW PROJECT . VIEW PROJECT . VIEW PROJECT ."
+                        textLength="930">
+                VIEW PROJECT ~ VIEW PROJECT ~ VIEW PROJECT ~ 
+              </textPath>
+            </text>
+          </svg>
+        `;
+
+        // Texto adicional (si se usa en el atributo, aunque esté vacío ahora)
+        const extra = el.getAttribute("data-cursor-view");
+        if (extra && extra.trim() !== "") {
+          view.appendChild(document.createTextNode(extra));
+        }
+
         ball.appendChild(view);
+
+        // Animación de entrada del cursor personalizado
         gsap.to(ball, {
-          duration:0.3,
-          yPercent:-75,
-          width:95,
-          height:95,
-          opacity:1,
-          borderWidth:0,
-          backgroundColor:"#FFF"
+          duration: 0.3,
+          yPercent: -75,
+          width: 95,
+          height: 95,
+          opacity: 1,
+          borderWidth: 0,
+          backgroundColor: "#FFB2C7"
         });
-        gsap.to(view, { duration:0.3, scale:1, autoAlpha:1 });
+
+        gsap.fromTo(view, {
+          scale: 0,
+          autoAlpha: 0
+        }, {
+          duration: 0.3,
+          scale: 1,
+          autoAlpha: 1
+        });
       });
+
       el.addEventListener("mouseleave", () => {
+        // Restaurar el cursor a su estado anterior
         gsap.to(ball, {
-          duration:0.3,
-          yPercent:-50,
-          width:ballWidth,
-          height:ballHeight,
-          opacity:ballOpacity,
-          borderWidth:ballBorderWidth,
-          backgroundColor:"transparent"
+          duration: 0.3,
+          yPercent: -50,
+          width: ballWidth,
+          height: ballHeight,
+          opacity: ballOpacity,
+          borderWidth: ballBorderWidth,
+          backgroundColor: "#FFB2C7"
         });
+
         const view = ball.querySelector(".ball-view");
-        if (view) gsap.to(view, { duration:0.3, scale:0, autoAlpha:0, clearProps:"all", onComplete:() => view.remove() });
+        if (view) {
+          gsap.to(view, {
+            duration: 0.3,
+            scale: 0,
+            autoAlpha: 0,
+            clearProps: "all",
+            onComplete: () => view.remove()
+          });
+        }
       });
     });
 
+
+
+
+
+
     // --- Swiper cursor-drag hover ---
-    document.querySelectorAll(".swiper").forEach(sw => {
-      const parent = sw.parentElement;
-      if (parent?.dataset?.simulateTouch === "true") {
-        // add not-hide-cursor
-        if (parent.classList.contains("cursor-drag")) {
-          sw.classList.add("not-hide-cursor");
-          sw.addEventListener("mouseenter", () => {
-            const drag = document.createElement("div"); drag.className="ball-drag";
-            ball.appendChild(drag);
-            gsap.to(ball, {duration:0.3,width:60,height:60,opacity:1});
-          });
-          sw.addEventListener("mouseleave", () => {
-            const drag = ball.querySelector(".ball-drag"); if(drag) drag.remove();
-            gsap.to(ball,{duration:0.3,width:ballWidth,height:ballHeight,opacity:ballOpacity});
+document.querySelectorAll(".swiper").forEach(sw => {
+  const parent = sw.parentElement;
+  if (parent?.dataset?.simulateTouch === "true") {
+    
+    // --- Cursor "drag" al pasar el mouse (mouseenter / mouseleave)
+    if (parent.classList.contains("cursor-drag")) {
+      sw.classList.add("not-hide-cursor");
+
+      sw.addEventListener("mouseenter", () => {
+        // Eliminar si ya existe
+        const existing = ball.querySelector(".ball-drag");
+        if (existing) existing.remove();
+
+        const drag = document.createElement("div");
+        drag.className = "ball-drag";
+        drag.innerText = "DRAG"; 
+        ball.appendChild(drag);
+
+        gsap.to(ball, {
+          duration: 0.3,
+            width: 100,
+            height: 100,
+          opacity: 1
+        });
+      });
+
+      sw.addEventListener("mouseleave", () => {
+        const drag = ball.querySelector(".ball-drag");
+        if (drag) drag.remove();
+
+        gsap.to(ball, {
+          duration: 0.3,
+          width: ballWidth,
+          height: ballHeight,
+          opacity: ballOpacity
+        });
+      });
+    }
+
+    // --- Cursor "drag" al hacer clic (mousedown / mouseup)
+    if (parent.classList.contains("cursor-drag-mouse-down")) {
+      sw.addEventListener("pointerdown", e => {
+        if (e.button === 0) {
+          // Eliminar previos antes de agregar
+          const existing = ball.querySelector(".ball-drag");
+          if (existing) existing.remove();
+
+          const drag = document.createElement("div");
+          drag.className = "ball-drag";
+          ball.appendChild(drag);
+
+          gsap.to(ball, {
+            duration: 0.2,
+            width: 100,
+            height: 100,
+            opacity: 1
           });
         }
-        if (parent.classList.contains("cursor-drag-mouse-down")) {
-          sw.addEventListener("pointerdown", e => {
-            if(e.button===0){
-              const drag = document.createElement("div"); drag.className="ball-drag";
-              ball.appendChild(drag);
-              gsap.to(ball,{duration:0.2,width:60,height:60,opacity:1});
-            }
-          });
-          sw.addEventListener("pointerup", () => {
-            ball.querySelectorAll(".ball-drag").forEach(d=>d.remove());
-            gsap.to(ball,{duration:0.2,width:ballWidth,height:ballHeight,opacity:ballOpacity});
-          });
-          sw.addEventListener("mouseleave", () => {
-            ball.querySelectorAll(".ball-drag").forEach(d=>d.remove());
-            gsap.to(ball,{duration:0.2,width:ballWidth,height:ballHeight,opacity:ballOpacity});
-          });
-        }
-      }
-    });
+      });
+
+      const clearDrag = () => {
+        ball.querySelectorAll(".ball-drag").forEach(d => d.remove());
+        gsap.to(ball, {
+          duration: 0.2,
+          width: ballWidth,
+          height: ballHeight,
+          opacity: ballOpacity
+        });
+      };
+
+      sw.addEventListener("pointerup", clearDrag);
+      sw.addEventListener("mouseleave", clearDrag);
+    }
+  }
+});
+
+
+
 
     // --- cursor-close hover ---
     document.querySelectorAll(".cursor-close").forEach(el => {

@@ -15,6 +15,7 @@ import CursorMagic from "@/components/CursorMagic/CursorMagic";
 import { initLenis } from '@/utils/initLenis';
 import { initMagicCursor, initScrollToTop, initAnchorScrolling } from '@/utils/themeFunctions';
 import { initScrollAnimations } from '@/utils/scrollAnimations';
+import { animateSplitTextScroll } from "@/utils/SplitText";
 
 export default function ClientProviders({ children }) {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function ClientProviders({ children }) {
     initScrollAnimations();
     initScrollToTop();
     initAnchorScrolling();
+    animateSplitTextScroll();
   }, []); 
 
   return (
