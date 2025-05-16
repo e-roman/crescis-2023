@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect } from "react";
 
+import dataProjects from "@/data/dataProjects";
 
 // Functions
 import { initPortfolioGrid } from '@/utils/themeFunctions2';
