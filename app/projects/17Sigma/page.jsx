@@ -339,7 +339,7 @@ Your browser does not support the video tag.
             <div className="tt-page-nav tt-pn-scroll">
               <a href={`/projects/GoogleAds`} className="tt-pn-link anim-fadeinup">
                 <div className="tt-pn-title">Next Project</div>
-                <div className="tt-pn-hover-title">Google Discovery Ads</div>
+                <div className="tt-pn-hover-title">Google Discovery</div>
               </a> 
               <div className="tt-pn-subtitle anim-fadeinup">Explore More</div>
 

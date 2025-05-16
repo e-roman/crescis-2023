@@ -7966,7 +7966,6 @@ video.tt-bg-video {
 	padding-left: 2vw;
 	font-size: 7.5vw;
 	line-height: 1.1;
-	text-transform: uppercase;
 	white-space: nowrap;
 	animation-name: tt_scrolling_text; 
 	animation-timing-function: linear; 
