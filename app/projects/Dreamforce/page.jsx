@@ -16,12 +16,11 @@ export default function projectDreamforce() {
   
   return (
     <>
-      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-5 ph-content-parallax">
+      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-3 ph-content-parallax">
         <div className="page-header-inner tt-wrap-xl padding-lr-xl">
           <div className="ph-image">
             <div className="ph-image-inner">
                   <video
-                    className="anim-image-parallax"
                     src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/01.mp4"
                     width={"100%"}
                     autoPlay
@@ -50,27 +49,13 @@ export default function projectDreamforce() {
               </li>
               <li>
                 <div className="pi-list-heading">Role</div>
-                  <div className="pi-list-cont">askjjash </div>
+                  <div className="pi-list-cont">ANIMATION </div>
+                  <div className="pi-list-cont">EVENTS IN MOTION </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <a href="#page-content" className="scroll-down-circle" data-offset="30">
-          <div className="sdc-inner ph-appear">
-            <div className="sdc-icon"><i className="fas fa-chevron-down"></i></div>
-            <svg viewBox="0 0 500 500">
-              <defs>
-                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
-              </defs>
-              <text dy="30">
-                <textPath href="#textcircle">
-                  Scroll down – Scroll down –
-                </textPath>
-              </text>
-            </svg>
-          </div> 
-        </a>
       </div>
 
 
@@ -82,7 +67,7 @@ export default function projectDreamforce() {
 <div className="tt-row">
 <div className="tt-col-lg-4 padding-right-md-5-p">
 <div className="tt-heading text-pink tt-heading-title text-uppercase anim-fadeinup">
-<h2 className="tt-heading-title text-pink">About</h2>
+<h2 className=" text-pink">About</h2>
 </div>
 </div>
 <div className="tt-col-lg-8 padding-top-xlg-100">
@@ -98,7 +83,7 @@ export default function projectDreamforce() {
 <div className="tt-section padding-xlg-180 padding-left-sm-3-p padding-right-sm-3-p">
 <div className="tt-section-inner tt-wrap">
 <div className="tt-row tt-justify-content-md-start">
-<div className="tt-col-lg-6 tt-offset-lg-1">
+<div className="tt-col-lg-7 tt-offset-lg-1">
 <div className="tt-heading text-pink tt-heading-title text-uppercase anim-fadeinup">
 <h2 className="tt-heading-title text-pink padding-bottom-xlg-50">A NEW EXPERIENCE FOR<br /> TRAILBLAZERS 🐻</h2>
 </div>
@@ -157,7 +142,7 @@ export default function projectDreamforce() {
 <div className="tt-row tt-justify-content-md-start">
 <div className="tt-col-lg-5 margin-right-auto padding-bottom-50">
 <div className="tt-image padding-top-md-50">
-<figure><video preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/02.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/02.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -166,7 +151,7 @@ Your browser does not support the video tag.
 </div>
 <div className="tt-col-lg-6 tt-offset-lg-1">
 <div className="tt-image">
-<figure><video preload="auto" autoPlay loop="loop" muted width="100%" height="150">
+<figure><video preload="auto" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/03.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/03.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -181,7 +166,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-md-end">
 <div className="tt-col-lg-5">
 <div className="tt-image padding-top-md-100">
-<figure><video preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/04.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/04.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -190,7 +175,7 @@ Your browser does not support the video tag.
 </div>
 <div className="tt-col-lg-6">
 <div className="tt-image">
-<figure><video preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/05.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/05.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -223,7 +208,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-md-end">
 <div className="tt-col-lg-10 margin-auto">
 <div className="tt-image">
-<figure><video preload="metadata" autoPlay loop="loop" muted width="100%" height="150">
+<figure><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/06.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/06.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -238,7 +223,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-md-start">
 <div className="tt-col-lg-6 margin-right-auto">
 <div className="tt-image">
-<figure className="padding-top-md-100"><video preload="metadata" autoPlay loop="loop" muted width="100%" height="150">
+<figure className="padding-top-md-100"><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/07.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/07.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -247,14 +232,14 @@ Your browser does not support the video tag.
 </div>
 <div className="tt-col-lg-5 tt-offset-lg-1">
 <div className="tt-image">
-<figure><video preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/08.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/08.mp4" type="video/mp4" />
 Your browser does not support the video tag.
 </video></figure>
 </div>
 <div className="tt-image padding-top-md-50">
-<figure><video preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/09.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/09.mp4" type="video/mp4" />
 Your browser does not support the video tag.

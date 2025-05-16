@@ -16,12 +16,11 @@ export default function projectSigma() {
   
   return (
     <>
-      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-5 ph-content-parallax">
+      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-3 ph-content-parallax">
         <div className="page-header-inner tt-wrap-xl padding-lr-xl">
           <div className="ph-image">
             <div className="ph-image-inner">
                   <video
-                    className="anim-image-parallax"
                     src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4"
                     width={"100%"}
                     height={"100%"}
@@ -51,27 +50,14 @@ export default function projectSigma() {
               </li>
               <li>
                 <div className="pi-list-heading">Role</div>
-                  <div className="pi-list-cont">askjjash </div>
+                  <div className="pi-list-cont">BRANDING </div>
+                  <div className="pi-list-cont">UX/UI DEVELOPMENT </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <a href="#page-content" className="scroll-down-circle" data-offset="30">
-          <div className="sdc-inner ph-appear">
-            <div className="sdc-icon"><i className="fas fa-chevron-down"></i></div>
-            <svg viewBox="0 0 500 500">
-              <defs>
-                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
-              </defs>
-              <text dy="30">
-                <textPath href="#textcircle">
-                  Scroll down – Scroll down –
-                </textPath>
-              </text>
-            </svg>
-          </div> 
-        </a>
+
       </div>
 
 
@@ -83,7 +69,7 @@ export default function projectSigma() {
 <div className="tt-row">
 <div className="tt-col-lg-4 padding-right-md-5-p">
 <div className="tt-heading text-pink tt-heading-title text-uppercase anim-fadeinup">
-<h2 className="tt-heading-title text-pink">About</h2>
+<h2 className="text-pink">About</h2>
 </div>
 </div>
 <div className="tt-col-lg-8">
@@ -151,7 +137,7 @@ export default function projectSigma() {
 <div className="tt-row tt-justify-content-md-center">
 <div className="tt-col-lg-5">
 <div className="tt-image padding-top-md-200">
-<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/07.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/07.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -255,7 +241,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-md-end">
 <div className="tt-col-lg-6">
 <div className="tt-image">
-<figure><video className="anim-fadeinup" preload="metadata" autoPlay="autoplay" loop="loop" muted width="300" height="150">
+<figure><video className="anim-fadeinup" preload="metadata" autoPlay="autoplay" loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/15.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/15.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -264,7 +250,7 @@ Your browser does not support the video tag.
 </div>
 <div className="tt-col-lg-6">
 <div className="tt-image padding-top-md-200">
-<figure><video className="anim-fadeinup" preload="metadata" autoPlay="autoplay" loop="loop" muted width="300" height="150">
+<figure><video className="anim-fadeinup" preload="metadata" autoPlay="autoplay" loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/16.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/16.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -279,7 +265,7 @@ Your browser does not support the video tag.
 <div className="tt-row">
 <div className="tt-col-lg-10">
 <div className="tt-image anim-fadeinup">
-<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/18.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/18.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -294,7 +280,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-md-end">
 <div className="tt-col-lg-6">
 <div className="tt-image anim-fadeinup">
-<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/19.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/19.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -303,7 +289,7 @@ Your browser does not support the video tag.
 </div>
 <div className="tt-col-lg-6">
 <div className="tt-image anim-fadeinup padding-top-md-200">
-<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/20.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/20.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -318,7 +304,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-md-end">
 <div className="tt-col-lg-12">
 <div className="tt-image anim-fadeinup">
-<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay="autoplay" loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/21.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/21.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -339,7 +325,7 @@ Your browser does not support the video tag.
             <div className="tt-page-nav tt-pn-scroll">
               <a href={`/projects/GoogleAds`} className="tt-pn-link anim-fadeinup">
                 <div className="tt-pn-title">Next Project</div>
-                <div className="tt-pn-hover-title">Google Discovery</div>
+                <div className="tt-pn-hover-title">Google Ads</div>
               </a> 
               <div className="tt-pn-subtitle anim-fadeinup">Explore More</div>
 

@@ -267,19 +267,35 @@ body.tt-transition .ptr-overlay:before {
 }
 body.tt-transition .ptr-preloader {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 65%;
+    left: 35%;
     z-index: 2;
     transform: translate(-50%, -50%);
+    width: 60vw;
 }
 body.tt-transition .ptr-prel-content {
     margin-top: 10px;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
-    font-size: 15px;
     color: #ffffff;
+    display: flex;
+    align-items: start;
+    justify-content: start;
 }
-
+body.tt-transition .ptr-prel-content svg {
+    z-index: -1;
+    position: absolute;
+    top: -6vw;
+    left: -29vw;
+    right: 0;
+    width: 65vw;
+    height: 65vw;
+    margin: 0 auto;
+}
+.ptr-prel-content h1 {
+	font-size: clamp(65px, 6vw, 110px);
+	line-height: 0.8;
+}
 .ptr-prel-image {
     opacity: .9;
     position: absolute;
@@ -290,6 +306,21 @@ body.tt-transition .ptr-prel-content {
     margin: 0 auto;
 }
 
+@media (max-width: 768px)  {
+    body.tt-transition .ptr-preloader {
+        width: 95%;
+        left: 15px;
+		top: 45%;
+        transform: none;
+    }
+	
+	body.tt-transition .ptr-prel-content svg {
+        top: -25vh;
+        left: -302px;
+        width: 136vw;
+        height: 190vw;
+	}
+}
 
 @-webkit-keyframes animate-svg-stroke-1 {
     0% {
@@ -678,7 +709,7 @@ body.tt-magic-cursor #magic-cursor {
 /* tt-Headings title */
 .tt-heading-title {
 	margin: 0;
-	font-size: calc(24px + 1vw);
+	font-size: calc(24px + 2vw);
 }
 
 /* tt-Headings subtitle */
@@ -753,8 +784,9 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 
 /* size lg */
 .tt-heading.tt-heading-lg .tt-heading-title {
-	font-size: calc(28px + 2vw);
-	line-height: 1.3;
+    font-size: calc(28px + 3vw);
+    line-height: 1;
+    font-weight: var(--font-bold);
 }
 .tt-heading.tt-heading-lg .tt-heading-subtitle {
 	font-size: calc(16px + 0.3vw);
@@ -2362,11 +2394,11 @@ a.ph-category:hover {
 
 /* project info list heading */
 .project-info-list .pi-list-heading {
-	margin-bottom: 5px;
-	font-size: calc(17px + 0.1vw);
-	opacity: .7;
+    margin-bottom: 5px;
+    font-size: calc(17px + 0.1vw);
+    opacity: .7;
+    text-transform: uppercase;
 }
-
 /* project info list content */
 .project-info-list .pi-list-cont {
 	font-size: calc(17px + 0.1vw);
@@ -2828,17 +2860,17 @@ body.ph-share-open .scrollbar-track {
 		display: flex;
 	}
 	#page-header:not(.ph-center).ph-inline .ph-caption {
-		-ms-flex: 0 0 75%;
-		flex: 0 0 75%;
-		max-width: 75%;
+		-ms-flex: 0 0 85%;
+		flex: 0 0 85%;
+		max-width: 85%;
 		align-self: center;
 		padding-right: 10%;
 	}
 
 	#page-header:not(.ph-center).ph-inline .project-info-list {
-		-ms-flex: 0 0 25%;
-		flex: 0 0 25%;
-		max-width: 25%;
+		-ms-flex: 0 0 15%;
+		flex: 0 0 15%;
+		max-width: 15%;
 		align-self: center;
 		margin: 0;
 	}
@@ -3175,8 +3207,11 @@ body:not(.is-mobile) .ttgr-cat-close {
 .tt-grid-item {
     width: 50%;
 }
-
-
+@media (max-width: 768px) {
+	.tt-grid-item {
+		width: 100%;
+	}
+}
 
 
 
@@ -3682,8 +3717,8 @@ body.tt-boxed .tt-wrap .tt-grid.ttgr-gap-3 {
 /* Gap 4 */
 .tt-grid.ttgr-gap-4,
 .tt-grid.ttgr-gap-4 .tt-grid-top {
-	margin-left: 3vw;
-	margin-right: 3vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 }
 body.tt-boxed .tt-wrap .tt-grid.ttgr-gap-4 {
 	margin-left: -3vw;
@@ -3691,7 +3726,7 @@ body.tt-boxed .tt-wrap .tt-grid.ttgr-gap-4 {
 }
 @media (min-width: 768px) {
 	.tt-grid.ttgr-gap-4 .ttgr-item-inner {
-		margin: 0 3vw 6vw 3vw;
+		margin: 0 2vw 6vw 2vw;
 	}
 }
 @media (max-width: 768px) {
@@ -4854,8 +4889,6 @@ video.pi-item-video {
 		left: auto;
 		right: 0;
 		font-size: calc(14px + 4vw);
-
-		font-style: italic;
 		color: #FFF;
 		opacity: .2;
 	}
@@ -7124,7 +7157,12 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 /* .tt-accordion-content:not(.is-open) {
 	display: none;
 } */
-
+.tt-accordion-content p {
+    font-size: calc(24px + 1vw);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #FFF;
+}
 .tt-accordion-content p:last-child {
 	margin-bottom: 0;
 }
@@ -7836,7 +7874,8 @@ input[type=range] {
 }
 
 .tt-contact-info > li {
-	padding: 3px 0;
+	padding: 0;
+	font-size: calc(14px + 1vw)
 }
 
 .tt-ci-icon {

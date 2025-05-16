@@ -56,7 +56,7 @@ export default function ContactPage() {
 
         <div id="page-content">
 
-                <div className="margin-top-5-p padding-bottom-100 padding-top-150 padding-top-lg-200 padding-bottom-130 padding-bottom-lg-100">
+                <div className="margin-top-5-p padding-bottom-100 padding-top-150 padding-top-lg-200 no-padding-bottom padding-bottom-lg-100">
 					<div className="tt-section-contact tt-boxed">
 						<div className="tt-section-inner tt-wrap-lg padding-lr-xl">
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
 										<h2 className="tt-heading-title text-pink">GET IN TOUCH<br/> WITH US</h2>
 									</div>
 
-									<ul className="tt-contact-info text-gray">
+									<ul className="tt-contact-info text-gray padding-bottom-100 no-padding-bottom-lg">
 										<li className="anim-fadeinup">
 											<span className="text-white">61NE 86th Street, Miami 33138, FL</span>
 										</li>
@@ -126,7 +126,7 @@ export default function ContactPage() {
 
 
 
-							<div className="tt-row padding-bottom-lg-150">
+							<div className="tt-row padding-bottom-80 padding-bottom-lg-150">
 
 								<div className="tt-col-lg-8 padding-top-100">
 									<div className="tt-heading-title-contact anim-fadeinup margin-bottom-100">

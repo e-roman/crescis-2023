@@ -79,9 +79,9 @@ export default function AboutPage() {
 
                         <div className="tt-col-lg-7 padding-right-lg-5-p padding-top-lg-50">
                             <div className="text-lg padding-top-lg-200">
-                                <p className="anim-fadeinup">We are an independent strategy, design and communications company. We put insight and imagination at the center of everything we do.</p>
-                                <p className="anim-fadeinup">We combine creativity, craft and technology into ideas that improve people’s lives. We put insight and imagination at the center of everything we do.</p>
-                                <p className="anim-fadeinup">Our mission is to prioritize quality over quantity. We build each brand in a unique system considering every detail so that the result is unmatched.</p>
+                                <p className="anim-fadeinup">We are an independent strategy, design and communications company. <br className="hide-from-md"/>We put insight and imagination at the center of everything we do.</p>
+                                <p className="anim-fadeinup">We combine creativity, craft and technology into ideas that improve people’s lives. <br className="hide-from-md"/>We put insight and imagination at the center of everything we do.</p>
+                                <p className="anim-fadeinup">Our mission is to prioritize quality over quantity. <br className="hide-from-md"/>We build each brand in a unique system considering every detail so that the result is unmatched.</p>
                                 <p className="anim-fadeinup">Challenge assumptions, explore perspectives, and uncover truth with insight — transforming ideas into action, and turning clarity into impact.</p>
                             </div>
                         </div> 

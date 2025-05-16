@@ -16,12 +16,11 @@ export default function projectTheSandbox() {
   
   return (
     <>
-      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-5 ph-content-parallax">
+      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-3 ph-content-parallax">
         <div className="page-header-inner tt-wrap-xl padding-lr-xl">
           <div className="ph-image">
             <div className="ph-image-inner">
                   <video
-                    className="anim-image-parallax"
                     src="https://d2s90tzqqa0vkb.cloudfront.net/projects/theSandbox/ml-01.mp4"
                     width={"100%"}
                     autoPlay
@@ -50,27 +49,13 @@ export default function projectTheSandbox() {
               </li>
               <li>
                 <div className="pi-list-heading">Role</div>
-                  <div className="pi-list-cont">askjjash </div>
+                  <div className="pi-list-cont">BRANDING </div>
+				  <div className="pi-list-cont">ANIMATION </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <a href="#page-content" className="scroll-down-circle" data-offset="30">
-          <div className="sdc-inner ph-appear">
-            <div className="sdc-icon"><i className="fas fa-chevron-down"></i></div>
-            <svg viewBox="0 0 500 500">
-              <defs>
-                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
-              </defs>
-              <text dy="30">
-                <textPath href="#textcircle">
-                  Scroll down – Scroll down –
-                </textPath>
-              </text>
-            </svg>
-          </div> 
-        </a>
       </div>
 
 
@@ -78,63 +63,31 @@ export default function projectTheSandbox() {
 
 				<div id="page-content">
 
-					<div className="tt-section padding-top-xlg-180 padding-left-sm-3-p padding-right-sm-3-p">
-
+					<div className="tt-section padding-top-xlg-180 padding-left-sm-3-p padding-right-sm-3-p padding-bottom-xlg-200">
 						<div className="tt-section-inner tt-wrap">
-
-
-
 							<div className="tt-row">
-
-
-
 								<div className="tt-col-lg-4 padding-right-md-5-p">
-
 									<div className="tt-heading text-pink tt-heading-title text-uppercase anim-fadeinup">
-
-										<h2 className="tt-heading-title text-pink padding-top-xlg-50">About</h2>
-
+										<h2 className="text-pink">About</h2>
 									</div>
-
-									
-
-								</div>
-
-
-
-								<div className="tt-col-lg-8">
-
-									<div className="text-description anim-fadeinup">
-
+									</div>
+									<div className="tt-col-lg-6">
+									<div className="text-description padding-top-xlg-100 anim-fadeinup">
 										<p>Discover the future of digital real estate with The Sandbox's latest project,
-
 											brought to you by Cresci's Agency.</p>
-
-
-
 										<p>We've combined the latest in motion graphics, branding, graphic design,
-
 											typography, illustration, and conceptual storytelling to create a
-
 											revolutionary approach to land sales in the metaverse. A blend of vibrant
-
 											content that immerses you into the thrilling metaverse.Join us on this
-
 											exciting journey!</p>
-
 									</div>
-
 								</div>
-
-							</div> 
-
-
-
-						</div> 
-
+							</div>
+						</div>
 					</div>
 
-					
+
+
 
 					<div className="tt-section no-padding-top padding-bottom-xlg-50">
 

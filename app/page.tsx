@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // Functions
 import { initTitleHoverProjects, initDraw } from '@/utils/themeFunctions';
-import { initPortfolioGrid } from '@/utils/themeFunctions2';
+import { initPortfolioGrid, initPortfolioListEffects } from '@/utils/themeFunctions2';
 
 import { animateSplitTextScroll } from "@/utils/SplitText";
 
@@ -19,6 +19,7 @@ export default function Home() {
 	 initDraw();
 	 animateSplitTextScroll();
     initPartnersSlider();   
+	 initPortfolioListEffects();   
     initTitleHoverProjects();   
     initPortfolioGrid();    
   }, []);
@@ -63,7 +64,7 @@ export default function Home() {
 
 
 
-		<div className="tt-pn-subtitle tt-sub-hero padding-top-lg-200 margin-top-20-p margin-bottom-10-p padding-bottom-lg-200">
+		<div className="tt-pn-subtitle tt-sub-hero padding-top-150 padding-top-lg-200 margin-top-20-p margin-bottom-10-p padding-bottom-lg-200">
 			<div className="tt-col-lg-9 tt-offset-lg-3 position-realative">
 				<div className="tt-heading tt-heading-lg">
 					<h2 className="tt-heading-title text-uppercase split-lines not-split">We believe in the power of human connection and the ability to bring people together through design</h2>
@@ -77,7 +78,7 @@ export default function Home() {
 
 
 
-		<div className="tt-section no-padding-bottom">
+		<div className="tt-section no-padding-bottom-lg padding-bottom-150">
 			<div className="tt-section-inner">
 				<div className="tt-heading tt-heading-lg tt-heading-center margin-bottom-10-p anim-fadeinup">
 					<h3 className="tt-heading-subtitle text-gray">Latest Projects</h3>
@@ -98,77 +99,11 @@ export default function Home() {
 
 
 							{/*Begin tt-Grid item*/}
-							<div className="tt-grid-item isotope-item people">
-								<div className="ttgr-item-inner">
-
-									{/*Begin portfolio grid item */}
-									<div className="portfolio-grid-item">
-										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
-											<div className="pgi-image-holder cover-opacity-2">
-												<div className="pgi-image-inner anim-zoomin">
-													<figure className="pgi-image ttgr-height">
-														<img src="/assets/img/portfolio/portfolio-1.jpg" alt="image" />
-													</figure> {/*/.pgi-image */}
-												</div> {/*/.pgi-image-inner */}
-											</div> {/*/.pgi-image-holder */}
-										</a> {/*/.pgi-image-wrap */}
-
-										<div className="pgi-caption">
-											<div className="pgi-caption-inner">
-												<h2 className="pgi-title">Victorian Girls</h2>
-												<div className="pgi-categories-wrap">
-													<div className="pgi-category">People</div>
-													{/*<div className="pgi-category">Varia</div> */}
-												</div> {/*/.pli-categories-wrap */}
-											</div> {/*/.pgi-caption-inner */}
-										</div> {/*/.pgi-caption */}
-									</div>
-									{/*End portfolio grid item */}
-
-								</div> {/*/.ttgr-item-inner */}
-							</div>
-							{/*End tt-Grid item */}
-
-
-							{/*Begin tt-Grid item*/}
-							<div className="tt-grid-item isotope-item creative">
-								<div className="ttgr-item-inner">
-
-
-									<div className="portfolio-grid-item anim-parallax">
-										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
-											<div className="pgi-image-holder cover-opacity-2">
-												<div className="pgi-image-inner anim-zoomin">
-													<figure className="pgi-image ttgr-height">
-														<img src="/assets/img/portfolio/portfolio-2.jpg" alt="image" />
-													</figure> {/*/.pgi-image */}
-												</div> {/*/.pgi-image-inner */}
-											</div> {/*/.pgi-image-holder */}
-										</a> {/*/.pgi-image-wrap */}
-
-										<div className="pgi-caption">
-											<div className="pgi-caption-inner">
-												<h2 className="pgi-title">Smithy</h2>
-												<div className="pgi-categories-wrap">
-													<div className="pgi-category">Creative</div>
-													{/*<div className="pgi-category">Varia</div> */}
-												</div> {/*/.pli-categories-wrap */}
-											</div> {/*/.pgi-caption-inner */}
-										</div> {/*/.pgi-caption */}
-									</div>
-									{/*End portfolio grid item */}
-
-								</div> {/*/.ttgr-item-inner */}
-							</div>
-							{/*End tt-Grid item */}
-
-
-							{/*Begin tt-Grid item*/}
-							<div className="tt-grid-item isotope-item people">
+							<div className="tt-grid-item isotope-item">
 								<div className="ttgr-item-inner">
 
 									{/*Begin portfolio grid item  */}
-									<div className="portfolio-grid-item">
+									<div className="portfolio-grid-item hover-scale">
 										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
@@ -177,19 +112,14 @@ export default function Home() {
 															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
-												</div> {/*/.pgi-image-inner */}
-											</div> {/*/.pgi-image-holder */}
+												</div> 
+											</div> 
 										</a> {/*/.pgi-image-wrap */}
-
 										<div className="pgi-caption">
-											<div className="pgi-caption-inner">
-												<h2 className="pgi-title">Washion Week</h2>
-												<div className="pgi-categories-wrap">
-													<div className="pgi-category">People</div>
-													{/*<div className="pgi-category">Varia</div> */}
-												</div> {/*/.pli-categories-wrap */}
-											</div> {/*/.pgi-caption-inner */}
-										</div> {/*/.pgi-caption */}
+											<div className="col-info">17 Sigma</div> 
+											<div className="col-info pgi-role">BRANDING</div>
+											<div className="col-info pgi-date hide-from-md">2023</div> 
+										</div> 
 									</div>
 									{/*End portfolio grid item */}
 
@@ -199,30 +129,87 @@ export default function Home() {
 
 
 							{/*Begin tt-Grid item*/}
-							<div className="tt-grid-item isotope-item nature">
+							<div className="tt-grid-item isotope-item">
 								<div className="ttgr-item-inner">
 
 									{/*Begin portfolio grid item  */}
-									<div className="portfolio-grid-item">
+									<div className="portfolio-grid-item hover-scale">
 										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
-													<figure className="pgi-image ttgr-height">
-														<img src="/assets/img/portfolio/portfolio-3.jpg" alt="image" />
-													</figure> {/*/.pgi-image */}
-												</div> {/*/.pgi-image-inner */}
-											</div> {/*/.pgi-image-holder */}
+													<figure className="pgi-video-wrap ttgr-height">
+														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
+														</video>
+													</figure> {/*/.pgi-video-wrap */}
+												</div> 
+											</div> 
 										</a> {/*/.pgi-image-wrap */}
-
 										<div className="pgi-caption">
-											<div className="pgi-caption-inner">
-												<h2 className="pgi-title">Mystery Forest</h2>
-												<div className="pgi-categories-wrap">
-													<div className="pgi-category">Nature</div>
-													{/*<div className="pgi-category">Varia</div> */}
-												</div> {/*/.pli-categories-wrap */}
-											</div> {/*/.pgi-caption-inner */}
-										</div> {/*/.pgi-caption */}
+											<div className="col-info">17 Sigma</div> 
+											<div className="col-info pgi-role">BRANDING</div>
+											<div className="col-info pgi-date hide-from-md">2023</div> 
+										</div> 
+									</div>
+									{/*End portfolio grid item */}
+
+								</div> {/*/.ttgr-item-inner */}
+							</div>
+							{/*End tt-Grid item */}
+
+
+							{/*Begin tt-Grid item*/}
+							<div className="tt-grid-item isotope-item">
+								<div className="ttgr-item-inner">
+
+									{/*Begin portfolio grid item  */}
+									<div className="portfolio-grid-item hover-scale">
+										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+											<div className="pgi-image-holder cover-opacity-2">
+												<div className="pgi-image-inner anim-zoomin">
+													<figure className="pgi-video-wrap ttgr-height">
+														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
+														</video>
+													</figure> {/*/.pgi-video-wrap */}
+												</div> 
+											</div> 
+										</a> {/*/.pgi-image-wrap */}
+										<div className="pgi-caption">
+											<div className="col-info">17 Sigma</div> 
+											<div className="col-info pgi-role">BRANDING</div>
+											<div className="col-info pgi-date hide-from-md">2023</div> 
+										</div> 
+									</div>
+									{/*End portfolio grid item */}
+
+								</div> {/*/.ttgr-item-inner */}
+							</div>
+							{/*End tt-Grid item */}
+
+
+							{/*Begin tt-Grid item*/}
+							<div className="tt-grid-item isotope-item">
+								<div className="ttgr-item-inner">
+
+									{/*Begin portfolio grid item  */}
+									<div className="portfolio-grid-item hover-scale">
+										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+											<div className="pgi-image-holder cover-opacity-2">
+												<div className="pgi-image-inner anim-zoomin">
+													<figure className="pgi-video-wrap ttgr-height">
+														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
+														</video>
+													</figure> {/*/.pgi-video-wrap */}
+												</div> 
+											</div> 
+										</a> {/*/.pgi-image-wrap */}
+										<div className="pgi-caption">
+											<div className="col-info">17 Sigma</div> 
+											<div className="col-info pgi-role">BRANDING</div>
+											<div className="col-info pgi-date hide-from-md">2023</div> 
+										</div> 
 									</div>
 									{/*End portfolio grid item */}
 
@@ -247,36 +234,47 @@ export default function Home() {
 
 
 
-		<div className="tt-section padding-bottom-lg-200">
+		<div className="tt-section padding-bottom-lg-200 padding-top-lg-200">
 			<div className="tt-section-inner tt-wrap-xl">
 
 				<div className="tt-heading tt-heading-center tt-heading-lg margin-bottom-10-p anim-fadeinup">
-					<h3 className="tt-heading-subtitle text-gray">Latest Projects</h3>
-					<h2 className="tt-heading-title">Works</h2>
-					<div className="tt-btn tt-btn-link margin-top-20">
-						<a href="portfolio-interactive-compact.html" data-hover="See All Works">See All Works</a>
-					</div>
+					<h3 className="tt-heading-subtitle text-gray">Latest articles</h3>
+					<h2 className="tt-heading-title">Blog</h2>
 				</div>
 				{/*}End tt-Heading */}
 
 				<div className="portfolio-interactive pi-borders pi-compact pi-force-scroll">
 
-					{/*}Begin portfolio interactive item 
-					====================================== 
-					* Adjust the "data-scroll-speed" attribute to find a suitable scrolling speed (no effect on mobile devices!).
-						*/}
 					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="3">
-						<a href="single-project-1.html" className="pi-item-title-link">
-							<h2 className="pi-item-title">Victorian Girls</h2>
-							<div className="pi-item-hover-title">Victorian Girls</div>
+						<a href="https://medium.com/design-bootcamp/branding-in-the-metaverse-e49981a4527e" className="pi-item-title-link">
+							<h2 className="pi-item-title">Branding in the Metaverse</h2>
+							<div className="pi-item-hover-title">Branding in the Metaverse</div>
 						</a>
 						<div className="pi-item-category-wrap">
-							<div className="pi-item-category">People</div>
-							<div className="pi-item-category">Varia</div>
+							<div className="pi-item-category">Bootcamp</div>
 						</div>
 						<figure className="pi-item-image cover-opacity-2">
 							<Image
-								src="/assets/img/portfolio/portfolio-1.jpg"
+								src="/images/blog/01.webp"
+								alt="Branding in the Metaverse"
+								width={800}
+								height={600}
+							/>
+						</figure>
+					</div>
+					{/*}End portfolio interactive item */}
+
+					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="5">
+						<a href="https://crescimone.medium.com/why-should-every-logo-have-one-joke-at-a-time-4da1998a535d" className="pi-item-title-link">
+							<h2 className="pi-item-title">Every logo have One Joke at a Time</h2>
+							<div className="pi-item-hover-title">Every logo have One Joke at a Time</div>
+						</a>
+						<div className="pi-item-category-wrap">
+							<div className="pi-item-category">3 letters & 2 sounds</div>
+						</div>
+						<figure className="pi-item-image cover-opacity-2">
+							<Image
+								src="/images/blog/03.jpg"
 								alt="Imagen de ejemplo"
 								width={800}
 								height={600}
@@ -285,22 +283,38 @@ export default function Home() {
 					</div>
 					{/*}End portfolio interactive item */}
 
-					{/*}Begin portfolio interactive item 
-					====================================== 
-					* Adjust the "data-scroll-speed" attribute to find a suitable scrolling speed (no effect on mobile devices!).
-						*/}
-					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="2">
-						<a href="single-project-2.html" className="pi-item-title-link">
-							<h2 className="pi-item-title">Smithy</h2>
-							<div className="pi-item-hover-title">Smithy</div>
+
+					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="3">
+						<a href="https://crescimone.medium.com/the-empathy-revolution-how-ai-is-revolutionizing-creativity-and-design-1a567ef3a4d2" className="pi-item-title-link">
+							<h2 className="pi-item-title">The Empathy Revolution</h2>
+							<div className="pi-item-hover-title">The Empathy Revolution</div>
 						</a>
 						<div className="pi-item-category-wrap">
-							<div className="pi-item-category">Creative</div>
-							<div className="pi-item-category">Varia</div>
+							<div className="pi-item-category">How AI is Revolutionizing Creativity and Design</div>
 						</div>
 						<figure className="pi-item-image cover-opacity-2">
 							<Image
-								src="/assets/img/portfolio/portfolio-2.jpg"
+								src="/images/blog/04.webp"
+								alt="Imagen de ejemplo"
+								width={800}
+								height={600}
+							/>
+						</figure>
+					</div>
+
+
+
+					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="3">
+						<a href="https://www.behance.net/_Cresci" className="pi-item-title-link">
+							<h2 className="pi-item-title">Follow us on Behance</h2>
+							<div className="pi-item-hover-title">Follow us on Behance</div>
+						</a>
+						<div className="pi-item-category-wrap">
+							<div className="pi-item-category">Portfolio</div>
+						</div>
+						<figure className="pi-item-image cover-opacity-2">
+							<Image
+								src="/images/blog/02.jpg"
 								alt="Imagen de ejemplo"
 								width={800}
 								height={600}
@@ -309,74 +323,8 @@ export default function Home() {
 					</div>
 					{/*}End portfolio interactive item */}
 
-					{/*}Begin portfolio interactive item 
-					====================================== 
-					* Adjust the "data-scroll-speed" attribute to find a suitable scrolling speed (no effect on mobile devices!).
-						*/}
-					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="3">
-						<a href="single-project-3.html" className="pi-item-title-link">
-							<h2 className="pi-item-title">Fashion Week</h2>
-							<div className="pi-item-hover-title">Fashion Week</div>
-						</a>
-						<div className="pi-item-category-wrap">
-							<div className="pi-item-category">People</div>
-							<div className="pi-item-category">Varia</div>
-						</div>
-						<figure className="pi-item-image cover-opacity-2">
-							<video className="pi-item-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
-								<source src="/assets/vids/fashion-week.mp4" type="video/mp4" />
-							</video>
-						</figure>
-					</div>
-					{/*}End portfolio interactive item */}
 
-					{/*}Begin portfolio interactive item 
-					====================================== 
-					* Adjust the "data-scroll-speed" attribute to find a suitable scrolling speed (no effect on mobile devices!).
-						*/}
-					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="3">
-						<a href="single-project-4.html" className="pi-item-title-link">
-							<h2 className="pi-item-title">Mystery Forest</h2>
-							<div className="pi-item-hover-title">Mystery Forest</div>
-						</a>
-						<div className="pi-item-category-wrap">
-							<div className="pi-item-category">Nature</div>
-							<div className="pi-item-category">Varia</div>
-						</div>
-						<figure className="pi-item-image cover-opacity-2">
-							<Image
-								src="/assets/img/portfolio/portfolio-3.jpg"
-								alt="Imagen de ejemplo"
-								width={800}
-								height={600}
-							/>
-						</figure>
-					</div>
-					{/*}End portfolio interactive item */}
 
-					{/*}Begin portfolio interactive item 
-					====================================== 
-					* Adjust the "data-scroll-speed" attribute to find a suitable scrolling speed (no effect on mobile devices!).
-						*/}
-					<div className="portfolio-interactive-item anim-skewinup" data-scroll-speed="3">
-						<a href="single-project-5.html" className="pi-item-title-link">
-							<h2 className="pi-item-title">Red Package</h2>
-							<div className="pi-item-hover-title">Red Package</div>
-						</a>
-						<div className="pi-item-category-wrap">
-							<div className="pi-item-category">Branding</div>
-							<div className="pi-item-category">Varia</div>
-						</div>
-						<figure className="pi-item-image cover-opacity-2">
-							<Image
-								src="/assets/img/portfolio/portfolio-4.jpg"
-								alt="Imagen de ejemplo"
-								width={800}
-								height={600}
-							/>
-						</figure>
-					</div>
-					{/*}End portfolio interactive item */}
 
 				</div>
 				{/*}End portfolio interactive */}
@@ -394,7 +342,7 @@ export default function Home() {
 
 				<div className="position-relative">
 					<div className="tt-heading margin-bottom-lg-100 anim-fadeinup">
-						<h1 className="tt-title-brands ph-title-parallax">TRUSTED COLLABS</h1>
+						<h2 className="tt-title-brands ph-title-parallax">TRUSTED COLLABS</h2>
 					</div>
 
 					<div id="draw-on" className="draw-on intiDraw2 anim-drawing">

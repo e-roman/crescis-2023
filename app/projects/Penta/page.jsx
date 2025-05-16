@@ -16,12 +16,11 @@ export default function projectPenta() {
   
   return (
     <>
-      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-5 ph-content-parallax">
+      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-3 ph-content-parallax">
         <div className="page-header-inner tt-wrap-xl padding-lr-xl">
           <div className="ph-image">
             <div className="ph-image-inner">
                   <video
-                    className="anim-image-parallax"
                     src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-01-1-c.mp4"
                     width={"100%"}
                     autoPlay
@@ -50,27 +49,15 @@ export default function projectPenta() {
               </li>
               <li>
                 <div className="pi-list-heading">Role</div>
-                  <div className="pi-list-cont">askjjash </div>
+                  <div className="pi-list-cont">STRATEGY </div>
+				  <div className="pi-list-cont">BRANDING </div>
+				  <div className="pi-list-cont">ANIMATION </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <a href="#page-content" className="scroll-down-circle" data-offset="30">
-          <div className="sdc-inner ph-appear">
-            <div className="sdc-icon"><i className="fas fa-chevron-down"></i></div>
-            <svg viewBox="0 0 500 500">
-              <defs>
-                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
-              </defs>
-              <text dy="30">
-                <textPath href="#textcircle">
-                  Scroll down – Scroll down –
-                </textPath>
-              </text>
-            </svg>
-          </div> 
-        </a>
+
       </div>
 
 
@@ -92,7 +79,7 @@ export default function projectPenta() {
 
 									<div className="tt-heading text-pink tt-heading-title text-uppercase anim-fadeinup">
 
-										<h2 className="tt-heading-title text-black">About</h2>
+										<h2 className="text-black">About</h2>
 
 									</div>
 
@@ -406,7 +393,7 @@ export default function projectPenta() {
 
 										<figure>
 
-										<video autoPlay playsinline muted loop preload="metadata">
+										<video autoPlay playsInline muted loop preload="metadata">
 										    <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-10.webm" type="video/webm"/>
 										    <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-10.mp4" type="video/mp4" />
 												Your browser does not support the video tag.
@@ -458,7 +445,7 @@ export default function projectPenta() {
 
 										<figure>
 
-										<video autoPlay playsinline muted loop preload="metadata">
+										<video autoPlay playsInline muted loop preload="metadata">
 										    <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-12.webm" type="video/webm"/>
 										    <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-12.mp4" type="video/mp4" />
 												Your browser does not support the video tag.
@@ -611,7 +598,7 @@ export default function projectPenta() {
 									<div className="tt-image">
 
 										<figure>
-											<video width="100%" autoPlay playsinline muted loop preload="metadata">
+											<video width="100%" autoPlay playsInline muted loop preload="metadata">
 											    <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-manifiesto.webm" type="video/webm"/>
 											    <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-manifiesto.mp4" type="video/mp4" />
 													Your browser does not support the video tag.

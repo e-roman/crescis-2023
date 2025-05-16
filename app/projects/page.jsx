@@ -82,7 +82,7 @@ export default function Projects() {
 
                     <div className="tt-col-lg-6">
                         <div className="pli-image-hv">
-                        <a href={`/projects/Google-Ads`} className="pli-image-link not-hide-cursor" data-cursor-view="">
+                        <a href={`/projects/GoogleAds`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
                                     <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Google-Poster.jpeg">

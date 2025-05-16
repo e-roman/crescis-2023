@@ -17,12 +17,11 @@ export default function projectDecoded() {
   
   return (
     <>
-      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-5 ph-content-parallax">
+      <div id="page-header" className="ph-full ph-inline ph-bg-image ph-image-cover-3 ph-content-parallax">
         <div className="page-header-inner tt-wrap-xl padding-lr-xl">
           <div className="ph-image">
             <div className="ph-image-inner">
                   <video
-                    className="anim-image-parallax"
                     src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-01a.mp4"
                     width={"100%"}
                     autoPlay
@@ -51,27 +50,13 @@ export default function projectDecoded() {
               </li>
               <li>
                 <div className="pi-list-heading">Role</div>
-                  <div className="pi-list-cont">askjjash</div>
+                  <div className="pi-list-cont">ANIMATION </div>
+                  <div className="pi-list-cont">EVENTS IN MOTION </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <a href="#page-content" className="scroll-down-circle" data-offset="30">
-          <div className="sdc-inner ph-appear">
-            <div className="sdc-icon"><i className="fas fa-chevron-down"></i></div>
-            <svg viewBox="0 0 500 500">
-              <defs>
-                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
-              </defs>
-              <text dy="30">
-                <textPath href="#textcircle">
-                  Scroll down – Scroll down –
-                </textPath>
-              </text>
-            </svg>
-          </div> 
-        </a>
       </div>
 
 
@@ -81,7 +66,7 @@ export default function projectDecoded() {
 <div className="tt-row">
 <div className="tt-col-lg-4 padding-right-md-5-p">
 <div className="tt-heading text-pink tt-heading-title text-uppercase anim-fadeinup">
-<h2 className="tt-heading-title text-pink">About</h2>
+<h2 className=" text-pink">About</h2>
 </div>
 </div>
 <div className="tt-col-lg-8">
@@ -98,7 +83,7 @@ Transcend reality and immerse yourself in this virtual adventure!</div>
 <div className="tt-section-inner">
 <div className="tt-row tt-justify-content-center">
 <div className="tt-col-lg-6 padding-bottom-50">
-<div className="tt-image"><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<div className="tt-image"><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-02.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-02.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -131,7 +116,7 @@ Your browser does not support the video tag.
 <div className="tt-row">
 <div className="tt-col-lg-12 no-padding">
 <div className="tt-image">
-<figure><video preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-06.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-06.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -153,7 +138,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-end">
 <div className="tt-col-lg-9">
 <div className="tt-image">
-<figure><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-08.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-08.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -179,7 +164,7 @@ Your browser does not support the video tag.
 <div className="tt-row tt-justify-content-md-center">
 <div className="tt-col-lg-10">
 <div className="tt-image padding-bottom-xlg-100">
-<figure><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-10.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-10.mp4" type="video/mp4" />
 Your browser does not support the video tag.
@@ -197,7 +182,7 @@ Your browser does not support the video tag.
 <figure><img className="anim-image-parallax anim-fadeinup" src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-11a.png" alt="" data-src="projects/decoded/decoded-11a.png" /></figure>
 </div>
 <div className="tt-image">
-<figure className="image-float-4"><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="300" height="150">
+<figure className="image-float-4"><video className="anim-fadeinup" preload="metadata" autoPlay loop="loop" muted width="100%">
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-12.webm" type="video/webm" />
  <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-12.mp4" type="video/mp4" />
 Your browser does not support the video tag.
