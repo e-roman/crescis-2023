@@ -104,21 +104,20 @@ export default function Home() {
 
 									{/*Begin portfolio grid item  */}
 									<div className="portfolio-grid-item hover-scale">
-										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+										<a href={`/projects/17Sigma`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
-															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Dreamforce-Poster.jpeg">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/01.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
-											<div className="col-info">17 Sigma</div> 
-											<div className="col-info pgi-role">BRANDING</div>
-											<div className="col-info pgi-date hide-from-md">2023</div> 
+											<div className="col-info">17 Sigma</div>
+											{/* <div className="col-info pgi-date hide-from-md">2023</div>  */}
 										</div> 
 									</div>
 									{/*End portfolio grid item */}
@@ -134,21 +133,20 @@ export default function Home() {
 
 									{/*Begin portfolio grid item  */}
 									<div className="portfolio-grid-item hover-scale">
-										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+										<a href={`/projects/Penta`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
-															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Penta-Poster.jpeg">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-preview.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
-											<div className="col-info">17 Sigma</div> 
-											<div className="col-info pgi-role">BRANDING</div>
-											<div className="col-info pgi-date hide-from-md">2023</div> 
+											<div className="col-info">Penta</div>
+											{/* <div className="col-info pgi-date hide-from-md">2023</div>  */}
 										</div> 
 									</div>
 									{/*End portfolio grid item */}
@@ -164,21 +162,20 @@ export default function Home() {
 
 									{/*Begin portfolio grid item  */}
 									<div className="portfolio-grid-item hover-scale">
-										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+										<a href={`/projects/Decoded`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
-															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Decoded-Poster.jpeg">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-01a.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
-											<div className="col-info">17 Sigma</div> 
-											<div className="col-info pgi-role">BRANDING</div>
-											<div className="col-info pgi-date hide-from-md">2023</div> 
+											<div className="col-info">Decoded</div>
+											{/* <div className="col-info pgi-date hide-from-md">2023</div>  */}
 										</div> 
 									</div>
 									{/*End portfolio grid item */}
@@ -194,21 +191,20 @@ export default function Home() {
 
 									{/*Begin portfolio grid item  */}
 									<div className="portfolio-grid-item hover-scale">
-										<a href={`/projects/Docusing`} className="pli-image-link" data-cursor-view="">
+										<a href={`/projects/theSandbox`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
-															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandbox-Poster.jpeg">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/theSandbox/ml-01.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
-											<div className="col-info">17 Sigma</div> 
-											<div className="col-info pgi-role">BRANDING</div>
-											<div className="col-info pgi-date hide-from-md">2023</div> 
+											<div className="col-info">The Sandbox</div>
+											{/* <div className="col-info pgi-date hide-from-md">2023</div>  */}
 										</div> 
 									</div>
 									{/*End portfolio grid item */}

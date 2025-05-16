@@ -4707,6 +4707,8 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	align-items: center;
 	text-decoration: none;
 	overflow: hidden;
+	padding-top: 35px;
+    padding-bottom: 45px;
 }
 
 /* Portfolio interactive item title */
@@ -4735,7 +4737,7 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	font-size: calc(14px + 5vw);
 	color: #FFF;
 	line-height: 1.5;
-	transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 125%, 0);
 	transition: transform .6s cubic-bezier(0.51, 0.57, 0.17, 1);
 }
 @media (min-width: 1025px) {
@@ -4750,7 +4752,7 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	}
 
 	.pi-item-title-link:hover .pi-item-title {
-		transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -125%, 0);
 		transition-delay: 0.1s;
 	}
 	.pi-item-title-link:hover .pi-item-hover-title {
@@ -4914,8 +4916,8 @@ video.pi-item-video {
 	}
 
 	.portfolio-interactive.pi-compact.pi-borders .portfolio-interactive-item {
-		padding-top: 35px;
-		padding-bottom: 45px;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 	.portfolio-interactive.pi-compact.pi-borders .portfolio-interactive-item::before {
 		left: auto;

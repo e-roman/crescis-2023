@@ -306,6 +306,9 @@ body {
     z-index: 99;
     color: #fff;
 }
+#tt-footer .nav-footer ul li a.nav-link:hover {
+    color: var(--color-pink)
+}
 
 .footer-col-inner {
     display: flex;
@@ -318,6 +321,7 @@ body {
 
 .title-members {
     font-size: 1rem;
+    color: #6c6c6c;
 }
 
 .tt-logo-footer {
@@ -997,16 +1001,18 @@ body {
 
 .hover-scale video.pgi-video {
     transition: transform 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99);
+    transform: scale(1.2) ;
 }
 .hover-scale:hover video.pgi-video {
-    transform: scale(0.7) rotate(0.001deg);
+    transform: scale(0.75) rotate(0.001deg);
     transition: transform 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99);
 }
 .hover-scale .pli-image-link {
-    background: #242028;
+    background: #000;
 }
-
-
+.col-info {
+    font-size: clamp(20px, 5vw, 75px);
+}
 
 #portfolio-grid.pgi-cap-inside .pgi-caption {
     position: relative;
@@ -1023,7 +1029,7 @@ body {
 
 /* Estado inicial */
 .pgi-caption .col-info {
-    transform: translateY(0%) rotate(0.001deg);
+    transform: translateY(0%) rotate(2deg);
     transition: 
         transform 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99),  
         opacity 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99),
@@ -1036,7 +1042,7 @@ body {
 
 /* Al hacer hover */
 .hover-scale:hover .pgi-caption .col-info {
-    transform: translateY(-50px) rotate(0.001deg);
+    transform: translateY(-75px) rotate(0deg);
     opacity: 1;
     color: #fff;
 }
