@@ -64,7 +64,7 @@ export default function Home() {
 
 
 
-		<div className="tt-pn-subtitle tt-sub-hero padding-top-150 padding-top-lg-200 margin-top-20-p margin-bottom-10-p padding-bottom-lg-200">
+		<div className="tt-pn-subtitle tt-sub-hero padding-top-150 padding-top-lg-200 margin-top-20-p margin-bottom-10-p padding-bottom-100 padding-bottom-lg-200">
 			<div className="tt-col-lg-9 tt-offset-lg-3 position-realative">
 				<div className="tt-heading tt-heading-lg">
 					<h2 className="tt-heading-title text-uppercase split-lines not-split">We believe in the power of human connection and the ability to bring people together through design</h2>
@@ -78,14 +78,10 @@ export default function Home() {
 
 
 
-		<div className="tt-section no-padding-bottom-lg padding-bottom-150">
+		<div className="tt-section no-padding-bottom-lg padding-bottom-100">
 			<div className="tt-section-inner">
-				<div className="tt-heading tt-heading-lg tt-heading-center margin-bottom-10-p anim-fadeinup">
-					<h3 className="tt-heading-subtitle text-gray">Latest Projects</h3>
-					<h2 className="tt-heading-title">Works</h2>
-					<div className="tt-btn tt-btn-link margin-top-20">
-						<a href="portfolio-grid-creative-1.html" data-hover="See All Works">See All Works</a>
-					</div>
+				<div className="tt-heading tt-heading-lg tt-heading-center padding-bottom-50 no-padding-bottom-lg margin-bottom-10-p anim-fadeinup">
+					<h2 className="tt-heading-title split-lines not-split">Works</h2>
 				</div>
 				{/*End tt-Heading */}
 
@@ -104,7 +100,7 @@ export default function Home() {
 
 									{/*Begin portfolio grid item  */}
 									<div className="portfolio-grid-item hover-scale">
-										<a href={`/projects/17Sigma`} className="pli-image-link" data-cursor-view="">
+										<a href={`/projects/Dreamforce`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-video-wrap ttgr-height">
@@ -116,7 +112,7 @@ export default function Home() {
 											</div> 
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
-											<div className="col-info">17 Sigma</div>
+											<div className="col-info">Dreamforce</div>
 											{/* <div className="col-info pgi-date hide-from-md">2023</div>  */}
 										</div> 
 									</div>
@@ -195,7 +191,7 @@ export default function Home() {
 											<div className="pgi-image-holder cover-opacity-2">
 												<div className="pgi-image-inner anim-zoomin">
 													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandbox-Poster.jpeg">
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandBox-Poster.jpeg">
 															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/theSandbox/ml-01.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
@@ -230,12 +226,12 @@ export default function Home() {
 
 
 
-		<div className="tt-section padding-bottom-lg-200 padding-top-lg-200">
+		<div className="tt-section padding-bottom-200 padding-top-lg-200 margin-bottom-lg-100">
 			<div className="tt-section-inner tt-wrap-xl">
 
 				<div className="tt-heading tt-heading-center tt-heading-lg margin-bottom-10-p anim-fadeinup">
 					<h3 className="tt-heading-subtitle text-gray">Latest articles</h3>
-					<h2 className="tt-heading-title">Blog</h2>
+					<h2 className="tt-heading-title split-lines not-split">Blog</h2>
 				</div>
 				{/*}End tt-Heading */}
 

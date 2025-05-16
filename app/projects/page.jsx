@@ -212,7 +212,7 @@ export default function Projects() {
                         <a href={`/projects/TheSandbox`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
-                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandbox-Poster.jpeg">
+                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandBox-Poster.jpeg">
                                         <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/theSandbox/ml-01.mp4" type="video/mp4" />
                                     </video>
                                 </figure> 

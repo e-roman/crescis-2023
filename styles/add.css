@@ -559,7 +559,7 @@ body {
         max-width: 100%;
     }
     .ph-caption.about-caption {
-        padding-top: 15vh;
+        padding-top: 45vh;
     }
     .ph-image-bg .anim-drawing {
         z-index: -1;
@@ -925,7 +925,7 @@ body {
         right: 0;
     }
     .projects-caption {
-        padding-top: 10vh
+        padding-top: 45vh
     }
     svg.svg-hero-projects {
         height: 80vh;
@@ -1011,7 +1011,7 @@ body {
     background: #000;
 }
 .col-info {
-    font-size: clamp(20px, 5vw, 75px);
+    font-size: clamp(25px, 4vw, 55px);
 }
 
 #portfolio-grid.pgi-cap-inside .pgi-caption {
@@ -1042,7 +1042,7 @@ body {
 
 /* Al hacer hover */
 .hover-scale:hover .pgi-caption .col-info {
-    transform: translateY(-75px) rotate(0deg);
+    transform: translateY(-45px) rotate(0deg);
     opacity: 1;
     color: #fff;
 }
@@ -1060,9 +1060,15 @@ body {
 
 
 @media (max-width: 768px) {
+    #portfolio-grid.pgi-cap-inside .pgi-caption {
+        padding: .5rem 0 0 0;
+    }
     .pgi-caption .col-info {
         color: #fff;
         opacity: 1;
+    }
+    .pgi-caption .col-info {
+        transform: none;
     }
 }
 

@@ -761,9 +761,14 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	text-transform: uppercase;
 }
-
-
+@media (max-width: 768px) {
+	.tt-heading.tt-heading-center {
+		padding: 0 1rem;
+		text-align: left;
+	}
+}
 /* tt-Headings sizes 
 ===================== */
 /* size xsm */
@@ -784,7 +789,7 @@ body.is-firefox .tt-heading.tt-heading-stroke .tt-heading-title {
 
 /* size lg */
 .tt-heading.tt-heading-lg .tt-heading-title {
-    font-size: calc(28px + 3vw);
+    font-size: calc(33px + 3vw);
     line-height: 1;
     font-weight: var(--font-bold);
 }
@@ -3828,7 +3833,9 @@ body.tt-boxed .tt-wrap .tt-grid.ttgr-gap-6 {
 	z-index: 1;
 	line-height: 1;
 }
-.pgi-image-holder {
+.pgi-image-holder{
+    overflow: hidden;
+    position: relative;
 }
 .pgi-image-inner {
 }
@@ -4603,8 +4610,8 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 }
 @media (max-width: 1024px) {
 	.portfolio-interactive {
-		padding-left: 5%;
-		padding-right: 5%;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 body.tt-boxed .tt-wrap .portfolio-interactive {
@@ -4619,10 +4626,11 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	padding-bottom: 25px;
 }
 @media (max-width: 1024px) {
-	.portfolio-interactive-item {
-		padding: 8% 3% 5% 3%;
-		margin-bottom: 20px;
-	}
+    .portfolio-interactive-item {
+        padding: 8% 3% 5%;
+        margin-bottom: 0;
+        border-top: solid 1px #4b4b4b;
+    }
 }
 
 /* Portfolio interactive item counter */
@@ -4741,6 +4749,10 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 	transition: transform .6s cubic-bezier(0.51, 0.57, 0.17, 1);
 }
 @media (min-width: 1025px) {
+.pi-item-title-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 	.pi-item-title, 
 	.pi-item-hover-title {
 		white-space: nowrap;
@@ -4820,6 +4832,7 @@ body.tt-boxed .tt-wrap .portfolio-interactive {
 @media (max-width: 1024px) {
 	.pi-item-image {
 		overflow: hidden;
+		display: none
 	}
 	.pi-item-image::before {
 		position: absolute;
@@ -4875,7 +4888,7 @@ video.pi-item-video {
 	.portfolio-interactive.pi-compact .portfolio-interactive-item {
 		padding-top: 10px;
 		padding-bottom: 20px;
-		padding-right: 15%;
+		padding-right: 0;
 	}
 
 	.portfolio-interactive.pi-compact .pi-item-title {
