@@ -421,6 +421,8 @@ document.querySelectorAll(".swiper").forEach(sw => {
         });
       });
     });
+
+    
     // Inner hover ignore
     document.querySelectorAll(".cursor-close a, .cursor-close button, .cursor-close .tt-btn, .cursor-close .hide-cursor")
       .forEach(inner => {

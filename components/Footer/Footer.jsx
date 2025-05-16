@@ -12,7 +12,7 @@ return (
 		<div className="tt-footer-inner padding-bottom-70">
 			<div className="footer-col">
 				<div className="footer-col-inner">
-					<div className="tt-logo-footer anim-fadeinupSmall">
+					<div className="tt-logo-footer anim-fadeinup">
 						<a href="/" target="_blank">
 							<img src="https://d2s90tzqqa0vkb.cloudfront.net/assets/img/logo.svg" alt="Crescis" />
 						</a>
@@ -22,7 +22,7 @@ return (
 			<div className="footer-col">
 				<div className="footer-col-inner">
 					<div className="nav-footer">
-						<ul className="anim-fadeinupSmall">
+						<ul className="anim-fadeinup">
 							<li className="nav-item"><a href="projects" className="nav-link">PROJECTS</a></li>
 							<li className="nav-item"><a href="about" className="nav-link">WHO WE ARE</a></li>
 							<li className="nav-item"><a href="contact" className="nav-link">LET’S TALK</a></li>
@@ -31,7 +31,7 @@ return (
 					</div>
 
 					<div className="nav-footer padding-top-xs-100">
-						<ul className="anim-fadeinupSmall">
+						<ul className="anim-fadeinup">
 							<li className="nav-item"><a href="https://www.instagram.com/_cresci/" target="_blank" className="nav-link">INSTAGRAM</a></li>
 							<li className="nav-item"><a href="https://www.behance.net/_Cresci" target="_blank" className="nav-link">BEHANCE</a></li>
 							<li className="nav-item"><a href="https://www.linkedin.com/company/crescimone/" target="_blank" className="nav-link">LINKEDIN</a></li>
@@ -47,12 +47,12 @@ return (
 			<div className="footer-col">
 				<div className="footer-col-inner">
 					<div className="members-footer">
-						<h5 className="title-members">MEMBERS OF</h5>
-						<ul className="anim-fadeinupSmall">
-							<li><a href="https://www.oneclub.org/" target="_blank"><img src="/assets/img/oneclub.svg" alt="Crescis"/></a></li>
-							<li><a href="https://www.oneclub.org/adcawards/" target="_blank"><img src="/assets/img/adc.svg" alt="Crescis"/></a></li>
-							<li><a href="https://www.oneclub.org/theoneshow/" target="_blank"><img src="/assets/img/theoneshow.svg" alt="Crescis"/></a></li>
-							<li><a href="https://www.oneclub.org/tdcawards/" target="_blank"><img src="/assets/img/tdcawards.svg" alt="Crescis"/></a></li>
+						<h5 className="title-members anim-fadeinup">MEMBERS OF</h5>
+						<ul className="anim-fadeinup">
+							<li><a href="https://www.oneclub.org/" target="_blank"><img src="/images/clients/oneclub.svg" alt="Crescis"/></a></li>
+							<li><a href="https://www.oneclub.org/adcawards/" target="_blank"><img src="/images/clients/adc.svg" alt="Crescis"/></a></li>
+							<li><a href="https://www.oneclub.org/theoneshow/" target="_blank"><img src="/images/clients/theoneshow.svg" alt="Crescis"/></a></li>
+							<li><a href="https://www.oneclub.org/tdcawards/" target="_blank"><img src="/images/clients/tdcawards.svg" alt="Crescis"/></a></li>
 						</ul>
 					</div> 
 				</div>

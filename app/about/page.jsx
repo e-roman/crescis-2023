@@ -5,12 +5,10 @@
 import { useEffect } from "react";
 
 // Functions
-import { initScrollingText } from '@/utils/themeFunctions';
 import { initAccordion } from "@/utils/FunctionsAccordion";
 
 export default function AboutPage() {
   useEffect(() => {
-    initScrollingText();    
     initAccordion();          
   }, []);
 
@@ -36,21 +34,6 @@ export default function AboutPage() {
                 
             </div> 
             
-            <a href="#page-content" className="scroll-down-circle" data-offset="30">
-              <div className="sdc-inner ph-appear">
-                <div className="sdc-icon"><i className="fas fa-chevron-down"></i></div>
-                <svg viewBox="0 0 500 500">
-                  <defs>
-                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
-                  </defs>
-                  <text dy="30">
-                    <textPath href="#textcircle">
-                      Scroll down – Scroll down –
-                    </textPath>
-                  </text>
-                </svg>
-              </div> 
-            </a>
         </div>
 
 
@@ -90,7 +73,7 @@ export default function AboutPage() {
                     <div className="tt-row">
                         <div className="tt-col-lg-5 padding-right-lg-5-p padding-top-lg-100">
                             <div className="tt-heading tt-heading-sm margin-bottom-60 anim-fadeinup">
-                                <h2 className="tt-heading-title text-pink">ABOUT US</h2>
+                                <h2 className="tt-heading-title text-pink">ABOUT CRESCI´S</h2>
                             </div>
                         </div> 
 
@@ -421,10 +404,10 @@ export default function AboutPage() {
                     </div>
                 
                     <ul className="tt-logo-wall cl-col-44 anim-fadeinup">
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-1.png" alt="Client"/></a></li>
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-2.png" alt="Client"/></a></li>
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-3.png" alt="Client"/></a></li>
-                        <li><a href="#" className="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-4.png" alt="Client"/></a></li>
+                        <li><a href="https://www.oneclub.org/" className="cursor-alter" target="_blank" rel="noopener"><img src="/images/clients/client-1.png" alt="Client"/></a></li>
+                        <li><a href="https://www.oneclub.org/adcawards" className="cursor-alter" target="_blank" rel="noopener"><img src="/images/clients/client-2.png" alt="Client"/></a></li>
+                        <li><a href="https://www.oneclub.org/theoneshow" className="cursor-alter" target="_blank" rel="noopener"><img src="/images/clients/client-3.png" alt="Client"/></a></li>
+                        <li><a href="https://www.oneclub.org/tdcawards" className="cursor-alter" target="_blank" rel="noopener"><img src="/images/clients/client-4.png" alt="Client"/></a></li>
                     </ul>
 
                 </div>

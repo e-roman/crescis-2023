@@ -238,57 +238,6 @@ body {
 /* ------------------------------------------------------------- *
  * Page transitions
 /* ------------------------------------------------------------- */
-/* 
-#page-transition {
-	display: none;
-}
-body.tt-transition #page-transition {
-	position: relative;
-	display: block;
-	z-index: 99999;
-}
-
-
-body.tt-transition .ptr-overlay {
-	position: fixed;
-	display: block;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: #111;
-	z-index: 1;
-}
-
-
-body.tt-transition .ptr-preloader {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	z-index: 2;
-	transform: translate(-50%, -50%);
-}
-
-body.tt-transition .ptr-prel-content {
-	margin-top: 10px;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 15px;
-	color: #af1212;
-}
-
-.ptr-prel-image {
-	max-height: 96px;
-	opacity: .2; 
-} */
-
-
-
-
-
-
-
-
 body.tt-transition #page-transition {
     position: relative;
     display: block;
@@ -333,11 +282,12 @@ body.tt-transition .ptr-prel-content {
 
 .ptr-prel-image {
     opacity: .9;
-    width: 400px;
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
+    width: 60vw;
+    margin: 0 auto;
 }
 
 
@@ -405,6 +355,13 @@ body.tt-boxed .tt-p-md {
 	padding-left: 3.5%;
 	padding-right: 3.5%;
 }
+
+@media (max-width: 767px) {
+	body.tt-boxed .tt-wrap {
+		max-width: 99vw;
+	}
+}
+
 
 /* ------------------------------------------------------------- *
  * Body inner
@@ -1573,7 +1530,7 @@ body.tt-smooth-scroll.tt-ol-menu-open .scrollbar-track {
 .tt-ol-menu-list > li > .tt-ol-submenu-trigger > a {
 	position: relative;
 	display: inline-block;
-	font-size: clamp(34px,7.2vw,100px);
+	font-size: clamp(38px, 10.5vw, 115px);
 	line-height: 1;
 	color: #eaeaea;
 	text-transform: uppercase;
@@ -1753,7 +1710,8 @@ body:not(.is-mobile) .tt-ol-menu-list > li > .tt-ol-submenu-trigger.tt-ol-submen
 	}
 }
 .tt-ol-menu-toggle-btn-holder {
-	float: left;
+    float: left;
+    position: relative;
 }
 
 /* Toggle button */
@@ -1762,6 +1720,7 @@ body:not(.is-mobile) .tt-ol-menu-list > li > .tt-ol-submenu-trigger.tt-ol-submen
     height: 55px;
     border-radius: 50px;
     border: 2px solid #fff;
+    display: block;
 }
 .tt-ol-menu-toggle-btn span {
     position: absolute;
@@ -2041,7 +2000,7 @@ body:not(.tt-boxed) .page-header-inner,
 @media (max-width: 540px) {
 	body.ph-image-on #page-header:not(.project-info-list-on) .page-header-inner {
 		padding-top: 240px;
-		padding-bottom: 40vw;
+		padding-bottom: 20vw;
 	}
 }
 
@@ -2231,12 +2190,13 @@ body:not(.tt-boxed) .page-header-inner,
 
 /* page header caption title */
 .ph-caption-title {
-	position: relative;
-	margin: 0;
-	font-size: clamp(40px, 5vw, 94px);
-	color: #FFF;
-	line-height: 1.3;
-	z-index: 9;
+    position: relative;
+    margin: 0;
+    font-size: clamp(47px, 7vw, 127px);
+    color: #FFF;
+    line-height: 1.3;
+    z-index: 9;
+    text-transform: uppercase;
 }
 
 
@@ -3212,11 +3172,19 @@ body:not(.is-mobile) .ttgr-cat-close {
 }
 
 
+.tt-grid-item {
+    width: 50%;
+}
+
+
+
+
+
 /* tt-Grid height class ("ttgr-height"). Use it on an element inside "ttgr-item-inner".
 ======================================== */
 .ttgr-height {
-	position: relative;
-	padding-bottom: 35%;
+    position: relative;
+    padding-bottom: 55%;
 }
 @media (max-width: 768px) {
 	.ttgr-height {
@@ -4174,6 +4142,23 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 	.pli-hover .pli-image-col:hover .pli-image .pli-image-hover-zoom {
 		transform: scale(1.05);
 	}
+
+	/* Image hover */
+	.pli-hover .pli-image-link {
+		transition: all 0.8s cubic-bezier(0.07, 0.72, 0.29, 0.96);
+		clip-path: inset(0 0 0 0);
+	}
+	.pli-hover .pli-image-hv:hover .pli-image-link {
+		clip-path: inset(3% 3% 3% 3%);
+	}
+
+	.pli-hover .pli-image .pli-image-hover-zoom {
+		transition: all 1s cubic-bezier(0.07, 0.72, 0.29, 0.96);
+	}
+	.pli-hover .pli-image-hv:hover .pli-image .pli-image-hover-zoom {
+		transform: scale(1.05);
+	}
+
 }
 
 
@@ -4222,9 +4207,10 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 	}
 }
 @media (max-width: 767px) {
-	.pli-info-col {
-		margin-top: 20px;
-	}
+    .pli-info-col {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
 }
 
 .pli-info { 
@@ -4242,11 +4228,11 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 	}
 }
 
-.pli-title { 
-	margin: 0;
-	font-size: calc(16px + 2vw);
-	color: #FFF;
-	line-height: 1.3;
+.pli-title {
+    margin: 0;
+    font-size: calc(16px + 2vw);
+    color: #FFF;
+    line-height: 0.9;
 }
 .pli-title .split-line-wrap {
 	line-height: 1.3;
@@ -6191,6 +6177,13 @@ video.tt-pci-video {
 	object-fit: cover;
 }
 
+.tt-pn-image video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+}
+
 #magic-cursor.tt-pn-hover-on {
 	z-index: -1;
 }
@@ -7089,6 +7082,13 @@ body:not(.tt-magic-cursor) .social-buttons > ul > li a:hover {
 	opacity: .3;
 	transition: opacity 0.3s;
 }
+@media (max-width: 767px) {
+	.tt-accordion-caret {
+		width: 25px;
+		height: 25px;
+	}
+}
+
 .tt-accordion-item:not(.active) .tt-accordion-heading:hover .tt-accordion-caret,
 .tt-accordion-caret:hover {
 	opacity: 1;
@@ -7966,6 +7966,7 @@ video.tt-bg-video {
 	padding-left: 2vw;
 	font-size: 7.5vw;
 	line-height: 1.1;
+	text-transform: uppercase;
 	white-space: nowrap;
 	animation-name: tt_scrolling_text; 
 	animation-timing-function: linear; 

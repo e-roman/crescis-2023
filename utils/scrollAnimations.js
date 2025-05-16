@@ -111,7 +111,7 @@ export function initScrollAnimations() {
     // scroll-down-circle
     if (document.querySelector(".scroll-down-circle")) {
       gsap.to(".scroll-down-circle", {
-        x: -100,
+        y: -100,
         autoAlpha: 0,
         ease: "none",
         scrollTrigger: {

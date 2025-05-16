@@ -56,69 +56,79 @@ export default function ContactPage() {
 
         <div id="page-content">
 
-                <div id="contactSection" className="margin-top-5-p margin-bottom-15-p padding-bottom-100 padding-top-200 padding-bottom-200">
-
-					<div className="tt-section-contact">
-
-						<div className="tt-section-inner tt-wrap-xl">
+                <div className="margin-top-5-p padding-bottom-100 padding-top-150 padding-top-lg-200 padding-bottom-130 padding-bottom-lg-100">
+					<div className="tt-section-contact tt-boxed">
+						<div className="tt-section-inner tt-wrap-lg padding-lr-xl">
 
 
 
-							<div className="tt-row">
-
+							<div className="tt-row padding-bottom-50 padding-bottom-lg-150">
 								<div className="tt-col-lg-6">
 
-
-
 									<div className="tt-heading-title-contact margin-bottom-10-p anim-fadeinup">
-
 										<h2 className="tt-heading-title text-pink">GET IN TOUCH<br/> WITH US</h2>
-
 									</div>
 
-									
-
-
-
-
-
 									<ul className="tt-contact-info text-gray">
-
 										<li className="anim-fadeinup">
-
-											<span className="tt-ci-icon text-white"><i className="fas fa-map-marker-alt"></i></span>
-
 											<span className="text-white">61NE 86th Street, Miami 33138, FL</span>
-
 										</li>
-
 										<li className="anim-fadeinup">
-
-											<span className="tt-ci-icon text-white"><i className="fas fa-phone"></i></span>
-
 											<a href="tel:+123456789000" className="tt-link text-white">+1 (786) 719 2390</a>
-
 										</li>
-
 										<li className="anim-fadeinup">
-
-											<span className="tt-ci-icon text-white"><i className="fas fa-envelope"></i></span>
-
 											<a href="mailto:company@email.com" className="tt-link text-white">info@cresci.co</a>
-
 										</li>
-
 									</ul>
-
-									
-
-
-
 								</div>
 
 
+								<div className="tt-col-lg-5 margin-auto">
+										
+										<div id="tt-contact-form" className="tt-form-minimal anim-fadeinup">
 
-								<div className="tt-col-lg-7 tt-offset-lg-5 padding-top-100">
+											<div className="tt-row">
+												<div className="tt-col-md-6">
+													<div className="tt-form-group">
+														<label>Name <span className="required">*</span></label>
+														<input className="tt-form-control" type="text" name="Name" placeholder="" required=""/>
+													</div>
+												</div> 
+
+												<div className="tt-col-md-6">
+													<div className="tt-form-group">
+														<label>Email address <span className="required">*</span></label>
+														<input className="tt-form-control" type="email" name="Email" placeholder="" required=""/>
+													</div>
+												</div> 
+											</div> 
+
+											<div className="tt-form-group">
+												<label>Subject <span className="required">*</span></label>
+												<input className="tt-form-control" type="text" name="Subject" placeholder="" required=""/>
+											</div>
+
+											<div className="tt-form-group">
+												<label>What do you want to tell us? <span className="required">*</span></label>
+												<textarea className="tt-form-control" rows="6" name="Message" placeholder="" required=""/>
+											</div>
+
+											<small className="tt-form-text"><em>Fields marked with an asterisk (*) are required!</em></small>
+
+											<div className="tt-btn tt-btn-light-outline margin-top-40">
+												<button type="submit" data-hover="Send Message">Send Message</button>
+											</div>
+										</div>
+								</div>
+
+
+							</div> 
+
+
+
+							<div className="tt-row padding-bottom-lg-150">
+
+								<div className="tt-col-lg-8 padding-top-100">
 									<div className="tt-heading-title-contact anim-fadeinup margin-bottom-100">
 										<h2 className="tt-heading-title text-pink margin-bottom-50">JOIN OUR <br/>DREAM TEAM</h2>
 										<h2 className="tt-heading-subtitle">WE ARE LOOKING FOR PEOPLE, NOT ROBOTS. <br/>
@@ -127,14 +137,74 @@ export default function ContactPage() {
 									</div>
 								</div>
 
+
+
+								<div className="tt-col-lg-8">
+									<div id="tt-contact-form" className="tt-form-minimal anim-fadeinup">
+										<div className="tt-row">
+											<div className="tt-col-md-6">
+												<div className="tt-form-group"> 
+													<label>Name <span className="required">*</span></label> 
+													<input className="tt-form-control" type="text" name="name" id="name" placeholder="" aria-label="Name" required=""/> 
+												</div>
+												<div className="tt-form-group"> 
+													<label>Email <span className="required">*</span></label> 
+													<input className="tt-form-control" type="email" name="email" id="email" placeholder="" aria-label="Email" required=""/> 
+												</div>
+												<div className="tt-form-group"> 
+													<label>Phone number <span className="required">*</span></label> 
+													<input className="tt-form-control" type="text" name="phone" id="phone" placeholder="" aria-label="Phone" required=""/> 
+												</div>
+												<div className="tt-form-group"> 
+													<label>Why are you interested?</label> 
+													<textarea className="tt-form-control" rows="6" placeholder="" type="text" name="menssageJoin" id="menssageJoin" aria-label="menssageJoin" required=""/>
+												</div> 
+												<small className="tt-form-text"><em>Fields marked with an asterisk (*) are required!</em></small>        
+											</div>
+										
+											<div className="tt-col-md-6">
+												<div className="tt-form-group"> 
+													<label>Linkedin</label> 
+													<input className="tt-form-control" type="text" name="linkedinUrl" id="linkedinUrl" placeholder="" aria-label="linkedinUrl"/> 
+												</div>
+												<div className="tt-form-group"> 
+													<label>Portfolio</label> 
+													<input className="tt-form-control" type="text" name="portfolioUrl" id="portfolioUrl" placeholder="" aria-label="portfolioUrl"/> 
+												</div>
+												<div className="tt-form-group text-right">
+													<div className="margin-top-xl-150">
+														<div className="tt-btn tt-btn-light-outline margin-top-40"> <button type="button" data-hover="Send Message" id="btnSubmitComment2">Send Message</button> </div>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+
+
 							</div> 
 
 
 
+
+							{/*Scrolling Text*/}
+							<div className="tt-section">
+							<div className="tt-section-inner">
+								<div className="tt-scrolling-text font-bold text-pink anim-fadeinup" data-scroll-speed="20">
+								<div className="tt-scrolling-text-inner" data-text=" Explore our projects. Explore our projects. Explore our projects.">
+									Explore our projects. Explore our projects. Explore our projects.
+								</div>
+								</div>
+							</div>
+							</div>
+
+
+
+
 						</div> 
-
 					</div>
-
 				</div>
 
         </div>  

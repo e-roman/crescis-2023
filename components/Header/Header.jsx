@@ -35,7 +35,7 @@ export default function Header() {
         </div>
         <div className="tt-header-col">
           <div id="tt-ol-menu-toggle-btn-wrap">
-            <div className="tt-ol-menu-toggle-btn-text">
+            <div className="tt-ol-menu-toggle-btn-text hide-from-sm">
               <span className="text-menu" data-hover="Open">Menu</span>
               <span className="text-close">Close</span>
             </div>
@@ -66,7 +66,7 @@ export default function Header() {
                           }}
                         >
                           <span>{item.label}</span>
-                          <span className="arrow-navlink"><svg width="70" height="48" viewBox="0 0 70 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5568 19.9733L13.781 21.4372L13.1364 19.8516L16.0516 18.7206L28.5508 6.50449L22.5777 0.666679L0 22.7329L0 25.4675L22.3726 47.3333L28.3457 41.4955L16.0516 29.4799L13.1364 28.3488L13.781 26.7632L17.5568 28.2271L70 28.0768V19.8194L17.5568 19.9697V19.9733Z" fill="#FFB2C7"></path></svg></span> 
+                          <span className="arrow-navlink hide-from-sm"><svg width="70" height="48" viewBox="0 0 70 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5568 19.9733L13.781 21.4372L13.1364 19.8516L16.0516 18.7206L28.5508 6.50449L22.5777 0.666679L0 22.7329L0 25.4675L22.3726 47.3333L28.3457 41.4955L16.0516 29.4799L13.1364 28.3488L13.781 26.7632L17.5568 28.2271L70 28.0768V19.8194L17.5568 19.9697V19.9733Z" fill="#FFB2C7"></path></svg></span> 
                         </a>
                       </li>
                     ))}

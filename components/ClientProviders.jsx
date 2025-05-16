@@ -13,7 +13,7 @@ import CursorMagic from "@/components/CursorMagic/CursorMagic";
 
 // Functions
 import { initLenis } from '@/utils/initLenis';
-import { initMagicCursor, initScrollToTop, initAnchorScrolling } from '@/utils/themeFunctions';
+import { initMagicCursor, initScrollToTop, initAnchorScrolling, initScrollingText } from '@/utils/themeFunctions';
 import { initScrollAnimations } from '@/utils/scrollAnimations';
 import { animateSplitTextScroll } from "@/utils/SplitText";
 
@@ -23,6 +23,7 @@ export default function ClientProviders({ children }) {
     initMagicCursor();
     initScrollAnimations();
     initScrollToTop();
+    initScrollingText();       
     initAnchorScrolling();
     animateSplitTextScroll();
   }, []); 
