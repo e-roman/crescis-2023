@@ -2,7 +2,6 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 // Functions
 import { initTitleHoverProjects, initDraw } from '@/utils/themeFunctions';
@@ -10,10 +9,7 @@ import { initPortfolioGrid } from '@/utils/themeFunctions2';
 
 import { animateSplitTextScroll } from "@/utils/SplitText";
 
-import {
-    initAccordion
-  } from "@/utils/FunctionsAccordion";
-  
+
 import {
   initPartnersSlider,
 } from "@/utils/FunctionsSwipers";
@@ -22,8 +18,6 @@ export default function Home() {
   useEffect(() => {
 	 initDraw();
 	 animateSplitTextScroll();
-    // initPortfolioSlider();
-    // initPortfolioCarousel();
     initPartnersSlider();   
     initTitleHoverProjects();   
     initPortfolioGrid();    
