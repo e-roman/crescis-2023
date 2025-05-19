@@ -82,7 +82,8 @@ html, body {
 
 body {
 	position: relative;
-	background-color: #0a0a0a;
+    background-color: #231f27;
+    font-family: "helvetica-regular", Helvetica, Arial, sans-serif;
 	line-height: 1.7;
 	font-size: 19px;
 	-webkit-font-smoothing: antialiased;
@@ -291,6 +292,17 @@ body.tt-transition .ptr-prel-content svg {
     width: 65vw;
     height: 65vw;
     margin: 0 auto;
+}
+body.tt-transition .ptr-prel-content svg.screens-in {
+    z-index: -1;
+    position: absolute;
+    top: -40vw;
+    right: -29vw;
+    right: -32vw;
+    width: 100vw;
+    height: 100vw;
+    margin: 0 auto;
+    left: inherit;
 }
 .ptr-prel-content h1 {
 	font-size: clamp(65px, 6vw, 110px);
@@ -2475,6 +2487,9 @@ a.ph-category:hover {
 #page-header.ph-bg-image .scroll-down-circle .sdc-icon {
 	color: #FFF;
 }
+.scroll-down-circle .sdc-icon svg {
+    animation: none;
+}
 
 /* Scroll down circle svg */
 .scroll-down-circle svg { 
@@ -4140,8 +4155,9 @@ body:not(.is-mobile) #portfolio-grid.pgi-cap-inside.pgi-cap-hover .portfolio-gri
 }
 
 .pli-image-link {
-	display: block;
-	overflow: hidden;
+    display: block;
+    overflow: hidden;
+    position: relative;
 }
 .pli-image-holder {
 }

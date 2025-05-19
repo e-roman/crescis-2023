@@ -3,13 +3,16 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import { useEffect } from "react";
+import Image from 'next/image';
 
 // Functions
 import { initAccordion } from "@/utils/FunctionsAccordion";
+import { initStyleMedia } from '@/utils/themeFunctions';
 
 export default function AboutPage() {
   useEffect(() => {
-    initAccordion();          
+    initAccordion();   
+    initStyleMedia();                 
   }, []);
 
   return (
@@ -174,14 +177,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" data-src="team/01.jpg" src="https://d2s90tzqqa0vkb.cloudfront.net/team/01.jpg" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/01.jpg" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -200,14 +207,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/02.png" data-src="team/02.png" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/02.png" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -226,14 +237,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/03.png" data-src="team/03.png" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/03.png" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -252,14 +267,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" data-src="team/04.png" src="https://d2s90tzqqa0vkb.cloudfront.net/team/04.png" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/04.png" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -278,14 +297,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/05.png" data-src="team/05.png" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/05.png" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -304,14 +327,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/06.png" data-src="team/06.png" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/06.png" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -330,14 +357,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/07.png" data-src="team/07.png" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/07.png" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -356,14 +387,18 @@ export default function AboutPage() {
                                     <div className="ttgr-item-inner">
 
                                         <div className="portfolio-grid-item">
-                                            <div className="pgi-image-holder">
+                                            <div className="pgi-image-holder media-transition">
                                                 <div className="tt-image">
-                                                    <figure>
+                                                    <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <img className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/08.png" data-src="team/08.png" />
+                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/08.png" alt="Crescis"
+                                                                  width={800}     // ← Requerido
+                                                                  height={600}    // ← Requerido
+                                                                />
                                                             </div>
                                                         </div>
+                                                        <div className="figure-reveal overlay"></div>
                                                     </figure>
                                                 </div>
                                             </div> {/* /.pgi-image-holder */}
@@ -396,7 +431,7 @@ export default function AboutPage() {
 
 
 
-            <div className="tt-section padding-top-xlg-150 padding-bottom-lg-150">
+            <div className="tt-section padding-top-xlg-150 padding-bottom-lg-150 hide-from-md">
                 <div className="tt-section-inner tt-wrap-xl padding-rl-xl">
 
                     <div className="tt-heading tt-heading-xxlg tt-heading-left padding-left-lg-50">

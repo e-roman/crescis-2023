@@ -1,4 +1,4 @@
-// MagixCursor.js
+
 import { gsap, Power2, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -18,6 +18,45 @@ export function initDraw() {
     });
   });
 }
+
+
+
+
+export function initStyleMedia() {
+  const containers = document.querySelectorAll('.media-transition');
+
+  containers.forEach((container) => {
+    const figures = container.querySelectorAll('.figure-reveal');
+    const videos = container.querySelectorAll('.figure-zoom-out');
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        start: 'top 70%',
+        end: 'bottom 10%',
+        toggleActions: 'play none none none',
+      }
+    });
+
+    // Agregamos etiqueta para alinear tiempo
+    tl.addLabel('start');
+
+    // Animación figures
+    tl.fromTo(figures, 
+      { scaleY: 1, rotate: 0.001 }, 
+      { scaleY: 0, rotate: 0.001, ease: "primary-ease", duration: 1, stagger: 0.017 }, 
+      'start'
+    );
+
+    // Animación videos
+    tl.fromTo(videos, 
+      { scale: 1.5, rotate: 0.001 }, 
+      { scale: 1, rotate: 0.001, ease: "primary-ease", duration: 1, stagger: 0.017 }, 
+      'start'
+    );
+  });
+}
+
 
 
 

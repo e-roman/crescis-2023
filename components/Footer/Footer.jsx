@@ -23,6 +23,7 @@ return (
 				<div className="footer-col-inner">
 					<div className="nav-footer">
 						<ul className="anim-fadeinup">
+							<li className="nav-item"><a href="/" className="nav-link">HOME</a></li>
 							<li className="nav-item"><a href="projects" className="nav-link">PROJECTS</a></li>
 							<li className="nav-item"><a href="about" className="nav-link">WHO WE ARE</a></li>
 							<li className="nav-item"><a href="contact" className="nav-link">LET’S TALK</a></li>

@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import Link from "next/link";
 
 // Functions
+import { initStyleMedia } from '@/utils/themeFunctions';
 import { initPortfolioListEffects } from '@/utils/themeFunctions2';
 
 
 export default function Projects() {
   useEffect(() => {
+    initStyleMedia(); //HOVER VIDEOS
     initPortfolioListEffects(); //HOVER VIDEOS
   }, []);
 
@@ -45,16 +47,16 @@ export default function Projects() {
                 <div className="pli-inner">
 
                     <div className="tt-col-lg-7">
-                        <div className="pli-image-hv">
+                        <div className="pli-image-hv media-transition">
                         <a href={`/projects/17Sigma`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
-                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/17Sigma-Poster.jpeg">
+                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/17Sigma-Poster.webp">
                                         <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
                                     </video>
                                 </figure> {/*/.pgi-video-wrap */}
                             </div> 
-
+                            <div className="figure-reveal overlay"></div>
                         </a>
                         </div>
                     </div> 
@@ -81,15 +83,16 @@ export default function Projects() {
                 <div className="pli-inner">
 
                     <div className="tt-col-lg-6">
-                        <div className="pli-image-hv">
+                        <div className="pli-image-hv media-transition">
                         <a href={`/projects/GoogleAds`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
-                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Google-Poster.jpeg">
+                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Google-Poster.webp">
                                         <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/google-discovery-ads/01.mp4" type="video/mp4" />
                                     </video>
                                 </figure> {/*/.pgi-video-wrap */}
                             </div> 
+                            <div className="figure-reveal overlay"></div>
                         </a>
                         </div>
                     </div> 
@@ -97,7 +100,7 @@ export default function Projects() {
                     <div className="pli-info-col pli-info-outer">
                         <div className="pli-info">
                             <div className="pli-counter"></div>
-                            <h2 className="pli-title"><a href="single-project-1.html">GOOGLE <br className="hide-from-sm"/>Discovery Ads</a></h2> 
+                            <h2 className="pli-title"><a href="single-project-1.html">GOOGLE <br className="hide-from-sm"/>DISCOVERY ADS</a></h2> 
                             <div className="pli-categories-wrap">
                                 <div className="pli-category">MOTION GRAPHICS</div>
                             </div>
@@ -113,15 +116,16 @@ export default function Projects() {
                 <div className="pli-inner">
 
                     <div className="tt-col-lg-5">
-                        <div className="pli-image-hv">
+                        <div className="pli-image-hv media-transition">
                         <a href={`/projects/Dreamforce`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
-                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Dreamforce-Poster.jpeg">
+                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Dreamforce-Poster.webp">
                                         <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/01.mp4" type="video/mp4" />
                                     </video>
                                 </figure> {/*/.pgi-video-wrap */}
                             </div> 
+                            <div className="figure-reveal overlay"></div>
                         </a>
                         </div>
                     </div> 
@@ -145,15 +149,16 @@ export default function Projects() {
                 <div className="pli-inner">
 
                     <div className="tt-col-lg-7">
-                        <div className="pli-image-hv">
+                        <div className="pli-image-hv media-transition">
                         <a href={`/projects/Penta`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
-                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Penta-Poster.jpeg">
+                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Penta-Poster.webp">
                                         <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-preview.mp4" type="video/mp4" />
                                     </video>
                                 </figure> {/*/.pgi-video-wrap */}
                             </div> 
+                            <div className="figure-reveal overlay"></div>
                         </a>
                         </div>
                     </div> 
@@ -176,15 +181,16 @@ export default function Projects() {
             <div className="portfolio-list-item">
                 <div className="pli-inner">
                     <div className="tt-col-lg-8">
-                        <div className="pli-image-hv">
+                        <div className="pli-image-hv media-transition">
                         <a href={`/projects/Decoded`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
-                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Decoded-Poster.jpeg">
+                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Decoded-Poster.webp">
                                         <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-01a.mp4" type="video/mp4" />
                                     </video>
                                 </figure> {/*/.pgi-video-wrap */}
                             </div> 
+                            <div className="figure-reveal overlay"></div>
                         </a>
                         </div>
                     </div> 
@@ -208,15 +214,16 @@ export default function Projects() {
                 <div className="pli-inner">
 
                     <div className="tt-col-lg-8">
-                        <div className="pli-image-hv">
+                        <div className="pli-image-hv media-transition">
                         <a href={`/projects/TheSandbox`} className="pli-image-link not-hide-cursor" data-cursor-view="">
                             <div className="pli-image-holder">
                                 <figure className="pgi-video-wrap ttgr-height">
-                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandBox-Poster.jpeg">
+                                    <video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandBox-Poster.webp">
                                         <source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/theSandbox/ml-01.mp4" type="video/mp4" />
                                     </video>
                                 </figure> 
                             </div> 
+                            <div className="figure-reveal overlay"></div>
                         </a>
                         </div>
                     </div> 

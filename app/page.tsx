@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 
 // Functions
-import { initTitleHoverProjects, initDraw } from '@/utils/themeFunctions';
+import { initTitleHoverProjects, initDraw, initStyleMedia } from '@/utils/themeFunctions';
 import { initPortfolioGrid, initPortfolioListEffects } from '@/utils/themeFunctions2';
 
 import { animateSplitTextScroll } from "@/utils/SplitText";
@@ -16,10 +16,11 @@ import {
 
 export default function Home() {
   useEffect(() => {
-	 initDraw();
-	 animateSplitTextScroll();
+	initDraw();
+	initStyleMedia();
+	animateSplitTextScroll();
     initPartnersSlider();   
-	 initPortfolioListEffects();   
+	initPortfolioListEffects();   
     initTitleHoverProjects();   
     initPortfolioGrid();    
   }, []);
@@ -43,7 +44,7 @@ export default function Home() {
       
         <a href="#page-content" className="scroll-down-circle" data-offset="30">
           <div className="sdc-inner ph-appear">
-            <div className="sdc-icon"><i className="fas fa-chevron-down"></i></div>
+            <div className="sdc-icon"><svg className="ion" width="20" height="42" viewBox="0 0 20 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 0H9V40H11V0Z" fill="white"></path><path fillRule="evenodd" clipRule="evenodd" d="M0.100586 32L1.5148 30.5858L10.0001 39.0711L18.4854 30.5858L19.8996 32L10.0001 41.8995L0.100586 32Z" fill="white"></path></svg></div>
             <svg viewBox="0 0 500 500">
               <defs>
                 <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
@@ -99,17 +100,18 @@ export default function Home() {
 								<div className="ttgr-item-inner">
 
 									{/*Begin portfolio grid item  */}
-									<div className="portfolio-grid-item hover-scale">
+									<div className="portfolio-grid-item hover-scale media-transition">
 										<a href={`/projects/Dreamforce`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
-												<div className="pgi-image-inner anim-zoomin">
-													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Dreamforce-Poster.jpeg">
+												<div className="pgi-image-inner">
+													<figure className="pgi-video-wrap ttgr-height figure-zoom-out">
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Dreamforce-Poster.webp">
 															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/dreamforce/01.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
+											<div className="figure-reveal overlay"></div>
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
 											<div className="col-info">Dreamforce</div>
@@ -128,20 +130,21 @@ export default function Home() {
 								<div className="ttgr-item-inner">
 
 									{/*Begin portfolio grid item  */}
-									<div className="portfolio-grid-item hover-scale">
-										<a href={`/projects/Penta`} className="pli-image-link" data-cursor-view="">
+									<div className="portfolio-grid-item hover-scale media-transition">
+										<a href={`/projects/17Sigma`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
-												<div className="pgi-image-inner anim-zoomin">
-													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Penta-Poster.jpeg">
-															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/penta/penta-preview.mp4" type="video/mp4" />
+												<div className="pgi-image-inner">
+													<figure className="pgi-video-wrap ttgr-height figure-zoom-out">
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/17Sigma-Poster.webp">
+															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/17sigma/01.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
+											<div className="figure-reveal overlay"></div>
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
-											<div className="col-info">Penta</div>
+											<div className="col-info">17 Sigma</div>
 											{/* <div className="col-info pgi-date hide-from-md">2023</div>  */}
 										</div> 
 									</div>
@@ -157,17 +160,18 @@ export default function Home() {
 								<div className="ttgr-item-inner">
 
 									{/*Begin portfolio grid item  */}
-									<div className="portfolio-grid-item hover-scale">
+									<div className="portfolio-grid-item hover-scale media-transition">
 										<a href={`/projects/Decoded`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
-												<div className="pgi-image-inner anim-zoomin">
-													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Decoded-Poster.jpeg">
+												<div className="pgi-image-inner">
+													<figure className="pgi-video-wrap ttgr-height figure-zoom-out">
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/Decoded-Poster.webp">
 															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/decoded/decoded-01a.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
+											<div className="figure-reveal overlay"></div>
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
 											<div className="col-info">Decoded</div>
@@ -186,17 +190,18 @@ export default function Home() {
 								<div className="ttgr-item-inner">
 
 									{/*Begin portfolio grid item  */}
-									<div className="portfolio-grid-item hover-scale">
+									<div className="portfolio-grid-item hover-scale media-transition">
 										<a href={`/projects/theSandbox`} className="pli-image-link" data-cursor-view="">
 											<div className="pgi-image-holder cover-opacity-2">
-												<div className="pgi-image-inner anim-zoomin">
-													<figure className="pgi-video-wrap ttgr-height">
-														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandBox-Poster.jpeg">
+												<div className="pgi-image-inner">
+													<figure className="pgi-video-wrap ttgr-height figure-zoom-out">
+														<video className="pgi-video" loop muted preload="metadata" poster="/images/posters/TheSandBox-Poster.webp">
 															<source src="https://d2s90tzqqa0vkb.cloudfront.net/projects/theSandbox/ml-01.mp4" type="video/mp4" />
 														</video>
 													</figure> {/*/.pgi-video-wrap */}
 												</div> 
 											</div> 
+											<div className="figure-reveal overlay"></div>
 										</a> {/*/.pgi-image-wrap */}
 										<div className="pgi-caption">
 											<div className="col-info">The Sandbox</div>
@@ -231,7 +236,7 @@ export default function Home() {
 
 				<div className="tt-heading tt-heading-center tt-heading-lg margin-bottom-10-p anim-fadeinup">
 					<h3 className="tt-heading-subtitle text-gray">Latest articles</h3>
-					<h2 className="tt-heading-title split-lines not-split">Blog</h2>
+					<h2 className="tt-heading-title split-lines not-split">Featured News</h2>
 				</div>
 				{/*}End tt-Heading */}
 

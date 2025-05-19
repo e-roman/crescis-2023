@@ -1,4 +1,10 @@
-
+.page-transition-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    position: fixed;
+    z-index: 9999999;
+}
 
  .is-hidden {
     visibility: hidden;
@@ -8,11 +14,6 @@
     padding-left: 3%;
     padding-right: 3%;
   }
-
-body {
-    background-color: #231f27;
-    font-family: "helvetica-regular", Helvetica, Arial, sans-serif
-}
 
 
 
@@ -457,7 +458,10 @@ body {
 .members-footer li a img {
     height: 55px;
     opacity: .2;
-    transition: all .3s;
+    transition: all .5s;
+}
+.members-footer li a:hover img {
+    opacity: .8;
 }
 
 #legal-footer p {
@@ -1004,7 +1008,7 @@ body {
     transform: scale(1.2) ;
 }
 .hover-scale:hover video.pgi-video {
-    transform: scale(0.75) rotate(0.001deg);
+    transform: scale(0.75) !important;
     transition: transform 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99);
 }
 .hover-scale .pli-image-link {
@@ -1018,6 +1022,8 @@ body {
     position: relative;
     padding: 0 1rem;
     padding-top: 0.5rem;
+    transform: translateY(-45px) rotate(0deg);
+    overflow: hidden;
 }
 #portfolio-grid .pgi-caption {
     display: flex;
@@ -1029,20 +1035,18 @@ body {
 
 /* Estado inicial */
 .pgi-caption .col-info {
-    transform: translateY(0%) rotate(2deg);
-    transition: 
-        transform 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99),  
-        opacity 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99),
-        color 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99);
+    transform: translateY(80px) rotate(1deg);
+    transition: transform 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99), opacity 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99), color 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99);
     color: #919191;
     opacity: 0;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 
 /* Al hacer hover */
 .hover-scale:hover .pgi-caption .col-info {
-    transform: translateY(-45px) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 1;
     color: #fff;
 }
@@ -1075,15 +1079,17 @@ body {
 
 
 
-
-
-
-
-.single-work-card .figure-scale {
-    width: 142.222%;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%) scale(1) rotate(0.001deg);
+.figure-reveal {
+    pointer-events: none;
+    background-image: url(/assets/img/bg-noise.png);
+    background-repeat: repeat;
+    background-color: #231f27;
+    transform-origin: top;
+    left: -1px;
+    top: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    z-index: 20;
 }
 .overlay {
     position: absolute;
