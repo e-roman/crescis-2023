@@ -9,8 +9,8 @@ import "@/styles/add.css";
 import ClientProviders from "@/components/ClientProviders"; 
 
 export const metadata: Metadata = {
-  title: "Mi sitio con Next.js + GSAP",
-  description: "…",
+  title: "CRESCI´S",
+  description: "CRESCI´S",
 };
 
 export default function RootLayout({
