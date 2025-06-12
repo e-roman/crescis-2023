@@ -208,71 +208,73 @@ export function initMagicCursor() {
       });
     });
 
+
+
     // --- data-cursor views ---
-document.querySelectorAll("[data-cursor]").forEach(el => {
-  el.classList.add("not-hide-cursor");
+    document.querySelectorAll("[data-cursor]").forEach(el => {
+      el.classList.add("not-hide-cursor");
 
-  el.addEventListener("mouseenter", () => {
-    // Eliminar cualquier .ball-view anterior si existe
-    const existingView = ball.querySelector(".ball-view");
-    if (existingView) existingView.remove();
+      el.addEventListener("mouseenter", () => {
+        // Eliminar cualquier .ball-view anterior si existe
+        const existingView = ball.querySelector(".ball-view");
+        if (existingView) existingView.remove();
 
-    // Crear nuevo .ball-view
-    const view = document.createElement("div");
-    view.className = "ball-view";
+        // Crear nuevo .ball-view
+        const view = document.createElement("div");
+        view.className = "ball-view";
 
-    const label = el.getAttribute("data-cursor");
-    if (label && label.trim() !== "") {
-      view.textContent = label;
-    }
+        const label = el.getAttribute("data-cursor");
+        if (label && label.trim() !== "") {
+          view.textContent = label;
+        }
 
-    ball.appendChild(view);
+        ball.appendChild(view);
 
-    // Animar entrada del cursor
-    gsap.to(ball, {
-      duration: 0.3,
-      yPercent: -75,
-      width: 95,
-      height: 95,
-      opacity: 1,
-      borderWidth: 0,
-      backgroundColor: "#FFF"
-    });
+        // Animar entrada del cursor
+        gsap.to(ball, {
+          duration: 0.3,
+          yPercent: -75,
+          width: 95,
+          height: 95,
+          opacity: 1,
+          borderWidth: 0,
+          backgroundColor: "#FFF"
+        });
 
-    gsap.fromTo(view, {
-      scale: 0,
-      autoAlpha: 0
-    }, {
-      duration: 0.3,
-      scale: 1,
-      autoAlpha: 1
-    });
-  });
-
-  el.addEventListener("mouseleave", () => {
-    // Restaurar estado del cursor
-    gsap.to(ball, {
-      duration: 0.3,
-      yPercent: -50,
-      width: ballWidth,
-      height: ballHeight,
-      opacity: ballOpacity,
-      borderWidth: ballBorderWidth,
-      backgroundColor: "transparent"
-    });
-
-    const view = ball.querySelector(".ball-view");
-    if (view) {
-      gsap.to(view, {
-        duration: 0.3,
-        scale: 0,
-        autoAlpha: 0,
-        clearProps: "all",
-        onComplete: () => view.remove()
+        gsap.fromTo(view, {
+          scale: 0,
+          autoAlpha: 0
+        }, {
+          duration: 0.3,
+          scale: 1,
+          autoAlpha: 1
+        });
       });
-    }
-  });
-});
+
+      el.addEventListener("mouseleave", () => {
+        // Restaurar estado del cursor
+        gsap.to(ball, {
+          duration: 0.3,
+          yPercent: -50,
+          width: ballWidth,
+          height: ballHeight,
+          opacity: ballOpacity,
+          borderWidth: ballBorderWidth,
+          backgroundColor: "transparent"
+        });
+
+        const view = ball.querySelector(".ball-view");
+        if (view) {
+          gsap.to(view, {
+            duration: 0.3,
+            scale: 0,
+            autoAlpha: 0,
+            clearProps: "all",
+            onComplete: () => view.remove()
+          });
+        }
+      });
+    });
 
 
 
@@ -634,26 +636,25 @@ export function initScrollingText() {
 
 
 
-// Init scroll-to-top buttons
+// Scroll To Top Button
 export function initScrollToTop() {
-  if (typeof window === 'undefined') return;
-  document.querySelectorAll('.scroll-to-top').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      const body = document.body;
-      const html = document.documentElement;
-      // Si se usa smooth-scroll basado en classe
-      if (body.classList.contains('tt-smooth-scroll')) {
-        const scrollbar = window.Scrollbar || null;
-        if (scrollbar && scrollbar.get) {
-          const sb = scrollbar.get(document.getElementById('scroll-container'));
-          gsap.to(sb, { duration: 1.5, scrollTo: { y: 0, autoKill: true }, ease: 'expo.inOut' });
-          return;
-        }
-      }
-      // fallback nativo / GSAP ScrollToPlugin
-      gsap.to(window, { duration: 1.5, scrollTo: { y: 0 }, ease: 'expo.inOut' });
-    });
+  if (typeof window === "undefined") return;
+
+  const scrollBtn = document.getElementById("scroll-to-top");
+
+  if (!scrollBtn) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 700) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  scrollBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    gsap.to(window, { duration: 1.5, scrollTo: 0, ease: "power3.inOut" });
   });
 }
 

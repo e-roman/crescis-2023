@@ -36,7 +36,6 @@ export default function Header() {
         <div className="tt-header-col">
           <div id="tt-ol-menu-toggle-btn-wrap">
             <div className="tt-ol-menu-toggle-btn-text hide-from-sm">
-              <span className="text-menu" data-hover="Open">Menu</span>
               <span className="text-close">Close</span>
             </div>
             <div className="tt-ol-menu-toggle-btn-holder">

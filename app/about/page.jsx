@@ -182,9 +182,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/01.jpg" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/01.webp" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
@@ -212,9 +212,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/02.png" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/02.png" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
@@ -242,9 +242,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/03.png" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/03.png" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
@@ -272,9 +272,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/04.png" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/04.png" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
@@ -302,9 +302,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/05.png" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/05.png" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
@@ -332,9 +332,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/06.png" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/06.png" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
@@ -362,9 +362,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/07.png" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/07.png" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
@@ -392,9 +392,9 @@ export default function AboutPage() {
                                                     <figure className="figure-zoom-out">
                                                         <div className="anim-image-parallax-wrap">
                                                             <div className="anim-image-parallax-inner">
-                                                                <Image className="anim-image-parallax" src="https://d2s90tzqqa0vkb.cloudfront.net/team/08.png" alt="Crescis"
-                                                                  width={800}     // ← Requerido
-                                                                  height={600}    // ← Requerido
+                                                                <Image className="anim-image-parallax" src="/team/08.png" alt="Crescis"
+                                                                  width={800}     
+                                                                  height={600}    
                                                                 />
                                                             </div>
                                                         </div>
