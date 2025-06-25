@@ -64,7 +64,7 @@ export default function Projects() {
                     <div className="pli-info-col pli-info-outer">
                         <div className="pli-info">
                             <div className="pli-counter"></div>
-                            <h2 className="pli-title"><a href="single-project-1.html">17SIGMA</a></h2> 
+                            <h2 className="pli-title"><a href={`/projects/17Sigma`}>17SIGMA</a></h2> 
                             <div className="pli-categories-wrap">
                                 <div className="pli-category">BRANDING</div>
                             </div>
@@ -100,7 +100,7 @@ export default function Projects() {
                     <div className="pli-info-col pli-info-outer">
                         <div className="pli-info">
                             <div className="pli-counter"></div>
-                            <h2 className="pli-title"><a href="single-project-1.html">GOOGLE <br className="hide-from-sm"/>DISCOVERY ADS</a></h2> 
+                            <h2 className="pli-title"><a href={`/projects/GoogleAds`}>GOOGLE <br className="hide-from-sm"/>DISCOVERY ADS</a></h2> 
                             <div className="pli-categories-wrap">
                                 <div className="pli-category">MOTION GRAPHICS</div>
                             </div>
@@ -133,7 +133,7 @@ export default function Projects() {
                     <div className="pli-info-col pli-info-outer">
                         <div className="pli-info">
                             <div className="pli-counter"></div>
-                            <h2 className="pli-title"><a href="single-project-1.html">DREAMFORCE</a></h2> 
+                            <h2 className="pli-title"><a href={`/projects/Dreamforce`}>DREAMFORCE</a></h2> 
                             <div className="pli-categories-wrap">
                                 <div className="pli-category">DIGITAL EXPERIENCE </div>
                             </div>
@@ -166,7 +166,7 @@ export default function Projects() {
                     <div className="pli-info-col pli-info-outer">
                         <div className="pli-info">
                             <div className="pli-counter"></div>
-                            <h2 className="pli-title"><a href="single-project-1.html">PENTA</a></h2> 
+                            <h2 className="pli-title"><a href={`/projects/Penta`}>PENTA</a></h2> 
                             <div className="pli-categories-wrap">
                                 <div className="pli-category">REBRANDING</div>
                             </div>
@@ -198,7 +198,7 @@ export default function Projects() {
                     <div className="pli-info-col pli-info-outer">
                         <div className="pli-info">
                             <div className="pli-counter"></div>
-                            <h2 className="pli-title"><a href="single-project-1.html">DECODED</a></h2> 
+                            <h2 className="pli-title"><a href={`/projects/Decoded`}>DECODED</a></h2> 
                             <div className="pli-categories-wrap">
                                 <div className="pli-category">VISUAL IDENTITY</div>
                             </div>
@@ -231,7 +231,7 @@ export default function Projects() {
                     <div className="pli-info-col pli-info-outer">
                         <div className="pli-info">
                             <div className="pli-counter"></div>
-                            <h2 className="pli-title"><a href="single-project-1.html">THE SANDBOX <br className="hide-from-sm"/>OWN THE FUTURE</a></h2> 
+                            <h2 className="pli-title"><a href={`/projects/TheSandbox`}>THE SANDBOX <br className="hide-from-sm"/>OWN THE FUTURE</a></h2> 
                             <div className="pli-categories-wrap">
                                 <div className="pli-category">VISUAL CAMPAIGN</div>
                             </div>

@@ -915,7 +915,7 @@
     max-width: 85vw;
 }
 .ph-caption-title-projects {
-    font-size: clamp(48px, 10.5vw, 150px);
+    font-size: clamp(48px, 7.5vw, 150px);
     line-height: 0.8;
     margin: 0;
 }
